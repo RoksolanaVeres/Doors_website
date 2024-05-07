@@ -10,7 +10,7 @@ import { HiLockClosed } from "react-icons/hi2";
 
 export default function Footer() {
   return (
-    <div className="flex justify-center bg-slate-500">
+    <div className="flex justify-center bg-accent">
       <footer className="max-w-large flex w-full flex-wrap justify-between gap-5 p-5 text-base">
         <div id="footer-col-1" className="">
           <div className="flex gap-2">
@@ -27,7 +27,7 @@ export default function Footer() {
           <p>пн-пт: 9:00-18:00</p>
           <p>сб: 9:00-16:00</p>
           <p className="flex items-center gap-2">
-            нд: <HiLockClosed />
+            нд: <HiLockClosed className="text-destructive" />
           </p>
         </div>
 

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function NavigationLinks() {
   return (
-    <nav className="flex justify-center bg-slate-800">
+    <nav className="flex justify-center ">
       <ul
         id="navigation-list"
         className="max-w-large flex w-full justify-between p-5"
