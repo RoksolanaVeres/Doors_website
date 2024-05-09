@@ -21,7 +21,7 @@ module.exports = {
     },
 
     maxWidth: {
-      large: "1200px",
+      large: "1600px",
     },
 
     container: {
@@ -33,6 +33,9 @@ module.exports = {
     },
 
     extend: {
+      padding: {
+        "container-padding": "30px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

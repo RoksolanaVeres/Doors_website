@@ -5,7 +5,7 @@ export default function NavigationLinks() {
     <nav className="flex justify-center ">
       <ul
         id="navigation-list"
-        className="max-w-large flex w-full justify-between p-5"
+        className="px-container-padding flex w-full max-w-large justify-between py-5"
       >
         <li>
           <NavLink
@@ -45,14 +45,14 @@ export default function NavigationLinks() {
         </li>
         <li>
           <NavLink
-            to="/blog"
+            to="/services"
             className={({ isActive }) =>
               isActive
                 ? "font-semibold text-red-600 hover:underline"
                 : "font-semibold text-slate-300 hover:underline"
             }
           >
-            Блог
+            Послуги
           </NavLink>
         </li>
         <li>

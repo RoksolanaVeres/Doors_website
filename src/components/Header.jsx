@@ -7,7 +7,7 @@ export default function Header() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <div className="flex h-fit justify-center bg-accent">
-      <header className="max-w-large flex w-full flex-wrap justify-between gap-5 p-5">
+      <header className="px-container-padding flex w-full max-w-large flex-wrap justify-between gap-5 py-5">
         <h1 className="text-3xl font-bold">Вікна & Двері</h1>
         <div id="" className="flex gap-2">
           <button className="">

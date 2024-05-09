@@ -13,7 +13,7 @@ export default function RootLayout() {
         <Header />
         <NavigationLinks />
         <main className="flex justify-center">
-          <div className="max-w-large w-full p-5">
+          <div className="px-container-padding w-full max-w-large py-5">
             <Outlet />
           </div>
         </main>

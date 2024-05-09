@@ -4,7 +4,7 @@ import HomePage from "./components/pages/HomePage";
 import ContactsPage from "./components/pages/ContactsPage";
 import CataloguePage from "./components/pages/CataloguePage";
 import BrandsPage from "./components/pages/BrandsPage";
-import BlogPage from "./components/pages/BlogPage";
+import ServicesPage from "./components/pages/ServicesPage";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -15,7 +15,7 @@ export default function App() {
         { path: "/", element: <HomePage /> },
         { path: "/catalogue", element: <CataloguePage /> },
         { path: "/brands", element: <BrandsPage /> },
-        { path: "/blog", element: <BlogPage /> },
+        { path: "/services", element: <ServicesPage /> },
         { path: "/contacts", element: <ContactsPage /> },
       ],
     },
