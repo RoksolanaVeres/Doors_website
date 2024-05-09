@@ -34,7 +34,7 @@ module.exports = {
 
     extend: {
       padding: {
-        "container-padding": "30px",
+        "container-padding": "60px",
       },
       colors: {
         background_secondary: "hsl(var(--background_secondary))",
