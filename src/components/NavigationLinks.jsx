@@ -5,15 +5,15 @@ export default function NavigationLinks() {
     <nav className="flex justify-center ">
       <ul
         id="navigation-list"
-        className="px-container-padding flex w-full max-w-large justify-between py-5"
+        className="flex w-full max-w-large justify-between px-container-padding py-5"
       >
         <li>
           <NavLink
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "font-semibold text-red-600 hover:underline"
-                : "font-semibold text-slate-300 hover:underline"
+                ? "text-accent-main font-semibold hover:underline"
+                : "font-semibold text-muted-foreground hover:underline"
             }
           >
             LOGO
@@ -24,8 +24,8 @@ export default function NavigationLinks() {
             to="/catalogue"
             className={({ isActive }) =>
               isActive
-                ? "font-semibold text-red-600 hover:underline"
-                : "font-semibold text-slate-300 hover:underline"
+                ? "text-accent-main font-semibold hover:underline"
+                : "font-semibold text-muted-foreground hover:underline"
             }
           >
             Каталог
@@ -36,8 +36,8 @@ export default function NavigationLinks() {
             to="/brands"
             className={({ isActive }) =>
               isActive
-                ? "font-semibold text-red-600 hover:underline"
-                : "font-semibold text-slate-300 hover:underline"
+                ? "text-accent-main font-semibold hover:underline"
+                : "font-semibold text-muted-foreground hover:underline"
             }
           >
             Бренди
@@ -48,8 +48,8 @@ export default function NavigationLinks() {
             to="/services"
             className={({ isActive }) =>
               isActive
-                ? "font-semibold text-red-600 hover:underline"
-                : "font-semibold text-slate-300 hover:underline"
+                ? "text-accent-main font-semibold hover:underline"
+                : "font-semibold text-muted-foreground hover:underline"
             }
           >
             Послуги
@@ -60,8 +60,8 @@ export default function NavigationLinks() {
             to="/contacts"
             className={({ isActive }) =>
               isActive
-                ? "font-semibold text-red-600 hover:underline"
-                : "font-semibold text-slate-300 hover:underline"
+                ? "text-accent-main font-semibold hover:underline"
+                : "font-semibold text-muted-foreground hover:underline"
             }
           >
             Контакти

@@ -10,8 +10,8 @@ import { HiLockClosed } from "react-icons/hi2";
 
 export default function Footer() {
   return (
-    <div className="flex justify-center bg-accent">
-      <footer className="px-container-padding flex w-full max-w-large flex-wrap justify-between gap-5 py-5 text-sm">
+    <div className="bg-background_secondary flex justify-center">
+      <footer className="flex w-full max-w-large flex-wrap justify-between gap-5 px-container-padding py-5 text-base">
         <div id="footer-col-1" className="">
           <a href="https://www.google.com/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9F%D0%B0%D0%B2%D0%BB%D0%B0+%D0%A2%D0%B8%D1%87%D0%B8%D0%BD%D0%B8,+19%D0%B0,+%D0%86%D0%B2%D0%B0%D0%BD%D0%BE-%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA,+%D0%86%D0%B2%D0%B0%D0%BD%D0%BE-%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+76000/@48.925289,24.7025273,17z/data=!3m1!4b1!4m6!3m5!1s0x4730c113d6f65c1b:0x19f2371228a7a433!8m2!3d48.9252855!4d24.7051022!16s%2Fg%2F11p5zhqzsj?entry=ttu">
             <div className="flex gap-2">

@@ -37,6 +37,7 @@ module.exports = {
         "container-padding": "30px",
       },
       colors: {
+        background_secondary: "hsl(var(--background_secondary))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -61,6 +62,7 @@ module.exports = {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          main: "hsl(var(--accent-main))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
