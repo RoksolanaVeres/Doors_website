@@ -3,12 +3,13 @@ import Map from "../Map";
 import emailImg from "../../assets/email.png";
 import locationImg from "../../assets/location.png";
 import phoneImg from "../../assets/phone.png";
+import scheduleImg from "../../assets/schedule.png";
 
 export default function ContactsPage() {
   return (
     <>
       <Helmet>
-        <title>The Doors | Contacts</title>
+        <title>Вікна & Двері | Контакти</title>
       </Helmet>
       <h2 className="mb-14 text-center text-2xl font-bold">
         Наші двері завжди* відчинені для Вас
@@ -16,7 +17,7 @@ export default function ContactsPage() {
       <div id="text-map__container" className="grid gap-20 md:grid-cols-2">
         <div id="text__container" className="grid gap-10">
           <div id="locationImg-text__container" className="flex gap-4">
-            <div className="bg-background_secondary grid size-[80px] items-center justify-center rounded-full">
+            <div className="grid size-[80px] items-center justify-center rounded-full bg-background_secondary">
               <img src={locationImg} className="size-[40px]" alt="" />
             </div>
             <div id="locationText__container" className="">
@@ -30,7 +31,7 @@ export default function ContactsPage() {
             id="phoneImg-text__container"
             className="flex justify-center gap-4"
           >
-            <div className="bg-background_secondary grid size-[80px] items-center justify-center rounded-full">
+            <div className="grid size-[80px] items-center justify-center rounded-full bg-background_secondary">
               <img src={phoneImg} className="size-[40px]" alt="" />
             </div>
             <div id="all-phones__container" className="grid gap-2">
@@ -86,9 +87,12 @@ export default function ContactsPage() {
             </div>
           </div>
 
-          <div id="email-schedule__container" className="flex justify-between gap-6 flex-wrap">
+          <div
+            id="email-schedule__container"
+            className="flex flex-wrap justify-between gap-6"
+          >
             <div id="emailImg-text__container" className="flex gap-4">
-              <div className="bg-background_secondary grid size-[80px] items-center justify-center rounded-full">
+              <div className="grid size-[80px] items-center justify-center rounded-full bg-background_secondary">
                 <img src={emailImg} className="size-[40px]" alt="" />
               </div>
               <div id="emailText__container" className="">
@@ -103,8 +107,8 @@ export default function ContactsPage() {
             </div>
 
             <div id="scheduleImg-text__container" className="flex gap-4">
-              <div className="bg-background_secondary grid size-[80px] items-center justify-center rounded-full">
-                {/* <img src={emailImg} className="size-[40px]" alt="" /> */}
+              <div className="grid size-[80px] items-center justify-center rounded-full bg-background_secondary">
+                <img src={scheduleImg} className="size-[40px]" alt="" />
               </div>
               <div id="emailText__container" className="">
                 <h2 className="text-lg font-bold uppercase">

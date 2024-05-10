@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>The Doors</title>
+        <title>Вікна & Двері</title>
       </Helmet>
       <h2>Home Page</h2>
     </>

@@ -4,7 +4,7 @@ export default function CataloguePage() {
   return (
     <>
       <Helmet>
-        <title>The Doors | Catalogue</title>
+        <title>Вікна & Двері | Каталог</title>
       </Helmet>
       <h2>Catalogue Page</h2>
     </>

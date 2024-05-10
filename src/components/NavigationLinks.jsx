@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import doorImg from "../assets/door.png"
 
 export default function NavigationLinks() {
   return (
@@ -17,6 +18,7 @@ export default function NavigationLinks() {
             }
           >
             LOGO
+            {/* <img className="w-8" src={doorImg} alt="" /> */}
           </NavLink>
         </li>
         <li>
