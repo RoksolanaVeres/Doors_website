@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import doorImg from "../assets/door.png"
+import doorImg from "../assets/icons/door.png";
 
 export default function NavigationLinks() {
   return (

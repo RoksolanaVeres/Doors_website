@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import Map from "../Map";
-import emailImg from "../../assets/email.png";
-import locationImg from "../../assets/location.png";
-import phoneImg from "../../assets/phone.png";
-import scheduleImg from "../../assets/schedule.png";
+import emailImg from "../../assets/icons/email.png";
+import locationImg from "../../assets/icons/location.png";
+import phoneImg from "../../assets/icons/phone.png";
+import scheduleImg from "../../assets/icons/schedule.png";
 
 export default function ContactsPage() {
   return (
@@ -20,8 +20,10 @@ export default function ContactsPage() {
             <div className="grid size-[80px] items-center justify-center rounded-full bg-background_secondary">
               <img src={locationImg} className="size-[40px]" alt="" />
             </div>
-            <div id="locationText__container" className="">
-              <h2 className="text-lg font-bold uppercase">Де знайти?</h2>
+            <div id="locationText__container" className="font-roboto">
+              <h3 className="font-inter text-lg font-bold uppercase">
+                Де знайти?
+              </h3>
               <p>м.Івано-Франківськ, вулиця Тичини 19А</p>
               <p>Орієнтир: між ТЦ "Бельведер" та "Майстер"</p>
             </div>
@@ -34,11 +36,11 @@ export default function ContactsPage() {
             <div className="grid size-[80px] items-center justify-center rounded-full bg-background_secondary">
               <img src={phoneImg} className="size-[40px]" alt="" />
             </div>
-            <div id="all-phones__container" className="grid gap-2">
-              <h2 className="text-lg font-bold uppercase">Куди дзвонити?</h2>
+            <div id="all-phones__container" className="grid gap-2 font-roboto">
+              <h3 className="text-lg font-bold uppercase font-inter">Куди дзвонити?</h3>
 
               <div id="doorsInfo-phones__container" className="">
-                <h3>З питань вікон та дверей:</h3>
+                <h4 className="font-inter">З питань вікон та дверей:</h4>
                 <div className="flex gap-2">
                   <a
                     href="tel:+380992236426"
@@ -60,7 +62,7 @@ export default function ContactsPage() {
               </div>
 
               <div id="glassInfo-phones__container" className="">
-                <h3>Якщо потрібно врізати скло:</h3>
+                <h4 className="font-inter">Якщо потрібно врізати скло:</h4>
                 <div className="flex gap-2">
                   <a
                     href="tel:+380999568789"
@@ -73,7 +75,7 @@ export default function ContactsPage() {
               </div>
 
               <div id="glassInfo-phones__container" className="">
-                <h3>Якщо зламалась техніка:</h3>
+                <h4 className="font-inter">Якщо зламалась техніка:</h4>
                 <div className="flex gap-2">
                   <a
                     href="tel:+380959246208"
@@ -95,8 +97,8 @@ export default function ContactsPage() {
               <div className="grid size-[80px] items-center justify-center rounded-full bg-background_secondary">
                 <img src={emailImg} className="size-[40px]" alt="" />
               </div>
-              <div id="emailText__container" className="">
-                <h2 className="text-lg font-bold uppercase">Куди писати?</h2>
+              <div id="emailText__container" className="font-roboto">
+                <h3 className="text-lg font-bold uppercase font-inter">Куди писати?</h3>
                 <a
                   href="mailto:taras-oksana@ukr.net"
                   className="flex items-center gap-2"
@@ -110,11 +112,11 @@ export default function ContactsPage() {
               <div className="grid size-[80px] items-center justify-center rounded-full bg-background_secondary">
                 <img src={scheduleImg} className="size-[40px]" alt="" />
               </div>
-              <div id="emailText__container" className="">
-                <h2 className="text-lg font-bold uppercase">
+              <div id="emailText__container" className="font-roboto">
+                <h3 className="font-inter text-lg font-bold uppercase">
                   *Коли це "завжди"?
-                </h2>
-                <h3 className="text-base font-bold">Або наш графік роботи</h3>
+                </h3>
+                <h4 className="font-inter text-base font-bold">Або наш графік роботи</h4>
                 <dl>
                   <dt className="mt-1">Понеділок - Пятниця:</dt>
                   <dd>9:00 - 18:00</dd>
@@ -127,7 +129,6 @@ export default function ContactsPage() {
             </div>
           </div>
         </div>
-
         <Map />
       </div>
     </>

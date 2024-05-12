@@ -1,5 +1,5 @@
-import UkFlagImg from "../assets/uk-flag.png";
-import UaFlagImg from "../assets/ua-flag.png";
+import UkFlagImg from "../assets/icons/uk-flag.png";
+import UaFlagImg from "../assets/icons/ua-flag.png";
 import { ThemeContext } from "./store/ThemeContext";
 import { useContext } from "react";
 

@@ -11,6 +11,8 @@ module.exports = {
   theme: {
     fontFamily: {
       inter: ["Inter Variable", "sans-serif"],
+      lora: ["Lora Variable", "serif"],
+      roboto: ["Roboto Slab Variable", "serif"],
     },
 
     screens: {
@@ -34,7 +36,7 @@ module.exports = {
 
     extend: {
       padding: {
-        "container-padding": "60px",
+        "container-padding": "150px",
       },
       colors: {
         background_secondary: "hsl(var(--background_secondary))",
