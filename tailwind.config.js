@@ -38,6 +38,10 @@ module.exports = {
       padding: {
         "container-padding": "150px",
       },
+      gridTemplateColumns: {
+        "auto-fill-265": "repeat(auto-fill, minmax(265px, 1fr))",
+      },
+
       colors: {
         background_secondary: "hsl(var(--background_secondary))",
         border: "hsl(var(--border))",

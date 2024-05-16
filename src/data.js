@@ -1,3 +1,4 @@
+// Druid
 import DruidAkordImg from "@/assets/doors-img/druid/druid-akord.png";
 import DruidAkraImg from "@/assets/doors-img/druid/druid-akra.png";
 import DruidAlaskaImg from "@/assets/doors-img/druid/druid-alaska.png";
@@ -46,289 +47,472 @@ import DruidVeneraImg from "@/assets/doors-img/druid/druid-venera.png";
 import DruidZhenevaImg from "@/assets/doors-img/druid/druid-zheneva.png";
 import DruidZlataImg from "@/assets/doors-img/druid/druid-zlata.png";
 
+// Gorgania
+import GorganiaBeskydBrownImg from "@/assets/doors-img/gorgania/gorgania-beskyd-brown.png";
+import GorganiaBeskydLightGrayImg from "@/assets/doors-img/gorgania/gorgania-beskyd-gray-light.png";
+import GorganiaBeskydLighterGrayImg from "@/assets/doors-img/gorgania/gorgania-beskyd-gray-lighter.png";
+import GorganiaBeskydGrayImg from "@/assets/doors-img/gorgania/gorgania-beskyd-gray.png";
+import GorganiaBeskydWhiteImg from "@/assets/doors-img/gorgania/gorgania-beskyd-white.png";
+
+import GorganiaHoverlaBrownImg from "@/assets/doors-img/gorgania/gorgania-hoverla-brown.png";
+import GorganiaHoverlaLightGrayImg from "@/assets/doors-img/gorgania/gorgania-hoverla-gray-light.png";
+import GorganiaHoverlaLighterGrayImg from "@/assets/doors-img/gorgania/gorgania-hoverla-gray-lighter.png";
+import GorganiaHoverlaGrayImg from "@/assets/doors-img/gorgania/gorgania-hoverla-gray.png";
+import GorganiaHoverlaWhiteImg from "@/assets/doors-img/gorgania/gorgania-hoverla-white.png";
+
+import GorganiaHrofaBrownImg from "@/assets/doors-img/gorgania/gorgania-hrofa-brown.png";
+import GorganiaHrofaLightGrayImg from "@/assets/doors-img/gorgania/gorgania-hrofa-gray-light.png";
+import GorganiaHrofaLighterGrayImg from "@/assets/doors-img/gorgania/gorgania-hrofa-gray-lighter.png";
+import GorganiaHrofaGrayImg from "@/assets/doors-img/gorgania/gorgania-hrofa-gray.png";
+import GorganiaHrofaWhiteImg from "@/assets/doors-img/gorgania/gorgania-hrofa-white.png";
+
+import GorganiaKrasiiaBrownImg from "@/assets/doors-img/gorgania/gorgania-krasiia-brown.png";
+import GorganiaKrasiiaLightGrayImg from "@/assets/doors-img/gorgania/gorgania-krasiia-gray-light.png";
+import GorganiaKrasiiaLighterGrayImg from "@/assets/doors-img/gorgania/gorgania-krasiia-gray-lighter.png";
+import GorganiaKrasiiaGrayImg from "@/assets/doors-img/gorgania/gorgania-krasiia-gray.png";
+import GorganiaKrasiiaWhiteImg from "@/assets/doors-img/gorgania/gorgania-krasiia-white.png";
+
+import GorganiaMahuraBrownImg from "@/assets/doors-img/gorgania/gorgania-mahura-brown.png";
+import GorganiaMahuraLightGrayImg from "@/assets/doors-img/gorgania/gorgania-mahura-gray-light.png";
+import GorganiaMahuraLighterGrayImg from "@/assets/doors-img/gorgania/gorgania-mahura-gray-lighter.png";
+import GorganiaMahuraGrayImg from "@/assets/doors-img/gorgania/gorgania-mahura-gray.png";
+import GorganiaMahuraWhiteImg from "@/assets/doors-img/gorgania/gorgania-mahura-white.png";
+
+import GorganiaPetrosBrownImg from "@/assets/doors-img/gorgania/gorgania-petros-brown.png";
+import GorganiaPetrosLightGrayImg from "@/assets/doors-img/gorgania/gorgania-petros-gray-light.png";
+import GorganiaPetrosLighterGrayImg from "@/assets/doors-img/gorgania/gorgania-petros-gray-lighter.png";
+import GorganiaPetrosGrayImg from "@/assets/doors-img/gorgania/gorgania-petros-gray.png";
+import GorganiaPetrosWhiteImg from "@/assets/doors-img/gorgania/gorgania-petros-white.png";
+
+import GorganiaPlaiBrownImg from "@/assets/doors-img/gorgania/gorgania-plai-brown.png";
+import GorganiaPlaiLightGrayImg from "@/assets/doors-img/gorgania/gorgania-plai-gray-light.png";
+import GorganiaPlaiLighterGrayImg from "@/assets/doors-img/gorgania/gorgania-plai-gray-lighter.png";
+import GorganiaPlaiGrayImg from "@/assets/doors-img/gorgania/gorgania-plai-gray.png";
+import GorganiaPlaiWhiteImg from "@/assets/doors-img/gorgania/gorgania-plai-white.png";
+
+import GorganiaStihBrownImg from "@/assets/doors-img/gorgania/gorgania-stih-brown.png";
+import GorganiaStihLightGrayImg from "@/assets/doors-img/gorgania/gorgania-stih-gray-light.png";
+import GorganiaStihLighterGrayImg from "@/assets/doors-img/gorgania/gorgania-stih-gray-lighter.png";
+import GorganiaStihGrayImg from "@/assets/doors-img/gorgania/gorgania-stih-gray.png";
+import GorganiaStihWhiteImg from "@/assets/doors-img/gorgania/gorgania-stih-white.png";
+
+import GorganiaStrymbaBrownImg from "@/assets/doors-img/gorgania/gorgania-strymba-brown.png";
+import GorganiaStrymbaLightGrayImg from "@/assets/doors-img/gorgania/gorgania-strymba-gray-light.png";
+import GorganiaStrymbaLighterGrayImg from "@/assets/doors-img/gorgania/gorgania-strymba-gray-lighter.png";
+import GorganiaStrymbaGrayImg from "@/assets/doors-img/gorgania/gorgania-strymba-gray.png";
+import GorganiaStrymbaWhiteImg from "@/assets/doors-img/gorgania/gorgania-strymba-white.png";
+
+import GorganiaYavorynaBrownImg from "@/assets/doors-img/gorgania/gorgania-yavoryna-brown.png";
+import GorganiaYavorynaLightGrayImg from "@/assets/doors-img/gorgania/gorgania-yavoryna-gray-light.png";
+import GorganiaYavorynaLighterGrayImg from "@/assets/doors-img/gorgania/gorgania-yavoryna-gray-lighter.png";
+import GorganiaYavorynaGrayImg from "@/assets/doors-img/gorgania/gorgania-yavoryna-gray.png";
+import GorganiaYavorynaWhiteImg from "@/assets/doors-img/gorgania/gorgania-yavoryna-white.png";
+
+
+
 const doors = [
   {
     title: "Акорд",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidAkordImg,
+    colors: [{ color: "white", img: DruidAkordImg }],
   },
   {
     title: "Акра",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidAkraImg,
+    colors: [{ color: "white", img: DruidAkraImg }],
   },
   {
     title: "Аляска",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidAlaskaImg,
+    colors: [{ color: "gray", img: DruidAlaskaImg }],
   },
   {
     title: "Аргентина",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidArhentynaImg,
+    colors: [{ color: "brown", img: DruidArhentynaImg }],
   },
   {
     title: "Берлін",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidBerlinImg,
+    colors: [{ color: "gray", img: DruidBerlinImg }],
   },
   {
     title: "Бразилія",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidBrazilImg,
+    colors: [{ color: "white", img: DruidBrazilImg }],
   },
   {
     title: "Канада",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidCanadaImg,
+    colors: [{ color: "beige", img: DruidCanadaImg }],
   },
   {
     title: "Сіті Лайт",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidCityLightImg,
+    colors: [{ color: "brown", img: DruidCityLightImg }],
   },
   {
     title: "Сіті Спейс",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidCitySpaceImg,
+    colors: [{ color: "white", img: DruidCitySpaceImg }],
   },
   {
     title: "Сіті",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidCityImg,
+    colors: [{ color: "lightGray", img: DruidCityImg }],
   },
   {
     title: "Данія",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidDaniiaImg,
+    colors: [{ color: "white", img: DruidDaniiaImg }],
   },
   {
     title: "Дабл",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidDoubleImg,
+    colors: [{ color: "brown", img: DruidDoubleImg }],
   },
   {
     title: "Дубай",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidDubaiImg,
+    colors: [{ color: "brown", img: DruidDubaiImg }],
   },
   {
     title: "Фортуна",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidFortunaImg,
+    colors: [{ color: "brown", img: DruidFortunaImg }],
   },
   {
     title: "Греція",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidGreeceImg,
+    colors: [{ color: "darkBrown", img: DruidGreeceImg }],
   },
   {
     title: "Конго Дабл",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidKonhoDoubleImg,
+    colors: [{ color: "darkBrown", img: DruidKonhoDoubleImg }],
   },
   {
     title: "Конго",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidKonhoImg,
+    colors: [{ color: "white", img: DruidKonhoImg }],
   },
   {
     title: "Лео",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidLeoImg,
+    colors: [{ color: "brown", img: DruidLeoImg }],
   },
   {
     title: "Лайн",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidLineImg,
+    colors: [{ color: "beige", img: DruidLineImg }],
   },
   {
     title: "Лондон Класік",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidLondonClasicImg,
+    colors: [{ color: "white", img: DruidLondonClasicImg }],
   },
   {
     title: "Лондон",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidLondonImg,
+    colors: [{ color: "white", img: DruidLondonImg }],
   },
   {
     title: "Мальта",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidMaltaImg,
+    colors: [{ color: "white", img: DruidMaltaImg }],
   },
   {
     title: "Манхетен Дабл",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidManhetenDoubleImg,
+    colors: [{ color: "white", img: DruidManhetenDoubleImg }],
   },
   {
     title: "Манхетен",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidManhetenImg,
+    colors: [{ color: "white", img: DruidManhetenImg }],
   },
   {
     title: "Марокко",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidMaroccoImg,
+    colors: [{ color: "white", img: DruidMaroccoImg }],
   },
 
   {
     title: "Марс",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidMarsImg,
+    colors: [{ color: "beige", img: DruidMarsImg }],
   },
   {
     title: "Мілан",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidMilanImg,
+    colors: [{ color: "white", img: DruidMilanImg }],
   },
   {
     title: "Нью Йорк",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidNewYorkImg,
+    colors: [{ color: "brown", img: DruidNewYorkImg }],
   },
   {
     title: "Ніцца",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidNizzaImg,
+    colors: [{ color: "white", img: DruidNizzaImg }],
   },
   {
     title: "Париж",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidParisImg,
+    colors: [{ color: "beige", img: DruidParisImg }],
   },
   {
     title: "Пекін New",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidPekinNewImg,
+    colors: [{ color: "gray", img: DruidPekinNewImg }],
   },
   {
     title: "Пекін Спейс",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidPekinSpaceImg,
+    colors: [{ color: "beige", img: DruidPekinSpaceImg }],
   },
   {
     title: "Пекін",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidPekinImg,
+    colors: [{ color: "beige", img: DruidPekinImg }],
   },
   {
     title: "Піраміда N",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidPiramidaNImg,
+    colors: [{ color: "white", img: DruidPiramidaNImg }],
   },
   {
     title: "Прага",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidPrahaImg,
+    colors: [{ color: "white", img: DruidPrahaImg }],
   },
   {
     title: "Рим",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidRomeImg,
+    colors: [{ color: "darkBrown", img: DruidRomeImg }],
   },
   {
     title: "Сахара",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidSakharaImg,
+    colors: [{ color: "white", img: DruidSakharaImg }],
   },
   {
     title: "Сакура 2",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidSakura2Img,
+    colors: [{ color: "brown", img: DruidSakura2Img }],
   },
   {
     title: "Сакура",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidSakuraImg,
+    colors: [{ color: "white", img: DruidSakuraImg }],
   },
   {
     title: "Шотландія",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidScotlandImg,
+    colors: [{ color: "white", img: DruidScotlandImg }],
   },
   {
     title: "Сідней",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidSidneyImg,
+    colors: [{ color: "gradarkBrowny", img: DruidSidneyImg }],
   },
   {
     title: "Спейс",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidSpaceImg,
+    colors: [{ color: "beige", img: DruidSpaceImg }],
   },
   {
     title: "Тріо",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidTrioImg,
+    colors: [{ color: "white", img: DruidTrioImg }],
   },
   {
     title: "Венеція",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidVeneciiaImg,
+    colors: [{ color: "beige", img: DruidVeneciiaImg }],
   },
   {
     title: "Венера",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidVeneraImg,
+    colors: [{ color: "beige", img: DruidVeneraImg }],
   },
   {
     title: "Женева",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidZhenevaImg,
+    colors: [{ color: "beige", img: DruidZhenevaImg }],
   },
   {
     title: "Злата",
     manufacturer: "Друїд",
     description: "some description",
-    img: DruidZlataImg,
+    colors: [{ color: "white", img: DruidZlataImg }],
+  },
+  {
+    title: "Бескид",
+    manufacturer: "Gorgania",
+    description: "some description",
+    colors: [
+      { color: "brown", img: GorganiaBeskydBrownImg },
+      { color: "lightGray", img: GorganiaBeskydLightGrayImg },
+      { color: "lighterGray", img: GorganiaBeskydLighterGrayImg },
+      { color: "gray", img: GorganiaBeskydGrayImg },
+      { color: "white", img: GorganiaBeskydWhiteImg },
+    ],
+  },
+  {
+    title: "Говерла",
+    manufacturer: "Gorgania",
+    description: "some description",
+    colors: [
+      { color: "lightGray", img: GorganiaHoverlaLightGrayImg },
+      { color: "brown", img: GorganiaHoverlaBrownImg },
+      { color: "lighterGray", img: GorganiaHoverlaLighterGrayImg },
+      { color: "gray", img: GorganiaHoverlaGrayImg },
+      { color: "white", img: GorganiaHoverlaWhiteImg },
+    ],
+  },
+  {
+    title: "Грофа",
+    manufacturer: "Gorgania",
+    description: "some description",
+    colors: [
+      { color: "lighterGray", img: GorganiaHrofaLighterGrayImg },
+      { color: "brown", img: GorganiaHrofaBrownImg },
+      { color: "lightGray", img: GorganiaHrofaLightGrayImg },
+      { color: "gray", img: GorganiaHrofaGrayImg },
+      { color: "white", img: GorganiaHrofaWhiteImg },
+    ],
+  },
+  {
+    title: "Красія",
+    manufacturer: "Gorgania",
+    description: "some description",
+    colors: [
+      { color: "gray", img: GorganiaKrasiiaGrayImg },
+      { color: "brown", img: GorganiaKrasiiaBrownImg },
+      { color: "lightGray", img: GorganiaKrasiiaLightGrayImg },
+      { color: "lighterGray", img: GorganiaKrasiiaLighterGrayImg },
+      { color: "white", img: GorganiaKrasiiaWhiteImg },
+    ],
+  },
+  {
+    title: "Магура",
+    manufacturer: "Gorgania",
+    description: "some description",
+    colors: [
+      { color: "white", img: GorganiaMahuraWhiteImg },
+      { color: "brown", img: GorganiaMahuraBrownImg },
+      { color: "lightGray", img: GorganiaMahuraLightGrayImg },
+      { color: "lighterGray", img: GorganiaMahuraLighterGrayImg },
+      { color: "gray", img: GorganiaMahuraGrayImg },
+    ],
+  },
+  {
+    title: "Петорс",
+    manufacturer: "Gorgania",
+    description: "some description",
+    colors: [
+      { color: "brown", img: GorganiaPetrosBrownImg },
+      { color: "lightGray", img: GorganiaPetrosLightGrayImg },
+      { color: "lighterGray", img: GorganiaPetrosLighterGrayImg },
+      { color: "gray", img: GorganiaPetrosGrayImg },
+      { color: "white", img: GorganiaPetrosWhiteImg },
+    ],
+  },
+  {
+    title: "Плай",
+    manufacturer: "Gorgania",
+    description: "some description",
+    colors: [
+      { color: "lightGray", img: GorganiaPlaiLightGrayImg },
+      { color: "brown", img: GorganiaPlaiBrownImg },
+      { color: "lighterGray", img: GorganiaPlaiLighterGrayImg },
+      { color: "gray", img: GorganiaPlaiGrayImg },
+      { color: "white", img: GorganiaPlaiWhiteImg },
+    ],
+  },
+  {
+    title: "Стіг",
+    manufacturer: "Gorgania",
+    description: "some description",
+    colors: [
+      { color: "lighterGray", img: GorganiaStihLighterGrayImg },
+      { color: "brown", img: GorganiaStihBrownImg },
+      { color: "lightGray", img: GorganiaStihLightGrayImg },
+      { color: "gray", img: GorganiaStihGrayImg },
+      { color: "white", img: GorganiaStihWhiteImg },
+    ],
+  },
+  {
+    title: "Стримба",
+    manufacturer: "Gorgania",
+    description: "some description",
+    colors: [
+      { color: "gray", img: GorganiaStrymbaGrayImg },
+      { color: "brown", img: GorganiaStrymbaBrownImg },
+      { color: "lightGray", img: GorganiaStrymbaLightGrayImg },
+      { color: "lighterGray", img: GorganiaStrymbaLighterGrayImg },
+      { color: "white", img: GorganiaStrymbaWhiteImg },
+    ],
+  },
+  {
+    title: "Яворина",
+    manufacturer: "Gorgania",
+    description: "some description",
+    colors: [
+      { color: "white", img: GorganiaYavorynaWhiteImg },
+      { color: "brown", img: GorganiaYavorynaBrownImg },
+      { color: "lightGray", img: GorganiaYavorynaLightGrayImg },
+      { color: "lighterGray", img: GorganiaYavorynaLighterGrayImg },
+      { color: "gray", img: GorganiaYavorynaGrayImg },
+    ],
   },
 ];
 

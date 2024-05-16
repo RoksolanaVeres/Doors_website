@@ -16,7 +16,7 @@ export default function CataloguePage() {
       <Helmet>
         <title>Вікна & Двері | Каталог</title>
       </Helmet>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid-cols-auto-fill-265 grid gap-4">
         {doorsData.map((door) => {
           return (
             <Card key={door.title} className="grid justify-center">
@@ -25,7 +25,7 @@ export default function CataloguePage() {
                 <CardDescription>{door.manufacturer}</CardDescription>
               </CardHeader>
               <CardContent>
-                <img src={door.img} className="h-[300px] w-[150px]" />
+                <img src={door.colors[0].img} className="h-[300px] w-[150px]" />
               </CardContent>
               <CardFooter>
                 <p>{door.description}</p>
