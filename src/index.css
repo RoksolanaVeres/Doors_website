@@ -36,6 +36,15 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
+    --door-white: 45, 57%, 97%;
+    --door-beige: 36, 28%, 77%;
+    --door-brown: 35, 23%, 56%;
+    --door-darkBrown: 47, 68%, 15%;
+    --door-gray: 0, 0%, 23%;
+    --door-lighterGray: 0, 1%, 35%;
+    --door-lightGray: 0, 0%, 49%;
+    --door-selected: 22, 73%, 40%;
+
     --radius: 0.5rem;
   }
 

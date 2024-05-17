@@ -78,6 +78,17 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        door: {
+          DEFAULT: "hsl(var(--card))",
+          white: "hsl(var(--door-white))",
+          beige: "hsl(var(--door-beige))",
+          brown: "hsl(var(--door-brown))",
+          darkBrown: "hsl(var(--door-darkBrown))",
+          gray: "hsl(var(--door-gray))",
+          lighterGray: "hsl(var(--door-lighterGray))",
+          lightGray: "hsl(var(--door-lightGray))",
+          selected: "hsl(var(--door-selected))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
