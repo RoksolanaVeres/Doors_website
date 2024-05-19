@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import DoorsCarousel from "../DoorsCarousel";
 
 import doorHandleImg from "../../assets/doors-img/unsplash-images/door-handle.jpg";
 import doorsOpenImg from "../../assets/doors-img/unsplash-images/doors-open.jpg";
@@ -33,8 +32,6 @@ export default function HomePage() {
         <img className="" src={doorHandleImg} alt="" />
         <img className="" src={windowImg} alt="" />
         <div className="">Також ми продаємо вікна, підвіконники та відливи</div>
-        {/* <DoorsCarousel/> */}
-      
       </div>
     </>
   );

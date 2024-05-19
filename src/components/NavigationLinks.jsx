@@ -13,36 +13,35 @@ export default function NavigationLinks() {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "text-accent-main font-semibold hover:underline"
+                ? "font-semibold text-accent-main hover:underline"
                 : "font-semibold text-muted-foreground hover:underline"
             }
           >
             LOGO
-            {/* <img className="w-8" src={doorImg} alt="" /> */}
           </NavLink>
         </li>
         <li>
           <NavLink
-            to="/catalogue"
+            to="/doors"
             className={({ isActive }) =>
               isActive
-                ? "text-accent-main font-semibold hover:underline"
+                ? "font-semibold text-accent-main hover:underline"
                 : "font-semibold text-muted-foreground hover:underline"
             }
           >
-            Каталог
+            Двері
           </NavLink>
         </li>
         <li>
           <NavLink
-            to="/brands"
+            to="/windows"
             className={({ isActive }) =>
               isActive
-                ? "text-accent-main font-semibold hover:underline"
+                ? "font-semibold text-accent-main hover:underline"
                 : "font-semibold text-muted-foreground hover:underline"
             }
           >
-            Бренди
+            Вікна
           </NavLink>
         </li>
         <li>
@@ -50,11 +49,11 @@ export default function NavigationLinks() {
             to="/services"
             className={({ isActive }) =>
               isActive
-                ? "text-accent-main font-semibold hover:underline"
+                ? "font-semibold text-accent-main hover:underline"
                 : "font-semibold text-muted-foreground hover:underline"
             }
           >
-            Послуги
+            Наші послуги
           </NavLink>
         </li>
         <li>
@@ -62,7 +61,7 @@ export default function NavigationLinks() {
             to="/contacts"
             className={({ isActive }) =>
               isActive
-                ? "text-accent-main font-semibold hover:underline"
+                ? "font-semibold text-accent-main hover:underline"
                 : "font-semibold text-muted-foreground hover:underline"
             }
           >

@@ -55,7 +55,8 @@ function defineButtonColor(doorColor) {
 }
 
 export default function DoorCard({ door }) {
-  const [doorColor, setDoorColor] = useState(null);
+  const defaultColor = Object.keys(door.colors)[0];
+  const [doorColor, setDoorColor] = useState(defaultColor);
 
   function handleColorClick(selectedColor) {
     setDoorColor(selectedColor);

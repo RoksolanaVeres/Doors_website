@@ -2,8 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./components/pages/RootLayout";
 import HomePage from "./components/pages/HomePage";
 import ContactsPage from "./components/pages/ContactsPage";
-import CataloguePage from "./components/pages/CataloguePage";
-import BrandsPage from "./components/pages/BrandsPage";
+import DoorsPage from "./components/pages/DoorsPage";
+import WindowsPage from "./components/pages/WindowsPage";
 import ServicesPage from "./components/pages/ServicesPage";
 
 export default function App() {
@@ -13,8 +13,8 @@ export default function App() {
       element: <RootLayout />,
       children: [
         { path: "/", element: <HomePage /> },
-        { path: "/catalogue", element: <CataloguePage /> },
-        { path: "/brands", element: <BrandsPage /> },
+        { path: "/doors", element: <DoorsPage /> },
+        { path: "/windows", element: <WindowsPage /> },
         { path: "/services", element: <ServicesPage /> },
         { path: "/contacts", element: <ContactsPage /> },
       ],
@@ -23,3 +23,13 @@ export default function App() {
 
   return <RouterProvider router={router} />;
 }
+
+
+// to do:
+// - steel doors from Міністерство дверей https://ministerstvo-dverej.ua/kataloh/
+// - add pdf catalogues Magda & Termoplast 
+// - doors sorting: type (inner, outer), manufacturer
+// - page / link to each door??? 
+// - some description???
+// - Windows from https://plamet.ua/vikna/
+
