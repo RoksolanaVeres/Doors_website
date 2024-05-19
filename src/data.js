@@ -47,6 +47,21 @@ import DruidVeneraImg from "@/assets/doors-img/druid/druid-venera.png";
 import DruidZhenevaImg from "@/assets/doors-img/druid/druid-zheneva.png";
 import DruidZlataImg from "@/assets/doors-img/druid/druid-zlata.png";
 
+// Druid colors
+import ColorAstanaMerle from "@/assets/doors-img/druid/color-astana-merle.png";
+import ColorAstanaRozvud from "@/assets/doors-img/druid/color-astana-rozvud.png";
+import ColorBileDerevo from "@/assets/doors-img/druid/color-bile-derevo.png";
+import ColorBilyi1129 from "@/assets/doors-img/druid/color-bilyi-1129.png";
+import ColorBilyiMat from "@/assets/doors-img/druid/color-bilyi-mat.png";
+import ColorDubShaleHrafit from "@/assets/doors-img/druid/color-dub-shale-hrafit.png";
+import ColorFiladelfiiaCrem from "@/assets/doors-img/druid/color-filadelfiia-krem.png";
+import ColorHorikhLisovyi from "@/assets/doors-img/druid/color-horikh-lisovyi.png";
+import ColorHorikhTemnyi from "@/assets/doors-img/druid/color-horikh-temnyi.png";
+import ColorKarpatskaYalyna from "@/assets/doors-img/druid/color-karpatska-yalyna.png";
+import ColorParma from "@/assets/doors-img/druid/color-parma.png";
+import ColorShvedskaVysjnia from "@/assets/doors-img/druid/color-shvedska-vyshnia.png";
+import ColorTikoveDerevo from "@/assets/doors-img/druid/color-tikove-derevo.png";
+
 // Gorgania
 import GorganiaBeskydBrownImg from "@/assets/doors-img/gorgania/gorgania-beskyd-brown.png";
 import GorganiaBeskydLightGrayImg from "@/assets/doors-img/gorgania/gorgania-beskyd-gray-light.png";
@@ -108,6 +123,22 @@ import GorganiaYavorynaLighterGrayImg from "@/assets/doors-img/gorgania/gorgania
 import GorganiaYavorynaGrayImg from "@/assets/doors-img/gorgania/gorgania-yavoryna-gray.png";
 import GorganiaYavorynaWhiteImg from "@/assets/doors-img/gorgania/gorgania-yavoryna-white.png";
 
+const druidColors = {
+  bileDerevo: ColorBileDerevo,
+  astanaRozvud: ColorAstanaRozvud,
+  horikhLisovyi: ColorHorikhLisovyi,
+  bilyiMat: ColorBilyiMat,
+  karpatskaYalyna: ColorKarpatskaYalyna,
+  parma: ColorParma,
+  horikhTemnyi: ColorHorikhTemnyi,
+  shvedskaVyshnia: ColorShvedskaVysjnia,
+  astanaMerle: ColorAstanaMerle,
+  bilyi1129: ColorBilyi1129,
+  dubShaleHrafit: ColorDubShaleHrafit,
+  filadelfiiaCrem: ColorFiladelfiiaCrem,
+  tikoveDerevo: ColorTikoveDerevo,
+};
+
 const doors = [
   {
     title: "Акорд",
@@ -115,6 +146,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidAkordImg,
+      ...druidColors,
     },
   },
   {
@@ -123,6 +155,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidAkraImg,
+      ...druidColors,
     },
   },
   {
@@ -131,6 +164,7 @@ const doors = [
     description: "some description",
     colors: {
       lightGray: DruidAlaskaImg,
+      ...druidColors,
     },
   },
   {
@@ -139,6 +173,7 @@ const doors = [
     description: "some description",
     colors: {
       beige: DruidArhentynaImg,
+      ...druidColors,
     },
   },
   {
@@ -147,6 +182,7 @@ const doors = [
     description: "some description",
     colors: {
       gray: DruidBerlinImg,
+      ...druidColors,
     },
   },
   {
@@ -155,6 +191,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidBrazilImg,
+      ...druidColors,
     },
   },
   {
@@ -163,6 +200,7 @@ const doors = [
     description: "some description",
     colors: {
       beige: DruidCanadaImg,
+      ...druidColors,
     },
   },
   {
@@ -171,6 +209,7 @@ const doors = [
     description: "some description",
     colors: {
       brown: DruidCityLightImg,
+      ...druidColors,
     },
   },
   {
@@ -179,6 +218,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidCitySpaceImg,
+      ...druidColors,
     },
   },
   {
@@ -187,6 +227,7 @@ const doors = [
     description: "some description",
     colors: {
       lightGray: DruidCityImg,
+      ...druidColors,
     },
   },
   {
@@ -195,6 +236,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidDaniiaImg,
+      ...druidColors,
     },
   },
   {
@@ -203,6 +245,7 @@ const doors = [
     description: "some description",
     colors: {
       brown: DruidDoubleImg,
+      ...druidColors,
     },
   },
   {
@@ -211,6 +254,7 @@ const doors = [
     description: "some description",
     colors: {
       brown: DruidDubaiImg,
+      ...druidColors,
     },
   },
   {
@@ -219,6 +263,7 @@ const doors = [
     description: "some description",
     colors: {
       brown: DruidFortunaImg,
+      ...druidColors,
     },
   },
   {
@@ -227,6 +272,7 @@ const doors = [
     description: "some description",
     colors: {
       darkBrown: DruidGreeceImg,
+      ...druidColors,
     },
   },
   {
@@ -235,6 +281,7 @@ const doors = [
     description: "some description",
     colors: {
       darkBrown: DruidKonhoDoubleImg,
+      ...druidColors,
     },
   },
   {
@@ -243,6 +290,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidKonhoImg,
+      ...druidColors,
     },
   },
   {
@@ -251,6 +299,7 @@ const doors = [
     description: "some description",
     colors: {
       brown: DruidLeoImg,
+      ...druidColors,
     },
   },
   {
@@ -259,6 +308,7 @@ const doors = [
     description: "some description",
     colors: {
       beige: DruidLineImg,
+      ...druidColors,
     },
   },
   {
@@ -267,6 +317,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidLondonClasicImg,
+      ...druidColors,
     },
   },
   {
@@ -275,6 +326,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidLondonImg,
+      ...druidColors,
     },
   },
   {
@@ -283,6 +335,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidMaltaImg,
+      ...druidColors,
     },
   },
   {
@@ -291,6 +344,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidManhetenDoubleImg,
+      ...druidColors,
     },
   },
   {
@@ -299,6 +353,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidManhetenImg,
+      ...druidColors,
     },
   },
   {
@@ -307,6 +362,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidMaroccoImg,
+      ...druidColors,
     },
   },
 
@@ -316,6 +372,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidMarsImg,
+      ...druidColors,
     },
   },
   {
@@ -324,6 +381,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidMilanImg,
+      ...druidColors,
     },
   },
   {
@@ -332,6 +390,7 @@ const doors = [
     description: "some description",
     colors: {
       brown: DruidNewYorkImg,
+      ...druidColors,
     },
   },
   {
@@ -340,6 +399,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidNizzaImg,
+      ...druidColors,
     },
   },
   {
@@ -348,6 +408,7 @@ const doors = [
     description: "some description",
     colors: {
       beige: DruidParisImg,
+      ...druidColors,
     },
   },
   {
@@ -356,6 +417,7 @@ const doors = [
     description: "some description",
     colors: {
       lighterGray: DruidPekinNewImg,
+      ...druidColors,
     },
   },
   {
@@ -364,6 +426,7 @@ const doors = [
     description: "some description",
     colors: {
       beige: DruidPekinSpaceImg,
+      ...druidColors,
     },
   },
   {
@@ -372,6 +435,7 @@ const doors = [
     description: "some description",
     colors: {
       beige: DruidPekinImg,
+      ...druidColors,
     },
   },
   {
@@ -380,6 +444,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidPiramidaNImg,
+      ...druidColors,
     },
   },
   {
@@ -388,6 +453,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidPrahaImg,
+      ...druidColors,
     },
   },
   {
@@ -396,6 +462,7 @@ const doors = [
     description: "some description",
     colors: {
       darkBrown: DruidRomeImg,
+      ...druidColors,
     },
   },
   {
@@ -404,6 +471,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidSakharaImg,
+      ...druidColors,
     },
   },
   {
@@ -412,6 +480,7 @@ const doors = [
     description: "some description",
     colors: {
       brown: DruidSakura2Img,
+      ...druidColors,
     },
   },
   {
@@ -420,6 +489,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidSakuraImg,
+      ...druidColors,
     },
   },
   {
@@ -428,6 +498,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidScotlandImg,
+      ...druidColors,
     },
   },
   {
@@ -436,6 +507,7 @@ const doors = [
     description: "some description",
     colors: {
       darkBrown: DruidSidneyImg,
+      ...druidColors,
     },
   },
   {
@@ -444,6 +516,7 @@ const doors = [
     description: "some description",
     colors: {
       beige: DruidSpaceImg,
+      ...druidColors,
     },
   },
   {
@@ -452,6 +525,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidTrioImg,
+      ...druidColors,
     },
   },
   {
@@ -459,7 +533,8 @@ const doors = [
     manufacturer: "Друїд",
     description: "some description",
     colors: {
-      beige: DruidVeneciiaImg,
+      white: DruidTrioImg,
+      ...druidColors,
     },
   },
   {
@@ -468,6 +543,7 @@ const doors = [
     description: "some description",
     colors: {
       beige: DruidVeneraImg,
+      ...druidColors,
     },
   },
   {
@@ -476,6 +552,7 @@ const doors = [
     description: "some description",
     colors: {
       beige: DruidZhenevaImg,
+      ...druidColors,
     },
   },
   {
@@ -484,6 +561,7 @@ const doors = [
     description: "some description",
     colors: {
       white: DruidZlataImg,
+      ...druidColors,
     },
   },
   {

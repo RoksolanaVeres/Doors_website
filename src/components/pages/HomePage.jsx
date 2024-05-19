@@ -33,6 +33,7 @@ export default function HomePage() {
         <img className="" src={doorHandleImg} alt="" />
         <img className="" src={windowImg} alt="" />
         <div className="">Також ми продаємо вікна, підвіконники та відливи</div>
+        {/* <DoorsCarousel/> */}
       
       </div>
     </>
