@@ -9,50 +9,28 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-// functions
-function defineButtonColor(doorColor) {
-  if (doorColor === "white") {
-    return "bg-door-white";
-  } else if (doorColor === "beige") {
-    return "bg-door-beige";
-  } else if (doorColor === "brown") {
-    return "bg-door-brown";
-  } else if (doorColor === "darkBrown") {
-    return "bg-door-darkBrown";
-  } else if (doorColor === "gray") {
-    return "bg-door-gray";
-  } else if (doorColor === "lighterGray") {
-    return "bg-door-lighterGray";
-  } else if (doorColor === "lightGray") {
-    return "bg-door-lightGray";
-  } else if (doorColor === "bileDerevo") {
-    return "bg-door-bileDerevo";
-  } else if (doorColor === "astanaMerle") {
-    return "bg-door-astanaMerle";
-  } else if (doorColor === "astanaRozvud") {
-    return "bg-door-astanaRozvud";
-  } else if (doorColor === "bilyi1129") {
-    return "bg-door-bilyi1129";
-  } else if (doorColor === "bilyiMat") {
-    return "bg-door-bilyiMat";
-  } else if (doorColor === "dubShaleHrafit") {
-    return "bg-door-dubShaleHrafit";
-  } else if (doorColor === "filadelfiiaCrem") {
-    return "bg-door-filadelfiiaCrem";
-  } else if (doorColor === "horikhLisovyi") {
-    return "bg-door-horikhLisovyi";
-  } else if (doorColor === "horikhTemnyi") {
-    return "bg-door-horikhTemnyi";
-  } else if (doorColor === "karpatskaYalyna") {
-    return "bg-door-karpatskaYalyna";
-  } else if (doorColor === "parma") {
-    return "bg-door-parma";
-  } else if (doorColor === "shvedskaVyshnia") {
-    return "bg-door-shvedskaVyshnia";
-  } else if (doorColor === "tikoveDerevo") {
-    return "bg-door-tikoveDerevo";
-  }
-}
+const btnColors = {
+  white: "bg-door-white",
+  beige: "bg-door-beige",
+  brown: "bg-door-brown",
+  darkBrown: "bg-door-darkBrown",
+  gray: "bg-door-gray",
+  lighterGray: "bg-door-lighterGray",
+  lightGray: "bg-door-lightGray",
+  bileDerevo: "bg-door-bileDerevo",
+  astanaMerle: "bg-door-astanaMerle",
+  astanaRozvud: "bg-door-astanaRozvud",
+  bilyi1129: "bg-door-bilyi1129",
+  bilyiMat: "bg-door-bilyiMat",
+  dubShaleHrafit: "bg-door-dubShaleHrafit",
+  filadelfiiaCrem: "bg-door-filadelfiiaCrem",
+  horikhLisovyi: "bg-door-horikhLisovyi",
+  horikhTemnyi: "bg-door-horikhTemnyi",
+  karpatskaYalyna: "bg-door-karpatskaYalyna",
+  parma: "bg-door-parma",
+  shvedskaVyshnia: "bg-door-shvedskaVyshnia",
+  tikoveDerevo: "bg-door-tikoveDerevo",
+};
 
 export default function DoorCard({ door }) {
   const defaultColor = Object.keys(door.colors)[0];
@@ -82,7 +60,7 @@ export default function DoorCard({ door }) {
               <button
                 onClick={() => handleColorClick(color)}
                 key={color}
-                className={`size-5 border-2 ${doorColor === color ? "border-door-selected" : "border-border"} ${defineButtonColor(color)}`}
+                className={`size-5 border-2 ${doorColor === color ? "border-door-selected" : "border-border"} ${btnColors[color]}`}
               />
             );
           })}
