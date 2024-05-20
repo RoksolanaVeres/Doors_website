@@ -1,31 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: [
-    "./pages/**/*.{js,jsx}",
-    "./components/**/*.{js,jsx}",
-    "./app/**/*.{js,jsx}",
-    "./src/**/*.{js,jsx}",
-  ],
+  content: ["./src/**/*.{js,jsx}"],
   prefix: "",
   theme: {
-    fontFamily: {
-      inter: ["Inter Variable", "sans-serif"],
-      lora: ["Lora Variable", "serif"],
-      roboto: ["Roboto Slab Variable", "serif"],
-    },
-
-    screens: {
-      sm: "500px",
-      md: "768px",
-      lg: "976px",
-      xl: "1440px",
-    },
-
-    maxWidth: {
-      large: "1600px",
-    },
-
     container: {
       center: true,
       padding: "2rem",
@@ -33,15 +11,27 @@ module.exports = {
         "2xl": "1400px",
       },
     },
-
+    screens: {
+      sm: "500px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
+    fontFamily: {
+      inter: ["Inter Variable", "sans-serif"],
+      lora: ["Lora Variable", "serif"],
+      roboto: ["Roboto Slab Variable", "serif"],
+    },
     extend: {
+      maxWidth: {
+        large: "1600px",
+      },
       padding: {
         "container-padding": "150px",
       },
       gridTemplateColumns: {
         "auto-fill-265": "repeat(auto-fill, minmax(265px, 1fr))",
       },
-
       colors: {
         background_secondary: "hsl(var(--background_secondary))",
         border: "hsl(var(--border))",
@@ -100,7 +90,6 @@ module.exports = {
           parma: "hsl(var(--door-parma))",
           shvedskaVyshnia: "hsl(var(--door-shvedskaVyshnia))",
           tikoveDerevo: "hsl(var(--door-tikoveDerevo))",
-
           selected: "hsl(var(--door-selected))",
         },
       },
