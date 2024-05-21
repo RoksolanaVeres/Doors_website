@@ -8,12 +8,13 @@ export default function DoorsPage() {
       <Helmet>
         <title>Вікна & Двері | Двері </title>
       </Helmet>
-      <div className="grid grid-cols-auto-fill-265 gap-4">
-        {doorsData.map((door) => {
-          return <DoorCard key={door.title} door={door} />;
-        })}
+      <div className="w-full px-container-padding py-24">
+        <div className="grid grid-cols-auto-fill-265 gap-10">
+          {doorsData.map((door) => {
+            return <DoorCard key={door.title} door={door} />;
+          })}
+        </div>
       </div>
     </>
   );
 }
-

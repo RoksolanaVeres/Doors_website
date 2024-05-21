@@ -1,12 +1,11 @@
 import { NavLink } from "react-router-dom";
-import doorImg from "../assets/icons/door.png";
 
 export default function NavigationLinks() {
   return (
-    <nav className="flex justify-center ">
+    <nav className="flex">
       <ul
         id="navigation-list"
-        className="flex w-full max-w-large justify-between px-container-padding py-5"
+        className="flex w-full max-w-large justify-between gap-4"
       >
         <li>
           <NavLink

@@ -23,16 +23,24 @@ module.exports = {
       roboto: ["Roboto Slab Variable", "serif"],
     },
     extend: {
-      maxWidth: {
-        large: "1600px",
+      backgroundImage: {
+        "room-interior":
+          "url('./src/assets/doors-img/unsplash-images/room-interior.jpg')",
+        "exterior-doors":
+          "url('./src/assets/doors-img/unsplash-images/steel-door.jpg')",
+        "interior-doors":
+          "url('./src/assets/doors-img/unsplash-images/interior-door.jpg')",
+        "windows":
+          "url('./src/assets/doors-img/unsplash-images/window.jpg')",
       },
       padding: {
-        "container-padding": "150px",
+        "container-padding": "5%",
       },
       gridTemplateColumns: {
         "auto-fill-265": "repeat(auto-fill, minmax(265px, 1fr))",
       },
       colors: {
+        blur: "hsla(var(--blur))",
         background_secondary: "hsl(var(--background_secondary))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

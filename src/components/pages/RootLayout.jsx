@@ -9,13 +9,10 @@ export default function RootLayout() {
       id="page-layout"
       className="flex min-h-screen flex-col justify-between"
     >
-      <div className="">
+      <div>
         <Header />
-        <NavigationLinks />
-        <main className="flex justify-center">
-          <div className="px-container-padding w-full max-w-large py-12">
-            <Outlet />
-          </div>
+        <main>
+          <Outlet />
         </main>
       </div>
       <Footer />

@@ -6,7 +6,9 @@ export default function ServicesPage() {
       <Helmet>
         <title>Вікна & Двері | Послуги</title>
       </Helmet>
-      <h2>Services Page</h2>
+      <div className="w-full px-container-padding py-24">
+        <h2>Services Page</h2>
+      </div>
     </>
   );
 }

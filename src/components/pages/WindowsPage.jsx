@@ -6,7 +6,9 @@ export default function WindowsPage() {
       <Helmet>
         <title>Вікна & Двері | Вікна</title>
       </Helmet>
-      <h2>Windows page</h2>
+      <div className="w-full px-container-padding py-24">
+        <h2>Windows page</h2>
+      </div>
     </>
   );
 }
