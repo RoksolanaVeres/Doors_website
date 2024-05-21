@@ -23,16 +23,6 @@ module.exports = {
       roboto: ["Roboto Slab Variable", "serif"],
     },
     extend: {
-      backgroundImage: {
-        "room-interior":
-          "url('./src/assets/doors-img/unsplash-images/room-interior.jpg')",
-        "exterior-doors":
-          "url('./src/assets/doors-img/unsplash-images/steel-door.jpg')",
-        "interior-doors":
-          "url('./src/assets/doors-img/unsplash-images/interior-door.jpg')",
-        "windows":
-          "url('./src/assets/doors-img/unsplash-images/window.jpg')",
-      },
       padding: {
         "container-padding": "5%",
       },
