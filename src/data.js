@@ -142,6 +142,7 @@ const druidColors = {
 const doors = [
   {
     title: "Акорд",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -151,6 +152,7 @@ const doors = [
   },
   {
     title: "Акра",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -160,6 +162,7 @@ const doors = [
   },
   {
     title: "Аляска",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -169,6 +172,7 @@ const doors = [
   },
   {
     title: "Аргентина",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -178,6 +182,7 @@ const doors = [
   },
   {
     title: "Берлін",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -187,6 +192,7 @@ const doors = [
   },
   {
     title: "Бразилія",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -196,6 +202,7 @@ const doors = [
   },
   {
     title: "Канада",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -205,6 +212,7 @@ const doors = [
   },
   {
     title: "Сіті Лайт",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -214,6 +222,7 @@ const doors = [
   },
   {
     title: "Сіті Спейс",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -223,6 +232,7 @@ const doors = [
   },
   {
     title: "Сіті",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -232,6 +242,7 @@ const doors = [
   },
   {
     title: "Данія",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -241,6 +252,7 @@ const doors = [
   },
   {
     title: "Дабл",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -250,6 +262,7 @@ const doors = [
   },
   {
     title: "Дубай",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -259,6 +272,7 @@ const doors = [
   },
   {
     title: "Фортуна",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -268,6 +282,7 @@ const doors = [
   },
   {
     title: "Греція",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -277,6 +292,7 @@ const doors = [
   },
   {
     title: "Конго Дабл",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -286,6 +302,7 @@ const doors = [
   },
   {
     title: "Конго",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -295,6 +312,7 @@ const doors = [
   },
   {
     title: "Лео",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -304,6 +322,7 @@ const doors = [
   },
   {
     title: "Лайн",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -313,6 +332,7 @@ const doors = [
   },
   {
     title: "Лондон Класік",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -322,6 +342,7 @@ const doors = [
   },
   {
     title: "Лондон",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -331,6 +352,7 @@ const doors = [
   },
   {
     title: "Мальта",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -340,6 +362,7 @@ const doors = [
   },
   {
     title: "Манхетен Дабл",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -349,6 +372,7 @@ const doors = [
   },
   {
     title: "Манхетен",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -358,6 +382,7 @@ const doors = [
   },
   {
     title: "Марокко",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -368,6 +393,7 @@ const doors = [
 
   {
     title: "Марс",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -377,6 +403,7 @@ const doors = [
   },
   {
     title: "Мілан",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -386,6 +413,7 @@ const doors = [
   },
   {
     title: "Нью Йорк",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -395,6 +423,7 @@ const doors = [
   },
   {
     title: "Ніцца",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -404,6 +433,7 @@ const doors = [
   },
   {
     title: "Париж",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -413,6 +443,7 @@ const doors = [
   },
   {
     title: "Пекін New",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -422,6 +453,7 @@ const doors = [
   },
   {
     title: "Пекін Спейс",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -431,6 +463,7 @@ const doors = [
   },
   {
     title: "Пекін",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -440,6 +473,7 @@ const doors = [
   },
   {
     title: "Піраміда N",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -449,6 +483,7 @@ const doors = [
   },
   {
     title: "Прага",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -458,6 +493,7 @@ const doors = [
   },
   {
     title: "Рим",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -467,6 +503,7 @@ const doors = [
   },
   {
     title: "Сахара",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -476,6 +513,7 @@ const doors = [
   },
   {
     title: "Сакура 2",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -485,6 +523,7 @@ const doors = [
   },
   {
     title: "Сакура",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -494,6 +533,7 @@ const doors = [
   },
   {
     title: "Шотландія",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -503,6 +543,7 @@ const doors = [
   },
   {
     title: "Сідней",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -512,6 +553,7 @@ const doors = [
   },
   {
     title: "Спейс",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -521,6 +563,7 @@ const doors = [
   },
   {
     title: "Тріо",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -530,6 +573,7 @@ const doors = [
   },
   {
     title: "Венеція",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -539,6 +583,7 @@ const doors = [
   },
   {
     title: "Венера",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -548,6 +593,7 @@ const doors = [
   },
   {
     title: "Женева",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -557,6 +603,7 @@ const doors = [
   },
   {
     title: "Злата",
+    type: "interior",
     manufacturer: "Друїд",
     description: "some description",
     colors: {
@@ -566,6 +613,7 @@ const doors = [
   },
   {
     title: "Бескид",
+    type: "interior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {
@@ -578,6 +626,7 @@ const doors = [
   },
   {
     title: "Говерла",
+    type: "interior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {
@@ -590,6 +639,7 @@ const doors = [
   },
   {
     title: "Грофа",
+    type: "interior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {
@@ -602,6 +652,7 @@ const doors = [
   },
   {
     title: "Красія",
+    type: "interior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {
@@ -614,6 +665,7 @@ const doors = [
   },
   {
     title: "Магура",
+    type: "interior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {
@@ -626,6 +678,7 @@ const doors = [
   },
   {
     title: "Петрос",
+    type: "interior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {
@@ -638,6 +691,7 @@ const doors = [
   },
   {
     title: "Плай",
+    type: "interior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {
@@ -650,6 +704,7 @@ const doors = [
   },
   {
     title: "Стіг",
+    type: "interior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {
@@ -662,6 +717,7 @@ const doors = [
   },
   {
     title: "Стримба",
+    type: "interior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {
@@ -674,6 +730,7 @@ const doors = [
   },
   {
     title: "Яворина",
+    type: "interior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {
