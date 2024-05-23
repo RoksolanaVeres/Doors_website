@@ -717,7 +717,7 @@ const doors = [
   },
   {
     title: "Стримба",
-    type: "interior",
+    type: "exterior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {
@@ -730,7 +730,7 @@ const doors = [
   },
   {
     title: "Яворина",
-    type: "interior",
+    type: "exterior",
     manufacturer: "Gorgania",
     description: "some description",
     colors: {

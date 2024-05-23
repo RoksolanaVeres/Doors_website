@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import roomInteriorImg from "../../assets/doors-img/unsplash-images/room-interior.jpg"
-import exteriorDoorsImg from "../../assets/doors-img/unsplash-images/steel-door.jpg"
-import interiorDoorsImg from "../../assets/doors-img/unsplash-images/interior-door.jpg"
-import windowImg from "../../assets/doors-img/unsplash-images/window.jpg"
+import roomInteriorImg from "../../assets/doors-img/unsplash-images/room-interior.jpg";
+import exteriorDoorsImg from "../../assets/doors-img/unsplash-images/steel-door.jpg";
+import interiorDoorsImg from "../../assets/doors-img/unsplash-images/interior-door.jpg";
+import windowImg from "../../assets/doors-img/unsplash-images/window.jpg";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
@@ -25,34 +26,37 @@ export default function HomePage() {
         </div>
       </div>
       <div id="assortment" className="flex flex-col items-center py-20">
-        <h2 className="pb-20 text-3xl font-semibold px-container-padding">
+        <h2 className="px-container-padding pb-20 text-3xl font-semibold">
           Наш асортимент включає:
         </h2>
         <div className="flex w-full flex-wrap justify-between gap-10">
-          <div
+          <Link
+            to="/doors"
             className="grid h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
             style={{ backgroundImage: `url(${exteriorDoorsImg})` }}
           >
             <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
               Вхідні Двері
             </h3>
-          </div>
-          <div
+          </Link>
+          <Link
+            to="/doors"
             className="grid h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
             style={{ backgroundImage: `url(${interiorDoorsImg})` }}
           >
             <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
               Міжкімнатні Двері
             </h3>
-          </div>
-          <div
+          </Link>
+          <Link
+            to="/windows"
             className="grid  h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
-            style={{ backgroundImage: `url(${windowImg})`}}
+            style={{ backgroundImage: `url(${windowImg})` }}
           >
             <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
               Вікна
             </h3>
-          </div>
+          </Link>
         </div>
       </div>
     </>
