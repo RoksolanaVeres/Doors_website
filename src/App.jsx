@@ -32,4 +32,6 @@ export default function App() {
 // - page / link to each door??? 
 // - some description???
 // - Windows from https://plamet.ua/vikna/
+// !!! back button doesn't work
+// !!! when go from homePage to InteriorDoors the page doesn't appear at the very top
 

@@ -9,6 +9,10 @@ export default function DoorsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [filter, setFilter] = useState(searchParams.get("type") || "all");
 
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   useEffect(
     () => setSearchParams((params) => ({ ...params, type: filter })),
     [filter],
@@ -29,6 +33,9 @@ export default function DoorsPage() {
         <title>Вікна & Двері | Двері </title>
       </Helmet>
       <div className="w-full px-container-padding py-24">
+        {/* <div className="">
+          {filter === "interior" && <p>Виробники міжкімнатних дверей</p>}
+        </div> */}
         <div className="flex justify-end gap-1 pb-10">
           <Button
             size="sm"
