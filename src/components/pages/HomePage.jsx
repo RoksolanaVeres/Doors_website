@@ -1,9 +1,8 @@
 import { Helmet } from "react-helmet-async";
-import roomInterior from "../../assets/doors-img/unsplash-images/room-interior.jpg"
-import exteriorDoors from "../../assets/doors-img/unsplash-images/steel-door.jpg"
-import interiorDoors from "../../assets/doors-img/unsplash-images/interior-door.jpg"
-import window from "../../assets/doors-img/unsplash-images/window.jpg"
-
+import roomInteriorImg from "../../assets/doors-img/unsplash-images/room-interior.jpg"
+import exteriorDoorsImg from "../../assets/doors-img/unsplash-images/steel-door.jpg"
+import interiorDoorsImg from "../../assets/doors-img/unsplash-images/interior-door.jpg"
+import windowImg from "../../assets/doors-img/unsplash-images/window.jpg"
 
 export default function HomePage() {
   return (
@@ -12,8 +11,8 @@ export default function HomePage() {
         <title>Вікна & Двері</title>
       </Helmet>
       <div
-        className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url(${roomInterior})` }}
+        className={`relative h-screen bg-cover bg-center`}
+        style={{ backgroundImage: `url(${roomInteriorImg})` }}
       >
         <div className="flex h-full w-1/2 flex-col justify-center gap-10 bg-blur px-container-padding">
           <h1 className="text-6xl font-bold">
@@ -26,13 +25,13 @@ export default function HomePage() {
         </div>
       </div>
       <div id="assortment" className="flex flex-col items-center py-20">
-        <h2 className="pb-20 text-3xl font-semibold">
+        <h2 className="pb-20 text-3xl font-semibold px-container-padding">
           Наш асортимент включає:
         </h2>
         <div className="flex w-full flex-wrap justify-between gap-10">
           <div
             className="grid h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
-            style={{ backgroundImage: `url(${exteriorDoors})` }}
+            style={{ backgroundImage: `url(${exteriorDoorsImg})` }}
           >
             <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
               Вхідні Двері
@@ -40,7 +39,7 @@ export default function HomePage() {
           </div>
           <div
             className="grid h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
-            style={{ backgroundImage: `url(${interiorDoors})` }}
+            style={{ backgroundImage: `url(${interiorDoorsImg})` }}
           >
             <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
               Міжкімнатні Двері
@@ -48,7 +47,7 @@ export default function HomePage() {
           </div>
           <div
             className="grid  h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
-            style={{ backgroundImage: `url(${window})` }}
+            style={{ backgroundImage: `url(${windowImg})`}}
           >
             <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
               Вікна

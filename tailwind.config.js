@@ -1,3 +1,5 @@
+import roomInterior from "./src/assets/doors-img/unsplash-images/interior-door"
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
