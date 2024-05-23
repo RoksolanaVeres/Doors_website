@@ -31,7 +31,7 @@ export default function HomePage() {
         </h2>
         <div className="flex w-full flex-wrap justify-between gap-10">
           <Link
-            to="/doors"
+            to="/doors?type=exterior"
             className="grid h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
             style={{ backgroundImage: `url(${exteriorDoorsImg})` }}
           >
@@ -40,7 +40,7 @@ export default function HomePage() {
             </h3>
           </Link>
           <Link
-            to="/doors"
+            to="/doors?type=interior"
             className="grid h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
             style={{ backgroundImage: `url(${interiorDoorsImg})` }}
           >
