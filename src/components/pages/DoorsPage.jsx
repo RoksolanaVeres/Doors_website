@@ -1,13 +1,21 @@
-import { Helmet } from "react-helmet-async";
 import doorsData from "@/data";
+
 import DoorCard from "../DoorCard";
+import { Helmet } from "react-helmet-async";
 import { Button } from "../ui/button";
-import { useEffect, useState } from "react";
+import { ArrowBigUp } from "lucide-react";
+
+import { useEffect, useState, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
+
+const PER_PAGE = 8;
 
 export default function DoorsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [filter, setFilter] = useState(searchParams.get("type") || "all");
+  const [page, setPage] = useState(1);
+  const { ref, inView } = useInView(false);
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -18,24 +26,33 @@ export default function DoorsPage() {
     [filter],
   );
 
-  let doorsToDisplay;
+  useEffect(() => {
+    if (inView) {
+      setPage((page) => page + 1);
+    }
+  }, [inView]);
+
+  let selectedCategoryDoors;
   if (filter === "all") {
-    doorsToDisplay = doorsData;
+    selectedCategoryDoors = doorsData;
   } else if (filter === "interior") {
-    doorsToDisplay = doorsData.filter((door) => door.type === "interior");
+    selectedCategoryDoors = doorsData.filter(
+      (door) => door.type === "interior",
+    );
   } else if (filter === "exterior") {
-    doorsToDisplay = doorsData.filter((door) => door.type === "exterior");
+    selectedCategoryDoors = doorsData.filter(
+      (door) => door.type === "exterior",
+    );
   }
+
+  let doorsToDisplay = selectedCategoryDoors.slice(0, page * PER_PAGE);
 
   return (
     <>
       <Helmet>
         <title>Вікна & Двері | Двері </title>
       </Helmet>
-      <div className="w-full px-container-padding py-24">
-        {/* <div className="">
-          {filter === "interior" && <p>Виробники міжкімнатних дверей</p>}
-        </div> */}
+      <div className="mx-auto w-full max-w-[1600px] px-container-padding py-24">
         <div className="flex justify-end gap-1 pb-10">
           <Button
             size="sm"
@@ -68,7 +85,49 @@ export default function DoorsPage() {
             return <DoorCard key={door.title} door={door} />;
           })}
         </div>
+        <div className="h-1 w-full" ref={ref}>
+          <ScrollToTopButton />
+        </div>
       </div>
     </>
+  );
+}
+
+function ScrollToTopButton() {
+  const buttonRef = useRef(null);
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  const scrollHandler = () => {
+    const threshold = 350;
+    const button = buttonRef.current;
+    if (window.scrollY > threshold) {
+      button.classList.remove("hidden");
+    } else {
+      button.classList.add("hidden");
+    }
+  };
+
+  useEffect(() => {
+    buttonRef.current.classList.add("hidden");
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.scroll(0, 0);
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
+
+  return (
+    <Button
+      ref={buttonRef}
+      variant="outline"
+      className="fixed bottom-3 right-3 shadow-lg"
+      onClick={scrollToTop}
+    >
+      <ArrowBigUp />
+    </Button>
   );
 }
