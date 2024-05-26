@@ -5,6 +5,18 @@ export default function NavigationLinkItems() {
     <>
       <li>
         <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "font-semibold text-accent-main hover:underline"
+              : "font-semibold text-muted-foreground hover:underline"
+          }
+        >
+          Головна
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
           to="/doors"
           className={({ isActive }) =>
             isActive
@@ -36,7 +48,7 @@ export default function NavigationLinkItems() {
               : "font-semibold text-muted-foreground hover:underline"
           }
         >
-          Наші послуги
+       Послуги
         </NavLink>
       </li>
       <li>
