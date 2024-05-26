@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import NavigationLinkItems from "../NavigationLinkItems";
-import { MenuContext } from "../store/MenuContext";
+import NavigationLinkItems from "./NavigationLinkItems";
+import { MenuContext } from "./store/MenuContext";
 
 export default function DropdownMenu() {
     const {closeMenuIfLinkClicked} = useContext(MenuContext)

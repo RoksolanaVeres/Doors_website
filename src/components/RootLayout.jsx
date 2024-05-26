@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
-import Header from "../Header";
-import Footer from "../Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 import DropdownMenu from "./DropdownMenu";
 import { useContext } from "react";
-import { MenuContext } from "../store/MenuContext";
+import { MenuContext } from "./store/MenuContext";
 
 export default function RootLayout() {
   const { toggleMenuOpenState, menuIsOpen } = useContext(MenuContext);
