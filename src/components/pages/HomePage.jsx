@@ -12,22 +12,38 @@ export default function HomePage() {
         <title>Вікна & Двері</title>
       </Helmet>
       <div
-        className={`relative h-screen bg-cover bg-center`}
+        className={`h-screen bg-cover bg-[90%] md:bg-center`}
         style={{ backgroundImage: `url(${roomInteriorImg})` }}
       >
-        <div className="flex h-full w-1/2 flex-col justify-center gap-10 bg-blur px-container-padding">
-          <h1 className="text-6xl font-bold">
-            Вікна <br />
-            <span className="ml-10 text-7xl">& Двері</span>
+        <div className="flex h-full w-2/3 flex-col justify-center gap-10 bg-blur px-container-padding md:w-1/2">
+          <h1 className="font-lora text-3xl font-semibold uppercase md:text-5xl">
+            Вікна
+            <br />
+            <span className="text-5xl font-bold md:text-7xl">Двері</span>
           </h1>
-          <p className="ml-10 text-base">
+          <p className="text-base">
             Some text about importance of windows and doors
           </p>
         </div>
       </div>
-      <div id="assortment" className="flex flex-col items-center py-20">
-        <h2 className="px-container-padding pb-20 text-3xl font-semibold">
-          Наш асортимент включає:
+
+      {/* <div className="h-screen px-container-padding my-20 w-full grid grid-cols-2 items-center">
+        <div className=""></div>
+  
+          <h2 className="px-container-padding pb-20 text-4xl font-bold">
+            Чому
+            <br />
+            <span className="ml-10 text-6xl">Ми?</span>
+          </h2>
+      </div> */}
+
+      <div
+        id="assortment"
+        className="flex flex-col items-center px-container-padding py-10 md:py-20"
+      >
+        <h2 className="pb-10 text-center font-lora text-2xl font-semibold md:pb-20 md:text-4xl uppercase">
+          Наш <br />
+          <span className="text-4xl md:text-6xl">Асортимент</span>
         </h2>
         <div className="flex w-full flex-wrap justify-between gap-10">
           <Link

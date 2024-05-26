@@ -85,6 +85,9 @@ export default function DoorsPage() {
             return <DoorCard key={door.title} door={door} />;
           })}
         </div>
+        {filter !== "interior" && (
+          <div className="">Каталоги в пдф</div>
+        )}
         <div className="h-1 w-full" ref={ref}>
           <ScrollToTopButton />
         </div>
