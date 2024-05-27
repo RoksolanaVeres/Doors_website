@@ -4,6 +4,7 @@ import exteriorDoorsImg from "../../assets/doors-img/unsplash-images/steel-door.
 import interiorDoorsImg from "../../assets/doors-img/unsplash-images/interior-door.jpg";
 import windowImg from "../../assets/doors-img/unsplash-images/window.jpg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
@@ -15,7 +16,7 @@ export default function HomePage() {
         className="h-screen bg-cover bg-[90%] md:bg-center"
         style={{ backgroundImage: `url(${roomInteriorImg})`}}
       >
-        <div className="flex h-full w-2/3 flex-col justify-center gap-10 px-container-padding md:w-1/2 bg-blur">
+        <motion.div className="flex h-full w-2/3 flex-col justify-center gap-10 px-container-padding md:w-1/2 bg-blur">
           <h1 className="font-lora text-3xl font-semibold uppercase md:text-5xl">
             Вікна
             <br />
@@ -24,7 +25,7 @@ export default function HomePage() {
           <p className="text-base">
             Some text about importance of windows and doors
           </p>
-        </div>
+        </motion.div>
       </div>
 
       {/* <div className="h-screen px-container-padding my-20 w-full grid grid-cols-2 items-center">

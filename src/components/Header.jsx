@@ -8,6 +8,8 @@ import "@theme-toggles/react/css/DarkSide.css";
 import { DarkSide } from "@theme-toggles/react";
 import { Separator } from "@/components/ui/separator";
 
+import { motion } from "framer-motion";
+
 export default function Header() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -51,15 +53,21 @@ function MobileHeader() {
           onClick={toggleMenuOpenState}
           className="grid h-[20px] w-[30px] grid-cols-1 gap-0.5"
         >
-          <div
-            className={`h-0.5 bg-black transition-all ${menuIsOpen ? "translate-y-[11px] -rotate-45" : undefined}`}
-          ></div>
-          <div
-            className={`h-0.5 bg-black transition-all ${menuIsOpen ? "hidden" : undefined}`}
-          ></div>
-          <div
-            className={`h-0.5 bg-black transition-all ${menuIsOpen ? "-translate-y-[0] rotate-45" : undefined}`}
-          ></div>
+          <motion.div
+            animate={{ rotate: menuIsOpen ? -45 : 0, y: menuIsOpen ? 11 : 0 }}
+            transition={{ ease: "easeOut", duration: 0.2 }}
+            className="h-0.5 bg-black"
+          ></motion.div>
+          <motion.div
+            animate={{ display: menuIsOpen ? "none" : "block" }}
+            transition={{ ease: "easeOut", duration: 0.1 }}
+            className="h-0.5 bg-black"
+          ></motion.div>
+          <motion.div
+            animate={{ rotate: menuIsOpen ? 45 : 0 }}
+            transition={{ ease: "easeOut", duration: 0.2 }}
+            className={"h-0.5 bg-black"}
+          ></motion.div>
         </button>
         <LanguageAndThemeSwitchers screenSize="mobile" />
       </header>
