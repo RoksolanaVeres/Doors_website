@@ -14,9 +14,13 @@ export default function HomePage() {
       </Helmet>
       <div
         className="h-screen bg-cover bg-[90%] md:bg-center"
-        style={{ backgroundImage: `url(${roomInteriorImg})`}}
+        style={{ backgroundImage: `url(${roomInteriorImg})` }}
       >
-        <motion.div className="flex h-full w-2/3 flex-col justify-center gap-10 px-container-padding md:w-1/2 bg-blur">
+        <motion.div
+          className="flex h-full w-2/3 flex-col justify-center gap-10 bg-blur px-container-padding md:w-1/2"
+          animate={{ x: ["-100%", 0] }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
           <h1 className="font-lora text-3xl font-semibold uppercase md:text-5xl">
             Вікна
             <br />
@@ -42,7 +46,7 @@ export default function HomePage() {
         id="assortment"
         className="flex flex-col items-center px-container-padding py-10 md:py-20"
       >
-        <h2 className="pb-10 text-center font-lora text-2xl font-semibold md:pb-20 md:text-4xl uppercase">
+        <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase md:pb-20 md:text-4xl">
           Наш <br />
           <span className="text-4xl md:text-6xl">Асортимент</span>
         </h2>
