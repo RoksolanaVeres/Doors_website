@@ -2,25 +2,39 @@ import { useContext } from "react";
 import { ThemeContext } from "./store/ThemeContext";
 import { MenuContext } from "./store/MenuContext";
 
-import NavigationLinkItems from "./NavigationLinkItems";
+import { motion } from "framer-motion";
 
 import "@theme-toggles/react/css/DarkSide.css";
 import { DarkSide } from "@theme-toggles/react";
 import { Separator } from "@/components/ui/separator";
 
-import { motion } from "framer-motion";
+import DropdownMenu from "./DropdownMenu";
+import NavigationLinkItems from "./NavigationLinkItems";
 
 export default function Header() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { menuIsOpen, toggleMenuOpenState } = useContext(MenuContext);
 
   return (
-    <div
-      id="mobile-desktop-header__container"
-      className="absolute left-0 right-0 top-0 z-10 flex"
-    >
-      <DesktopHeader theme={theme} toggleTheme={toggleTheme} />
-      <MobileHeader theme={theme} toggleTheme={toggleTheme} />
-    </div>
+    <>
+      {menuIsOpen && (
+        <>
+          <div
+            id="overlay"
+            className="absolute bottom-0 top-0 z-10 w-full bg-black/70"
+            onClick={toggleMenuOpenState}
+          ></div>
+          <DropdownMenu />
+        </>
+      )}
+
+      <div
+        id="mobile-desktop-header__container"
+        className="absolute left-0 right-0 top-0 z-10 flex"
+      >
+        <DesktopHeader />
+        <MobileHeader />
+      </div>
+    </>
   );
 }
 
