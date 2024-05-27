@@ -12,9 +12,8 @@ export default function HomePage() {
         <title>Вікна & Двері</title>
       </Helmet>
       <div
-        className={`h-screen bg-cover bg-[90%] md:bg-center
-        `}
-        style={{ backgroundImage: `url(${roomInteriorImg})` }}
+        className="h-screen bg-cover bg-[90%] md:bg-center"
+        style={{ backgroundImage: `url(${roomInteriorImg})`}}
       >
         <div className="flex h-full w-2/3 flex-col justify-center gap-10 px-container-padding md:w-1/2 bg-blur">
           <h1 className="font-lora text-3xl font-semibold uppercase md:text-5xl">

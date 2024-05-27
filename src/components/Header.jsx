@@ -1,15 +1,12 @@
-
 import { useContext } from "react";
 import { ThemeContext } from "./store/ThemeContext";
 import { MenuContext } from "./store/MenuContext";
 
-import { NavLink } from "react-router-dom";
 import NavigationLinkItems from "./NavigationLinkItems";
 
 import "@theme-toggles/react/css/DarkSide.css";
 import { DarkSide } from "@theme-toggles/react";
 import { Separator } from "@/components/ui/separator";
-
 
 export default function Header() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -25,39 +22,24 @@ export default function Header() {
   );
 }
 
-function DesktopHeader({ theme, toggleTheme }) {
+function DesktopHeader() {
   return (
     <header
       id="desktopHeader"
       className="hidden w-full justify-between px-container-padding py-8 md:flex"
     >
-        <nav id="desktopNav">
-          <ul className="flex w-full justify-between gap-5">
-            <NavigationLinkItems />
-          </ul>
-        </nav>
-    
-      <div
-        id="desktop-language-theme-buttons__container"
-        className="flex gap-1 md:gap-2"
-      >
-        <button>УКР</button>
-        <Separator orientation="vertical" />
-        <button>ENG</button>
-        <DarkSide
-          duration={300}
-          onToggle={toggleTheme}
-          toggled={theme === "light"}
-          className="ml-2 text-2xl md:ml-4"
-        />
-      </div>
+      <nav id="desktopNav">
+        <ul className="flex w-full justify-between gap-5">
+          <NavigationLinkItems />
+        </ul>
+      </nav>
+      <LanguageAndThemeSwitchers screenSize="desktop" />
     </header>
   );
 }
 
-function MobileHeader({ theme, toggleTheme }) {
-  const { toggleMenuOpenState, menuIsOpen, closeMenu } =
-    useContext(MenuContext);
+function MobileHeader() {
+  const { toggleMenuOpenState, menuIsOpen } = useContext(MenuContext);
 
   return (
     <>
@@ -68,21 +50,29 @@ function MobileHeader({ theme, toggleTheme }) {
         <button onClick={toggleMenuOpenState}>
           Menu {menuIsOpen ? "open" : "closed"}
         </button>
-        <div
-          id="mobile-language-theme-buttons__container"
-          className="flex gap-1"
-        >
-          <button>УКР</button>
-          <Separator orientation="vertical" />
-          <button>ENG</button>
-          <DarkSide
-            duration={300}
-            onToggle={toggleTheme}
-            toggled={theme === "light"}
-            className="ml-2 text-lg md:ml-4"
-          />
-        </div>
+        <LanguageAndThemeSwitchers screenSize="mobile" />
       </header>
     </>
+  );
+}
+
+function LanguageAndThemeSwitchers({ screenSize }) {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  
+  return (
+    <div
+      id="languageAndThemeSwitchers"
+      className={`flex ${screenSize === "mobile" ? "gap-1" : "gap-2"}`}
+    >
+      <button>УКР</button>
+      <Separator orientation="vertical" />
+      <button>ENG</button>
+      <DarkSide
+        duration={300}
+        onToggle={toggleTheme}
+        toggled={theme === "light"}
+        className={`ml-2 flex ${screenSize === "mobile" ? "text-lg" : "text-2xl"}`}
+      />
+    </div>
   );
 }
