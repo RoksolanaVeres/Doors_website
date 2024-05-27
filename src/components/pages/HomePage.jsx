@@ -51,33 +51,51 @@ export default function HomePage() {
           <span className="text-4xl md:text-6xl">Асортимент</span>
         </h2>
         <div className="flex w-full flex-wrap justify-between gap-10">
-          <Link
-            to="/doors?type=exterior"
-            className="grid h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
-            style={{ backgroundImage: `url(${exteriorDoorsImg})` }}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", duration: 0.5 }}
           >
-            <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
-              Вхідні Двері
-            </h3>
-          </Link>
-          <Link
-            to="/doors?type=interior"
-            className="grid h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
-            style={{ backgroundImage: `url(${interiorDoorsImg})` }}
+            <Link
+              to="/doors?type=exterior"
+              className="grid h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
+              style={{ backgroundImage: `url(${exteriorDoorsImg})` }}
+            >
+              <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
+                Вхідні Двері
+              </h3>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", duration: 0.5 }}
           >
-            <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
-              Міжкімнатні Двері
-            </h3>
-          </Link>
-          <Link
-            to="/windows"
-            className="grid  h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
-            style={{ backgroundImage: `url(${windowImg})` }}
+            <Link to="/doors?type=interior">
+              <div
+                className="grid h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
+                style={{ backgroundImage: `url(${interiorDoorsImg})` }}
+              >
+                <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
+                  Міжкімнатні Двері
+                </h3>
+              </div>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", duration: 0.5 }}
           >
-            <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
-              Вікна
-            </h3>
-          </Link>
+            <Link
+              to="/windows"
+              className="grid  h-[500px] min-w-[300px] flex-1 items-end bg-cover bg-center"
+              style={{ backgroundImage: `url(${windowImg})` }}
+            >
+              <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
+                Вікна
+              </h3>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </>

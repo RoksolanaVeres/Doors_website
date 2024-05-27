@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ThemeContext } from "./store/ThemeContext";
 import { MenuContext } from "./store/MenuContext";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import "@theme-toggles/react/css/DarkSide.css";
 import { DarkSide } from "@theme-toggles/react";
@@ -16,17 +16,21 @@ export default function Header() {
 
   return (
     <>
-      {menuIsOpen && (
-        <>
-          <div
-            id="overlay"
-            className="absolute bottom-0 top-0 z-10 w-full bg-black/70"
-            onClick={toggleMenuOpenState}
-          ></div>
-          <DropdownMenu />
-        </>
-      )}
-
+      <AnimatePresence>
+        {menuIsOpen && (
+          <>
+            <motion.div
+              id="overlay"
+              className="absolute bottom-0 top-0 z-10 w-full bg-black/70"
+              onClick={toggleMenuOpenState}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            ></motion.div>
+            <DropdownMenu />
+          </>
+        )}
+      </AnimatePresence>
       <div
         id="mobile-desktop-header__container"
         className="absolute left-0 right-0 top-0 z-10 flex"
