@@ -47,8 +47,19 @@ function MobileHeader() {
         id="mobileHeader"
         className="flex w-full justify-between gap-5 px-container-padding py-6 text-sm md:hidden"
       >
-        <button onClick={toggleMenuOpenState}>
-          Menu {menuIsOpen ? "open" : "closed"}
+        <button
+          onClick={toggleMenuOpenState}
+          className="grid h-[20px] w-[30px] grid-cols-1 gap-0.5"
+        >
+          <div
+            className={`h-0.5 bg-black transition-all ${menuIsOpen ? "translate-y-[11px] -rotate-45" : undefined}`}
+          ></div>
+          <div
+            className={`h-0.5 bg-black transition-all ${menuIsOpen ? "hidden" : undefined}`}
+          ></div>
+          <div
+            className={`h-0.5 bg-black transition-all ${menuIsOpen ? "-translate-y-[0] rotate-45" : undefined}`}
+          ></div>
         </button>
         <LanguageAndThemeSwitchers screenSize="mobile" />
       </header>
@@ -58,7 +69,7 @@ function MobileHeader() {
 
 function LanguageAndThemeSwitchers({ screenSize }) {
   const { theme, toggleTheme } = useContext(ThemeContext);
-  
+
   return (
     <div
       id="languageAndThemeSwitchers"
