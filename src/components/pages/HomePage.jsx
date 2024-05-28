@@ -3,8 +3,66 @@ import roomInteriorImg from "../../assets/doors-img/unsplash-images/room-interio
 import exteriorDoorsImg from "../../assets/doors-img/unsplash-images/steel-door.jpg";
 import interiorDoorsImg from "../../assets/doors-img/unsplash-images/interior-door.jpg";
 import windowImg from "../../assets/doors-img/unsplash-images/window.jpg";
+
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Button } from "../ui/button";
+
+const OUR_ADVANTAGES = [
+  {
+    id: 1,
+    header: "Безпека та якість",
+    details: `Нашому дверному бізнесу вже понад 15 років. За цей час ми ретельно вивчили всіх можливих виробників дверей
+    та вікон, обрали найкращих для того, щоб з впевненістю гарантувати Вам довговічність та надійність наших виробів.`,
+    buttons: [
+      {
+        buttonCaption: "Подивитись двері",
+        path: "./doors",
+      },
+      {
+        buttonCaption: "Глянути на вікна",
+        path: "./windows",
+      },
+    ],
+  },
+  {
+    id: 2,
+    header: "Повний сервіс",
+    details: `Наші послуги включають не лише продаж, а й професійний монтаж (а при потребі й демонтаж старих вікон чи дверей). 
+    Крім цього, у нас ви можете замовити доставку свого замовлення та виїзд майстра додому для заміру дверного отвору.`,
+    buttons: [
+      {
+        buttonCaption: "Всі послуги",
+        path: "./services",
+      },
+    ],
+  },
+  {
+    id: 3,
+    header: "Економія часу",
+    details: `Країна у смартфоні - це про нас. Звісно, двері через Дію ми Вам не встановимо, але переважну більшість наших послуг
+    можна отримати просто зв'язавшись з нами по телефону.`,
+    buttons: [
+      {
+        buttonCaption: "Зв'язатися з нами",
+        path: "./contacts",
+      },
+    ],
+  },
+  {
+    id: 4,
+    header: "Адекватні ціни",
+    details: `Ми розуміємо з якими труднощами ви стикаєтесь коли наважуєтесь розпочати ремонт в оселі, особливо в цей нелегкий час,
+    тому подбали про те, щоб попри все наші ціни залишалися конкурентними без жертвування якістю.`,
+    highlight: `Для військових, які захищають наш спокій, пропонуємо приємні знижки - це наш спосіб сказати "Дякую"!`,
+    buttons: [
+      {
+        buttonCaption: "Наші контакти",
+        path: "./contacts",
+      },
+    ],
+  },
+];
 
 export default function HomePage() {
   return (
@@ -17,7 +75,7 @@ export default function HomePage() {
         style={{ backgroundImage: `url(${roomInteriorImg})` }}
       >
         <motion.div
-          className="flex h-full w-2/3 flex-col justify-center gap-10 bg-blur px-container-padding md:w-1/2"
+          className="flex h-full w-2/3 flex-col justify-center gap-10 bg-blur px-container-padding backdrop-blur-sm md:w-1/2"
           animate={{ x: ["-100%", 0] }}
           transition={{ ease: "easeOut", duration: 0.5 }}
         >
@@ -26,21 +84,63 @@ export default function HomePage() {
             <br />
             <span className="text-5xl font-bold md:text-7xl">Двері</span>
           </h1>
-          <p className="text-base">
-            Some text about importance of windows and doors
-          </p>
+          <div className="">
+            <p className="text-2xl">Затишок та комфорт для Вашої оселі</p>
+          </div>
         </motion.div>
       </div>
 
-      {/* <div className="h-screen px-container-padding my-20 w-full grid grid-cols-2 items-center">
-        <div className=""></div>
-  
-          <h2 className="px-container-padding pb-20 text-4xl font-bold">
-            Чому
-            <br />
-            <span className="ml-10 text-6xl">Ми?</span>
-          </h2>
-      </div> */}
+      <div
+        id="ourAdvantages"
+        className="mx-auto flex flex-col items-center px-container-padding pt-10 md:px-0 md:pt-20 xl:w-2/3"
+      >
+        <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase md:pb-20 md:text-4xl">
+          Чому варто <br />
+          <span className="text-4xl md:text-6xl">обрати нас?</span>
+        </h2>
+        <ol className="grid gap-8">
+          {OUR_ADVANTAGES.map((advantage) => {
+            return (
+              <div
+                id="advantage-container"
+                key={advantage.id}
+                className="grid md:grid-cols-2"
+              >
+                <div
+                  id="advantages-text-container"
+                  className={`py-10 md:px-10 ${advantage.id % 2 === 0 && "order-2"}`}
+                >
+                  <p id="advantage-number" className="pb-4 text-slate-400">
+                    <span className="tracking-widest">причина # </span>
+                    <span className="text-5xl">0{advantage.id}</span>
+                  </p>
+                  <h3 className="pb-2 text-2xl font-semibold">
+                    {advantage.header}
+                  </h3>
+                  <p className="text-muted-foreground">{advantage.details}</p>
+                  {advantage.highlight && (
+                    <p className="pt-2">{advantage.highlight}</p>
+                  )}
+                  <div id="advantage-button-container" className="flex gap-4">
+                    {advantage.buttons.map((button) => {
+                      return (
+                        <Link
+                          key={button.buttonCaption}
+                          to={button.path}
+                          className="pt-8"
+                        >
+                          <Button> {button.buttonCaption}</Button>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div id="advantages-image-container">Some image?</div>
+              </div>
+            );
+          })}
+        </ol>
+      </div>
 
       <div
         id="assortment"
