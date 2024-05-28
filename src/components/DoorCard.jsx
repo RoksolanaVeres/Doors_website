@@ -41,31 +41,31 @@ export default function DoorCard({ door }) {
   }
 
   return (
-    <Card className="relative grid justify-center">
-      <CardHeader>
-        <CardTitle>{door.title}</CardTitle>
-        <CardDescription>{door.manufacturer}</CardDescription>
-      </CardHeader>
-      <CardContent className="h-[360px] flex items-center">
+      <Card className="relative grid justify-center">
+        <CardHeader>
+          <CardTitle>{door.title}</CardTitle>
+          <CardDescription>{door.manufacturer}</CardDescription>
+        </CardHeader>
+        <CardContent className="flex h-[360px] items-center">
           <img
             src={door.colors[doorColor] || Object.values(door.colors)[0]}
-            className="max-h-[300px] w-[150px] mx-auto"
+            className="mx-auto max-h-[300px] w-[150px]"
           />
-      </CardContent>
-      <CardFooter className="flex-col gap-2">
-        <p>Доступні кольори:</p>
-        <div className="flex flex-wrap gap-3">
-          {Object.keys(door.colors).map((color) => {
-            return (
-              <button
-                onClick={() => handleColorClick(color)}
-                key={color}
-                className={`size-5 border-2 ${doorColor === color ? "border-door-selected" : "border-border"} ${btnColors[color]}`}
-              />
-            );
-          })}
-        </div>
-      </CardFooter>
-    </Card>
+        </CardContent>
+        <CardFooter className="flex-col gap-2">
+          <p>Доступні кольори:</p>
+          <div className="flex flex-wrap gap-3">
+            {Object.keys(door.colors).map((color) => {
+              return (
+                <button
+                  onClick={() => handleColorClick(color)}
+                  key={color}
+                  className={`size-5 border-2 ${doorColor === color ? "border-door-selected" : "border-border"} ${btnColors[color]}`}
+                />
+              );
+            })}
+          </div>
+        </CardFooter>
+      </Card>
   );
 }

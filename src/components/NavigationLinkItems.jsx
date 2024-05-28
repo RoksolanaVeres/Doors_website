@@ -9,6 +9,11 @@ const LINKS = [
   { page: "Контакти", path: "/contacts" },
 ];
 
+const linkVariants = {
+  hidden: { opacity: 0, y: -100 },
+  visible: { opacity: 1, y: 0 },
+};
+
 export default function NavigationLinkItems() {
   return (
     <>
@@ -16,10 +21,7 @@ export default function NavigationLinkItems() {
         return (
           <motion.li
             key={link.page}
-            variants={{
-              hidden: { opacity: 0, y: -100 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            variants={linkVariants}
             transition={{ ease: "easeOut" }}
           >
             <NavLink
