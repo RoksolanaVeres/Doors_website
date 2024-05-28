@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 import {
   Card,
@@ -41,31 +42,35 @@ export default function DoorCard({ door }) {
   }
 
   return (
-      <Card className="relative grid justify-center">
-        <CardHeader>
-          <CardTitle>{door.title}</CardTitle>
-          <CardDescription>{door.manufacturer}</CardDescription>
-        </CardHeader>
-        <CardContent className="flex h-[360px] items-center">
-          <img
-            src={door.colors[doorColor] || Object.values(door.colors)[0]}
-            className="mx-auto max-h-[300px] w-[150px]"
-          />
-        </CardContent>
-        <CardFooter className="flex-col gap-2">
-          <p>Доступні кольори:</p>
-          <div className="flex flex-wrap gap-3">
-            {Object.keys(door.colors).map((color) => {
-              return (
-                <button
-                  onClick={() => handleColorClick(color)}
-                  key={color}
-                  className={`size-5 border-2 ${doorColor === color ? "border-door-selected" : "border-border"} ${btnColors[color]}`}
-                />
-              );
-            })}
-          </div>
-        </CardFooter>
-      </Card>
+    <Card className="relative grid justify-center">
+      <CardHeader>
+        <CardTitle>{door.title}</CardTitle>
+        <CardDescription>{door.manufacturer}</CardDescription>
+      </CardHeader>
+      <CardContent className="flex h-[360px] items-center">
+        <img
+          src={door.colors[doorColor] || Object.values(door.colors)[0]}
+          className="mx-auto max-h-[300px] w-[150px]"
+        />
+      </CardContent>
+      <CardFooter className="flex-col gap-2">
+        <p>Доступні кольори:</p>
+        <div className="flex flex-wrap gap-3">
+          {Object.keys(door.colors).map((color) => {
+            return (
+              <motion.button
+                whileHover={{
+                  scale: 1.2,
+                  transition: { duration: 0.2, ease: "easeInOut" },
+                }}
+                onClick={() => handleColorClick(color)}
+                key={color}
+                className={`size-5 outline outline-2 ${doorColor === color ? "outline-door-selected" : "outline-transparent"} ${btnColors[color]}`}
+              />
+            );
+          })}
+        </div>
+      </CardFooter>
+    </Card>
   );
 }

@@ -9,6 +9,8 @@ import { useEffect, useState, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 
+import { motion } from "framer-motion";
+
 const PER_PAGE = 8;
 
 export default function DoorsPage() {
@@ -52,7 +54,9 @@ export default function DoorsPage() {
       <Helmet>
         <title>Вікна & Двері | Двері </title>
       </Helmet>
-      <div className="mx-auto w-full max-w-[1600px] px-container-padding py-24">
+      <div
+        className="mx-auto w-full max-w-[1600px] px-container-padding py-24"
+      >
         <div className="flex justify-end gap-1 pb-10">
           <Button
             size="sm"
@@ -82,7 +86,18 @@ export default function DoorsPage() {
 
         <div className="grid grid-cols-auto-fill-265 gap-10">
           {doorsToDisplay.map((door) => {
-            return <DoorCard key={door.title} door={door} />;
+            return (
+              <motion.div
+                key={door.title}
+                initial={{scale:0.5}}
+                animate={{scale: 1}}
+                transition={{duration: 0.2, ease: "easeOut"}}
+              >
+                <DoorCard door={door} />
+              </motion.div>
+            );
+            
+           
           })}
         </div>
         {filter !== "interior" && <div className="">Каталоги в пдф</div>}
