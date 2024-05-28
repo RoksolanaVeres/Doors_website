@@ -28,8 +28,8 @@ export default function NavigationLinkItems() {
               to={link.path}
               className={({ isActive }) =>
                 isActive
-                  ? "font-semibold text-accent-main hover:underline"
-                  : "font-semibold text-muted-foreground hover:underline"
+                  ? "font-semibold after:scale-100 text-accent-main after:mt-0.5 after:block after:h-0.5 after:w-auto after:bg-accent-main after:transition-transform after:duration-400 after:ease-in-out after:content-['']"
+                  : "after:scale-50 font-semibold text-muted-foreground after:content-[''] hover:text-accent-main"
               }
             >
               {link.page}

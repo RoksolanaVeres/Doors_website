@@ -27,7 +27,7 @@ export default function DropdownMenu() {
       transition={{ ease: "easeOut", duration: 0.5 }}
     >
       <motion.ul
-        className="grid gap-10 text-lg"
+        className="grid gap-10 text-lg w-fit"
         variants={dropdownListVariants}
       >
         <NavigationLinkItems />

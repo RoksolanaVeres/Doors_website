@@ -46,7 +46,7 @@ function DesktopHeader() {
   return (
     <header
       id="desktopHeader"
-      className="hidden w-full justify-between px-container-padding py-8 md:flex"
+      className="hidden w-full justify-between px-container-padding py-8 md:flex items-center"
     >
       <nav id="desktopNav">
         <ul className="flex w-full justify-between gap-5">
