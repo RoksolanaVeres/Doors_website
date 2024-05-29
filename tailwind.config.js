@@ -32,6 +32,7 @@ module.exports = {
       },
       colors: {
         blur: "hsla(var(--blur))",
+        neutral: "hsl(var(--neutral))",
         background_secondary: "hsl(var(--background_secondary))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -45,6 +46,10 @@ module.exports = {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        brand: {
+          DEFAULT: "hsl(var(--brand-main))",
+          main:"hsl(var(--brand-main))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
