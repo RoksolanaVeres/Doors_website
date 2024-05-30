@@ -23,7 +23,7 @@ const OUR_ADVANTAGES = [
     buttons: [
       {
         buttonCaption: "Подивитись двері",
-        path: "./doors",
+        path: "./doors?type=all",
       },
       {
         buttonCaption: "Глянути на вікна",
