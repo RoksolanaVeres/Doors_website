@@ -15,18 +15,13 @@ const PER_PAGE = 8;
 
 export default function DoorsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [filter, setFilter] = useState(searchParams.get("type") || "all");
+  const filter = searchParams.get("type");
   const [page, setPage] = useState(1);
   const { ref, inView } = useInView(false);
 
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-
-  useEffect(
-    () => setSearchParams((params) => ({ ...params, type: filter })),
-    [filter],
-  );
 
   useEffect(() => {
     if (inView) {
@@ -54,14 +49,14 @@ export default function DoorsPage() {
       <Helmet>
         <title>Вікна & Двері | Двері </title>
       </Helmet>
-      <div
-        className="mx-auto w-full max-w-[1600px] px-container-padding py-24"
-      >
+      <div className="mx-auto w-full max-w-[1600px] px-container-padding py-24">
         <div className="flex justify-end gap-1 pb-10">
           <Button
             size="sm"
             variant="outline"
-            onClick={() => setFilter("all")}
+            onClick={() =>
+              setSearchParams((params) => ({ ...params, type: "all" }))
+            }
             className={`${filter === "all" && "bg-background_secondary"}`}
           >
             Всі
@@ -69,7 +64,9 @@ export default function DoorsPage() {
           <Button
             size="sm"
             variant="outline"
-            onClick={() => setFilter("interior")}
+            onClick={() =>
+              setSearchParams((params) => ({ ...params, type: "interior" }))
+            }
             className={`${filter === "interior" && "bg-background_secondary"}`}
           >
             Міжкімнатні
@@ -77,7 +74,9 @@ export default function DoorsPage() {
           <Button
             size="sm"
             variant="outline"
-            onClick={() => setFilter("exterior")}
+            onClick={() =>
+              setSearchParams((params) => ({ ...params, type: "exterior" }))
+            }
             className={`${filter === "exterior" && "bg-background_secondary"}`}
           >
             Вхідні
@@ -89,15 +88,13 @@ export default function DoorsPage() {
             return (
               <motion.div
                 key={door.title}
-                initial={{scale:0.5}}
-                animate={{scale: 1}}
-                transition={{duration: 0.2, ease: "easeOut"}}
+                initial={{ scale: 0.5 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
               >
                 <DoorCard door={door} />
               </motion.div>
             );
-            
-           
           })}
         </div>
         {filter !== "interior" && <div className="">Каталоги в пдф</div>}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const LINKS = [
   { page: "Головна", path: "/" },
-  { page: "Двері", path: "/doors" },
+  { page: "Двері", path: "/doors?type=all" },
   { page: "Вікна", path: "/windows" },
   { page: "Послуги", path: "/services" },
   { page: "Контакти", path: "/contacts" },
