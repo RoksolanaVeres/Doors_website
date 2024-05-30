@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import roomInteriorImg from "../../assets/doors-img/unsplash-images/room-interior.jpg";
 import exteriorDoorsImg from "../../assets/doors-img/unsplash-images/steel-door.jpg";
 import interiorDoorsImg from "../../assets/doors-img/unsplash-images/interior-door.jpg";
@@ -9,6 +8,7 @@ import doorServicesImg from "../../assets/doors-img/unsplash-images/door-fix.jpg
 import qualitySecurityImg from "../../assets/doors-img/unsplash-images/door-handle.jpg";
 import saveMoneyImg from "../../assets/doors-img/unsplash-images/save-money.jpg";
 
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
@@ -22,11 +22,11 @@ const OUR_ADVANTAGES = [
     та вікон, обрали найкращих для того, щоб з впевненістю гарантувати Вам довговічність та надійність наших виробів.`,
     buttons: [
       {
-        buttonCaption: "Подивитись двері",
+        buttonCaption: "Тут двері",
         path: "./doors?type=all",
       },
       {
-        buttonCaption: "Глянути на вікна",
+        buttonCaption: "А тут вікна",
         path: "./windows",
       },
     ],
@@ -88,38 +88,40 @@ export default function HomePage() {
           animate={{ x: ["-100%", 0] }}
           transition={{ ease: "easeOut", duration: 0.5 }}
         >
-          <h1 className="text-brand-main font-lora text-3xl font-semibold uppercase md:text-5xl">
+          <h1 className="font-lora text-3xl font-semibold uppercase text-brand-main md:text-5xl">
             Вікна
             <br />
             <span className="text-5xl font-bold md:text-7xl">Двері</span>
           </h1>
-          <div className="">
-            <p className="text-2xl">Затишок та комфорт для Вашої оселі</p>
+          <div>
+            <p className="font-roboto text-2xl">
+              Затишок та комфорт для Вашої оселі
+            </p>
           </div>
         </motion.div>
       </div>
 
       <div
         id="ourAdvantages"
-        className="mx-auto flex flex-col items-center px-container-padding pt-10 md:px-0 md:pt-20 xl:w-2/3"
+        className="mx-auto flex flex-col items-center px-container-padding pt-10 md:pt-20 xl:w-2/3 xl:px-0"
       >
-        <h2 className="text-brand-main pb-10 text-center font-lora text-2xl font-semibold uppercase md:pb-20 md:text-4xl">
+        <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase text-brand-main md:pb-20 md:text-4xl">
           Чому варто <br />
           <span className="text-4xl md:text-6xl">обрати нас?</span>
         </h2>
-        <ol className="grid gap-10">
+        <ol className="grid gap-20">
           {OUR_ADVANTAGES.map((advantage) => {
             return (
-              <div
+              <li
                 id="advantage-container"
                 key={advantage.id}
                 className="grid md:grid-cols-2"
               >
                 <div
-                  id="advantages-text-container"
+                  id="advantage-text-container"
                   className={`py-10 md:px-10 ${advantage.id % 2 === 0 && "md:order-2"}`}
                 >
-                  <p id="advantage-number" className="text-neutral pb-4">
+                  <p id="advantage-number" className="pb-4 text-neutral">
                     <span className="tracking-widest">причина # </span>
                     <span className="text-5xl">0{advantage.id}</span>
                   </p>
@@ -130,7 +132,10 @@ export default function HomePage() {
                   {advantage.highlight && (
                     <p className="pt-2">{advantage.highlight}</p>
                   )}
-                  <div id="advantage-button-container" className="flex gap-4">
+                  <div
+                    id="advantage-button-container"
+                    className="flex gap-4"
+                  >
                     {advantage.buttons.map((button) => {
                       return (
                         <Link
@@ -138,7 +143,9 @@ export default function HomePage() {
                           to={button.path}
                           className="pt-8"
                         >
-                          <Button className="bg-brand-main">{button.buttonCaption}</Button>
+                          <Button className="bg-brand-main">
+                            {button.buttonCaption}
+                          </Button>
                         </Link>
                       );
                     })}
@@ -150,11 +157,11 @@ export default function HomePage() {
                 >
                   <img
                     src={advantage.img}
-                    className="w-[300px] md:w-[400px] rounded-md"
+                    className="w-[300px] rounded-md md:w-[400px]"
                     alt=""
                   />
                 </div>
-              </div>
+              </li>
             );
           })}
         </ol>
@@ -164,7 +171,7 @@ export default function HomePage() {
         id="assortment"
         className="flex flex-col items-center px-container-padding py-10 md:py-20"
       >
-        <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase md:pb-20 md:text-4xl">
+        <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase text-brand-main md:pb-20 md:text-4xl">
           Наш <br />
           <span className="text-4xl md:text-6xl">Асортимент</span>
         </h2>

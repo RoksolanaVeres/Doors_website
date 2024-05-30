@@ -28,10 +28,9 @@ export default function App() {
 // to do:
 // - steel doors from Міністерство дверей https://ministerstvo-dverej.ua/kataloh/
 // - add pdf catalogues Magda & Termoplast 
-// - doors sorting: type (inner, outer), manufacturer
 // - page / link to each door??? 
 // - some description???
 // - Windows from https://plamet.ua/vikna/
-// !!! back button doesn't work
-// !!! when go from homePage to InteriorDoors the page doesn't appear at the very top
+// - add to favourite feature
+
 

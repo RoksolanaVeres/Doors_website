@@ -1,11 +1,19 @@
 import { Helmet } from "react-helmet-async";
+
 import Map from "../Map";
 import emailImg from "../../assets/icons/email.png";
 import locationImg from "../../assets/icons/location.png";
 import phoneImg from "../../assets/icons/phone.png";
 import scheduleImg from "../../assets/icons/schedule.png";
 
+import { useEffect } from "react";
+
 export default function ContactsPage() {
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <>
       <Helmet>
