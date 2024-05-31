@@ -1,13 +1,13 @@
-import counsultingImg from "@/assets/doors-img/unsplash-images/consulting.jpg"
-import deliveryImg from "@/assets/doors-img/unsplash-images/delivery.jpg"
-import doorInstallationImg from "@/assets/doors-img/unsplash-images/doors-installation.jpg"
-import glassCuttingImg from "@/assets/doors-img/unsplash-images/glass-cutting.jpg"
-import electricalAppliancesImg from "@/assets/doors-img/unsplash-images/electrical-appliances.jpg"
+import counsultingImg from "@/assets/doors-img/unsplash-images/consulting.jpg";
+import deliveryImg from "@/assets/doors-img/unsplash-images/delivery.jpg";
+import doorInstallationImg from "@/assets/doors-img/unsplash-images/doors-installation.jpg";
+import glassCuttingImg from "@/assets/doors-img/unsplash-images/glass-cutting.jpg";
+import electricalAppliancesImg from "@/assets/doors-img/unsplash-images/electrical-appliances.jpg";
 
+import { ArrowBigUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { Button } from "../ui/button";
 
-import { useEffect } from "react"
+import { useEffect } from "react";
 
 const OUR_SERVICES = [
   {
@@ -17,7 +17,10 @@ const OUR_SERVICES = [
     img: counsultingImg,
     details: `Якщо серед різноманіття вибору, яке ми пропонуємо, Вам важко обрати саме ті двері чи вікна, наші досвідчені консультанти 
     завжди готові прийти на допомогу. Ми врахуємо всі Ваші побажання і порадимо найкращий варіант.`,
-    buttonCaption: "Отримати консультацію",
+    backCard: {
+      header: "Отримати консультацію можна за телефоном:",
+      phones: ["(068) 234-94-04 - Тарас", "(099) 223-64-26 - Оксана"],
+    },
   },
   {
     id: 2,
@@ -26,7 +29,10 @@ const OUR_SERVICES = [
     img: deliveryImg,
     details: `Купуючи у нас товари, Вам не варто хвилюватися про їх доставлення, адже ми також надаємо послуги 
     з вантажного перевезення.`,
-    buttonCaption: "Дізнатись деталі",
+    backCard: {
+      header: "З питань доставки звертайтесь за телефоном:",
+      phones: ["(068) 234-94-04 - Тарас", "(099) 223-64-26 - Оксана"],
+    },
   },
   {
     id: 3,
@@ -35,7 +41,10 @@ const OUR_SERVICES = [
     img: doorInstallationImg,
     details: `Наші спеціалісти забезпечать встановлення вікон та дверей з дотриманням найвищих стандартів якості. 
     Також можливий виклик майстра додому для зняття замірів дверного отвору.`,
-    buttonCaption: "Дізнатись деталі",
+    backCard: {
+      header: "Обговорити деталі можна за телефоном:",
+      phones: ["(068) 234-94-04 - Тарас", "(099) 223-64-26 - Оксана"],
+    },
   },
   {
     id: 4,
@@ -44,7 +53,10 @@ const OUR_SERVICES = [
     img: glassCuttingImg,
     details: `Для Вашої зручності, одразу поряд з магазином знаходиться порізка скла, куди Ви можете звернутися
     у випадку, якщо Вам потрібно засклити двері чи вікна, або просто врізати скло.`,
-    buttonCaption: "Дізнатись деталі",
+    backCard: {
+      header: "Дізнатись деталі можна за телефоном:",
+      phones: ["(099) 956-87-89 - Богдан"],
+    },
   },
   {
     id: 5,
@@ -53,24 +65,24 @@ const OUR_SERVICES = [
     img: electricalAppliancesImg,
     details: `Неочікувано, але факт: в магазині працює телерадіомайстерня, де Ви можете зремонтувати техніку, 
     яка вийшла з ладу.`,
-    buttonCaption: "Зателефонувати",
+    backCard: {
+      header: "З питань ремонту техніки дзвоніть за телефоном:",
+      phones: ["Колін номер - Микола"],
+    },
   },
 ];
 
 export default function ServicesPage() {
-    useEffect(() => {
-      window.scroll(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>
       <Helmet>
         <title>Вікна & Двері | Послуги</title>
       </Helmet>
-      <div
-        id="ourServices"
-        className="bg-background_secondary py-20 md:py-36"
-      >
+      <div id="ourServices" className="bg-background_secondary py-20 md:py-36">
         <div
           id="services-content-container"
           className="mx-auto max-w-[1600px] px-container-padding "
@@ -85,24 +97,45 @@ export default function ServicesPage() {
                 >
                   <div
                     id="service-text-container"
-                    className={`h-fit rounded-md bg-background px-10 py-10 shadow-lg md:z-10 md:h-5/6 ${service.id % 2 === 1 ? "order-2 md:-ml-10" : "md:-mr-10"}`}
+                    className={`group order-2 [perspective:1000px] md:z-10 md:h-5/6 ${service.id % 2 === 1 ? "md:order-2 md:-ml-10" : "md:-mr-10"}`}
                   >
-                    <h3 className="pb-2 font-roboto text-2xl font-semibold">
-                      {service.header}
-                    </h3>
-                    <p className="pb-4 text-muted-foreground">
-                      {service.subheader}
-                    </p>
-                    <p className="pb-6">{service.details}</p>
-                    <div id="advantage-button-container" className="flex gap-4">
-                      <Button size="sm" className="bg-brand-main">
-                        {service.buttonCaption}
-                      </Button>
+                    <div className="relative h-[350px] shadow-xl transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] md:h-full">
+                      <div className="absolute inset-0">
+                        <div className="h-full rounded-md bg-background p-5 md:p-10">
+                          <h3 className="pb-2 font-roboto text-xl md:text-2xl font-semibold">
+                            {service.header}
+                          </h3>
+                          <p className="pb-4 text-muted-foreground">
+                            {service.subheader}
+                          </p>
+                          <p className="pb-6 text-sm sm:text-base">{service.details}</p>
+                          <div
+                            id="service-arrow-container"
+                            className="absolute bottom-5 right-5 flex size-[50px] items-center justify-center rounded-full bg-background_secondary"
+                          >
+                            <ArrowBigUp className="w-full rotate-90 scale-125 text-muted-foreground" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="absolute inset-0 flex w-full items-center justify-center rounded-md bg-brand-main px-12 text-center text-slate-200 [backface-visibility:hidden] [transform:rotateY(180deg)] md:h-full">
+                        <div className="grid gap-2 p-5 md:p-10">
+                          <h3>{service.backCard.header}</h3>
+                          <div>
+                            {service.backCard.phones.map((phone) => {
+                              return <p>{phone}</p>;
+                            })}
+                          </div>
+                          <h3 className="mt-4">
+                            Або завітайте до нас особисто:
+                          </h3>
+                          <p>м.Івано-Франківськ, вул.Тичини 19А</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div
-                    id="advantages-image-container"
-                    className="grid min-h-[350px] items-end bg-cover bg-center"
+                    id="service-image-container"
+                    className={`order-1 grid h-[350px] items-end bg-cover bg-center ${service.id % 2 === 1 ? "md:order-1" : "md:order-2"}`}
                     style={{ backgroundImage: `url(${service.img})` }}
                   ></div>
                 </li>
