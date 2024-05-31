@@ -1,8 +1,8 @@
-import counsultingImg from "@/assets/doors-img/unsplash-images/reserve/keys.jpg"
-import deliveryImg from "@/assets/doors-img/unsplash-images/reserve/delivery.jpg"
-import doorInstallationImg from "@/assets/doors-img/unsplash-images/reserve/door-installation.jpg"
-import glassCuttingImg from "@/assets/doors-img/unsplash-images/reserve/glass-cutting.jpg"
-import electronicsImg from "@/assets/doors-img/unsplash-images/reserve/electronics.jpg"
+import counsultingImg from "@/assets/doors-img/unsplash-images/consulting.jpg"
+import deliveryImg from "@/assets/doors-img/unsplash-images/delivery.jpg"
+import doorInstallationImg from "@/assets/doors-img/unsplash-images/doors-installation.jpg"
+import glassCuttingImg from "@/assets/doors-img/unsplash-images/glass-cutting.jpg"
+import electricalAppliancesImg from "@/assets/doors-img/unsplash-images/electrical-appliances.jpg"
 
 import { Helmet } from "react-helmet-async";
 import { Button } from "../ui/button";
@@ -21,20 +21,20 @@ const OUR_SERVICES = [
   },
   {
     id: 2,
-    header: "Монтаж дверей та вікон",
-    subheader: "а також демонтаж старих дверей та вікон",
-    img: doorInstallationImg,
-    details: `Наші спеціалісти забезпечать встановлення вікон та дверей з дотриманням найвищих стандартів якості. 
-    Також можливий виклик майстра додому для зняття замірів дверного отвору.`,
-    buttonCaption: "Дізнатись деталі",
-  },
-  {
-    id: 3,
     header: "Доставлення замовлення",
     subheader: "в межах Івано-Франківська та поза ним",
     img: deliveryImg,
     details: `Купуючи у нас товари, Вам не варто хвилюватися про їх доставлення, адже ми також надаємо послуги 
     з вантажного перевезення.`,
+    buttonCaption: "Дізнатись деталі",
+  },
+  {
+    id: 3,
+    header: "Монтаж дверей та вікон",
+    subheader: "а також демонтаж старих дверей та вікон",
+    img: doorInstallationImg,
+    details: `Наші спеціалісти забезпечать встановлення вікон та дверей з дотриманням найвищих стандартів якості. 
+    Також можливий виклик майстра додому для зняття замірів дверного отвору.`,
     buttonCaption: "Дізнатись деталі",
   },
   {
@@ -50,7 +50,7 @@ const OUR_SERVICES = [
     id: 5,
     header: "Ремонт побутової техніки",
     subheader: "та діагностика поломки",
-    img: electronicsImg,
+    img: electricalAppliancesImg,
     details: `Неочікувано, але факт: в магазині працює телерадіомайстерня, де Ви можете зремонтувати техніку, 
     яка вийшла з ладу.`,
     buttonCaption: "Зателефонувати",
