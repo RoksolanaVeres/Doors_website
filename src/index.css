@@ -48,18 +48,15 @@
     --door-lightGray: 0, 0%, 47%;
     --door-lighterGray: 0, 1%, 35%;
     --door-bileDerevo: 250, 10%, 89%; 
-    --door-bilyi1129: 204, 8%, 75%;
     --door-astanaMerle: 349, 13%, 47%;
     --door-astanaRozvud: 24, 19%, 69%;
     --door-bilyiMat: 150, 1%, 72%;
-    --door-dubShaleHrafit: 345, 5%, 44%;
     --door-filadelfiiaCrem: 2, 46%, 90%;
     --door-horikhLisovyi: 0, 28%, 30%;
     --door-horikhTemnyi: 328, 27%, 14%;
     --door-karpatskaYalyna: 33, 41%, 34%;
     --door-parma: 42, 7%, 61%;
     --door-shvedskaVyshnia: 320, 4%, 68%;
-    --door-tikoveDerevo: 217, 15%, 27%;
     --door-selected: 22, 73%, 40%;
     --radius: 0.5rem;
   }

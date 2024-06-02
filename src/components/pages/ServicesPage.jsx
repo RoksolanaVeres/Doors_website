@@ -24,7 +24,7 @@ const OUR_SERVICES = [
   },
   {
     id: 2,
-    header: "Доставлення замовлення",
+    header: "Привіз замовлення",
     subheader: "в межах Івано-Франківська та поза ним",
     img: deliveryImg,
     details: `Купуючи у нас товари, Вам не варто хвилюватися про їх доставлення, адже ми також надаємо послуги 
@@ -40,7 +40,7 @@ const OUR_SERVICES = [
     subheader: "а також демонтаж старих дверей та вікон",
     img: doorInstallationImg,
     details: `Наші спеціалісти забезпечать встановлення вікон та дверей з дотриманням найвищих стандартів якості. 
-    Також можливий виклик майстра додому для зняття замірів дверного отвору.`,
+    Також можливий виклик майстра додому для зняття попередніх замірів.`,
     backCard: {
       header: "Обговорити деталі можна за телефоном:",
       phones: ["(068) 234-94-04 - Тарас", "(099) 223-64-26 - Оксана"],
@@ -51,7 +51,7 @@ const OUR_SERVICES = [
     header: "Порізка скла",
     subheader: "та дзеркал будь-якої складності",
     img: glassCuttingImg,
-    details: `Для Вашої зручності, одразу поряд з магазином знаходиться порізка скла, куди Ви можете звернутися
+    details: `Для Вашої зручності, одразу поряд з магазином знаходиться майстерня по порізці скла, куди Ви можете звернутися
     у випадку, якщо Вам потрібно засклити двері чи вікна, або просто врізати скло.`,
     backCard: {
       header: "Дізнатись деталі можна за телефоном:",
@@ -64,10 +64,10 @@ const OUR_SERVICES = [
     subheader: "та діагностика поломки",
     img: electricalAppliancesImg,
     details: `Неочікувано, але факт: в магазині працює телерадіомайстерня, де Ви можете зремонтувати техніку, 
-    яка вийшла з ладу.`,
+    яка вийшла з ладу, а також придбати супутні товари (тюнер, пульт, антену, блок живлення тощо).`,
     backCard: {
       header: "З питань ремонту техніки дзвоніть за телефоном:",
-      phones: ["Колін номер - Микола"],
+      phones: [" (095) 924-62-08 - Микола"],
     },
   },
 ];
@@ -82,10 +82,13 @@ export default function ServicesPage() {
       <Helmet>
         <title>Вікна & Двері | Послуги</title>
       </Helmet>
-      <div id="ourServices" className="bg-background_secondary py-20 md:py-36">
+      <div id="ourServices" className="bg-background_secondary py-20">
+        {/* <div className="h-[400px] w-full bg-slate-300">
+          Ми відкриті до співпраці
+        </div> */}
         <div
           id="services-content-container"
-          className="mx-auto max-w-[1600px] px-container-padding "
+          className="mx-auto max-w-[1600px] px-container-padding py-20 "
         >
           <ol className="grid gap-20">
             {OUR_SERVICES.map((service) => {

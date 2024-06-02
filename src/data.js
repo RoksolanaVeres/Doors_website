@@ -133,10 +133,7 @@ const druidColors = {
   horikhTemnyi: ColorHorikhTemnyi,
   shvedskaVyshnia: ColorShvedskaVysjnia,
   astanaMerle: ColorAstanaMerle,
-  bilyi1129: ColorBilyi1129,
-  dubShaleHrafit: ColorDubShaleHrafit,
   filadelfiiaCrem: ColorFiladelfiiaCrem,
-  tikoveDerevo: ColorTikoveDerevo,
 };
 
 const doors = [

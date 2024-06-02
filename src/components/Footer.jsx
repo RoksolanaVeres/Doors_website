@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
 
         <div id="footer-col-2" className="">
-          <p>пн-пт: 9:00-18:00</p>
+          <p>пн-пт: 9:00-17:00</p>
           <p>сб: 9:00-16:00</p>
           <p className="flex items-center gap-2">
             нд: <HiLockClosed className="text-destructive" />
