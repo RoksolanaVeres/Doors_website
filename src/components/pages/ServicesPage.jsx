@@ -83,9 +83,6 @@ export default function ServicesPage() {
         <title>Вікна & Двері | Послуги</title>
       </Helmet>
       <div id="ourServices" className="bg-background_secondary py-20">
-        {/* <div className="h-[400px] w-full bg-slate-300">
-          Ми відкриті до співпраці
-        </div> */}
         <div
           id="services-content-container"
           className="mx-auto max-w-[1600px] px-container-padding py-20 "
@@ -105,13 +102,15 @@ export default function ServicesPage() {
                     <div className="relative h-[350px] shadow-xl transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] md:h-full">
                       <div className="absolute inset-0">
                         <div className="h-full rounded-md bg-background p-5 md:p-10">
-                          <h3 className="pb-2 font-roboto text-xl md:text-2xl font-semibold">
+                          <h3 className="pb-2 font-roboto text-xl font-semibold md:text-2xl">
                             {service.header}
                           </h3>
                           <p className="pb-4 text-muted-foreground">
                             {service.subheader}
                           </p>
-                          <p className="pb-6 text-sm sm:text-base">{service.details}</p>
+                          <p className="pb-6 text-sm sm:text-base">
+                            {service.details}
+                          </p>
                           <div
                             id="service-arrow-container"
                             className="absolute bottom-5 right-5 flex size-[50px] items-center justify-center rounded-full bg-background_secondary"
@@ -125,7 +124,7 @@ export default function ServicesPage() {
                           <h3>{service.backCard.header}</h3>
                           <div>
                             {service.backCard.phones.map((phone) => {
-                              return <p>{phone}</p>;
+                              return <p key={phone}>{phone}</p>;
                             })}
                           </div>
                           <h3 className="mt-4">

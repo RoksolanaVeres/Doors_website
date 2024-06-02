@@ -4,8 +4,10 @@ import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { IoHome } from "react-icons/io5";
 import { GrSchedule } from "react-icons/gr";
+import { FaViber } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
 
-import openDoorImg from "@/assets/doors-img/unsplash-images/reserve/open-door-4.jpg"
+import openDoorImg from "@/assets/doors-img/unsplash-images/reserve/open-door-3.jpg"
 
 import { useEffect } from "react";
 
@@ -20,15 +22,15 @@ export default function ContactsPage() {
         <title>Вікна & Двері | Контакти</title>
       </Helmet>
       <div id="ourContacts" className="pt-20">
-        <div
+        {/* <div
           id="contactsHeader"
-          className="flex h-[500px] items-center justify-center bg-cover bg-center"
           style={{ backgroundImage: `url(${openDoorImg})` }}
+          className="flex h-[300px] items-center justify-center bg-cover bg-center"
         >
           <h1 className="font-roboto text-3xl font-semibold">
-            Наші двері завжди<span>*</span> відчинені для Вас
+         Наші двері завжди відчинені для Вас
           </h1>
-        </div>
+        </div> */}
 
         <div
           id="contactsInfo"
@@ -36,34 +38,43 @@ export default function ContactsPage() {
         >
           <div
             id="email-container"
-            className="flex justify-center rounded-md bg-background_secondary p-10"
+            className="flex justify-center rounded-md bg-background_secondary p-10 shadow-lg"
           >
             <div className="grid w-full content-start justify-center gap-2 text-center">
               <IoIosMail className="mx-auto text-2xl" />
               <h2 className="font-semibold uppercase tracking-wider">Пишіть</h2>
               <a
                 href="mailto:taras-oksana@ukr.net"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 text-secondary-foreground"
               >
                 taras-oksana@ukr.net
               </a>
-              <p>viber, telegram </p>
+              <div className="flex items-center gap-2">
+                <FaViber className="text-xl text-secondary-foreground" />
+                <a href="tel:+380999568789">+380992236426</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaTelegramPlane className="text-xl text-secondary-foreground" />
+                <a href="tel:+380999568789">+380992236426</a>
+              </div>
             </div>
           </div>
 
           <div
             id="phones-container"
-            className="flex justify-center rounded-md bg-background_secondary p-10"
+            className="flex justify-center rounded-md bg-background_secondary p-10 shadow-lg"
           >
             <div className="grid w-full content-start justify-center gap-2 text-center">
-              <FaPhone className="mx-auto text-xl" />
+              <FaPhone className="mx-auto text-xl text-secondary-foreground" />
               <h2 className="font-semibold uppercase tracking-wider">
                 Дзвоніть
               </h2>
               <div id="doors-phones">
-                <h3>З питань вікон та дверей:</h3>
+                <h3 className="text-secondary-foreground">
+                  З питань вікон та дверей:
+                </h3>
                 <ul>
-                  <li className="flex gap-2">
+                  <li className="flex justify-center gap-2 text-sm">
                     <a
                       href="tel:+380992236426"
                       className="flex items-center gap-2"
@@ -72,7 +83,7 @@ export default function ContactsPage() {
                     </a>
                     <p>(Оксана)</p>
                   </li>
-                  <li className="flex gap-2">
+                  <li className="flex justify-center gap-2 text-sm">
                     <a
                       href="tel:+380682349404"
                       className="flex items-center gap-2"
@@ -85,8 +96,8 @@ export default function ContactsPage() {
               </div>
 
               <div id="glass-phone">
-                <h3>Порізка скла:</h3>
-                <div className="flex gap-2">
+                <h3 className="text-secondary-foreground">Порізка скла:</h3>
+                <div className="flex justify-center gap-2 text-sm">
                   <a
                     href="tel:+380999568789"
                     className="flex items-center gap-2"
@@ -98,8 +109,13 @@ export default function ContactsPage() {
               </div>
 
               <div id="electronics-phone">
-                <h3>Телерадіомайстерня:</h3>
-                <div id="electronics-phone" className="flex gap-2">
+                <h3 className="text-secondary-foreground">
+                  Телерадіомайстерня:
+                </h3>
+                <div
+                  id="electronics-phone"
+                  className="flex justify-center gap-2 text-sm"
+                >
                   <a
                     href="tel:+380959246208"
                     className="flex items-center gap-2"
@@ -114,17 +130,17 @@ export default function ContactsPage() {
 
           <div
             id="location-container"
-            className="flex justify-center rounded-md bg-background_secondary p-10"
+            className="flex justify-center rounded-md bg-background_secondary p-10 shadow-lg"
           >
             <div className="grid w-full content-start justify-center gap-2 text-center">
-              <IoHome className="mx-auto text-2xl" />
+              <IoHome className="mx-auto text-2xl text-accent-foreground" />
               <h2 className="font-semibold uppercase tracking-wider">
                 Заходьте
               </h2>
-              <div className="">
-                <p>м.Івано-Франківськ, вулиця Тичини 19А</p>
-                <p>Орієнтир: між ТЦ "Бельведер" та "Майстер"</p>
-              </div>
+              <p className="text-secondary-foreground">
+                м.Івано-Франківськ, вулиця Тичини 19А
+              </p>
+              <p className="text-sm">Орієнтир: між ТЦ "Бельведер" та "Майстер"</p>
             </div>
           </div>
 
@@ -134,19 +150,21 @@ export default function ContactsPage() {
 
           <div
             id="workingHours-container"
-            className="flex justify-center rounded-md bg-background_secondary p-10"
+            className="flex justify-center rounded-md bg-background_secondary p-10 shadow-lg"
           >
             <div className="grid w-full content-start justify-center gap-2 text-center">
-              <GrSchedule className="mx-auto text-2xl" />
+              <GrSchedule className="mx-auto text-2xl text-secondary-foreground" />
               <h2 className="font-semibold uppercase tracking-wider">
                 Графік роботи
               </h2>
               <dl>
-                <dt className="mt-1">Понеділок - Пятниця:</dt>
+                <dt className="mt-1 text-secondary-foreground">
+                  Понеділок - Пятниця:
+                </dt>
                 <dd>9:00 - 17:00</dd>
-                <dt className="mt-1">Субота:</dt>
+                <dt className="mt-1 text-secondary-foreground">Субота:</dt>
                 <dd>9:00 - 16:00</dd>
-                <dt className="mt-1">Неділя:</dt>
+                <dt className="mt-3">Неділя:</dt>
                 <dd className="text-destructive">Вихідний</dd>
               </dl>
             </div>

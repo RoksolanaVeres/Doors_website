@@ -13,6 +13,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 
+import { FaHeart } from "react-icons/fa6";
+
 const OUR_ADVANTAGES = [
   {
     id: 1,
@@ -130,12 +132,11 @@ export default function HomePage() {
                   </h3>
                   <p className="text-muted-foreground">{advantage.details}</p>
                   {advantage.highlight && (
-                    <p className="pt-2">{advantage.highlight}</p>
+                    <p className="pt-3 text-brand-main text-sm font-semibold tracking-wider">
+                      {advantage.highlight}
+                    </p>
                   )}
-                  <div
-                    id="advantage-button-container"
-                    className="flex gap-4"
-                  >
+                  <div id="advantage-button-container" className="flex gap-4">
                     {advantage.buttons.map((button) => {
                       return (
                         <Link

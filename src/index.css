@@ -6,8 +6,8 @@
   :root {
     --background: 42 100% 98.04%;
     --foreground: 11, 93%, 6%;
-
-    --background_secondary: 43.64 29.73% 85.49%;  /* header, footer bg */
+    
+    --background_secondary: 44, 59%, 91%; 
 
     --card:40, 69%, 95%;
     --card-foreground: 222.2 84% 4.9%;
@@ -19,13 +19,13 @@
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary-foreground: 27, 92%, 31%; /*contacts page highlights*/
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 12, 12%, 49%; /*inactive Navlink*/
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96.1%; /*button background on hover*/
+    --accent-foreground: 222.2 47.4% 11.2%; /*button text on hover*/
 
     --accent-main: 12, 96%, 10%; /*main heading, active Navlink*/
 
@@ -51,7 +51,7 @@
     --door-astanaMerle: 349, 13%, 47%;
     --door-astanaRozvud: 24, 19%, 69%;
     --door-bilyiMat: 150, 1%, 72%;
-    --door-filadelfiiaCrem: 2, 46%, 90%;
+    --door-filadelfiiaCrem: 29, 55%, 90%;
     --door-horikhLisovyi: 0, 28%, 30%;
     --door-horikhTemnyi: 328, 27%, 14%;
     --door-karpatskaYalyna: 33, 41%, 34%;
