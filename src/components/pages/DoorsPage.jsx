@@ -87,7 +87,7 @@ export default function DoorsPage() {
           {doorsToDisplay.map((door) => {
             return (
               <motion.div
-                key={door.title}
+                key={door.id}
                 initial={{ scale: 0.5 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}

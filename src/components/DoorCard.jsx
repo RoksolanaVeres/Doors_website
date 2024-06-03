@@ -44,7 +44,10 @@ export default function DoorCard({ door }) {
   return (
     <Card className="relative grid justify-center">
       <CardHeader>
-        <CardTitle>{door.title}</CardTitle>
+        <CardTitle>
+          <p>{door.title}</p>
+          {door.subtitle && <p className="text-base text-secondary-foreground">{door.subtitle}</p>}
+        </CardTitle>
         <CardDescription>{door.manufacturer}</CardDescription>
       </CardHeader>
       <CardContent className="flex h-[360px] items-center">
