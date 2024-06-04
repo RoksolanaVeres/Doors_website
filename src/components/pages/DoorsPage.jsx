@@ -11,6 +11,11 @@ import { useInView } from "react-intersection-observer";
 
 import { motion } from "framer-motion";
 
+import magdaCatalogue from "@/assets/catalogues/Magda_doors-catalogue.pdf";
+import termoplastCatalogue from "@/assets/catalogues/Termoplast_doors-catalogue.pdf"
+import magdaImg from "@/assets/catalogues/magda-img.png"
+import termoplastImg from "@/assets/catalogues/termoplast-img.png"
+
 const PER_PAGE = 8;
 
 export default function DoorsPage() {
@@ -82,7 +87,6 @@ export default function DoorsPage() {
             Вхідні
           </Button>
         </div>
-
         <div className="grid grid-cols-auto-fill-265 gap-10">
           {doorsToDisplay.map((door) => {
             return (
@@ -97,10 +101,10 @@ export default function DoorsPage() {
             );
           })}
         </div>
-        {filter !== "interior" && <div className="">Каталоги в пдф</div>}
         <div className="h-1 w-full" ref={ref}>
           <ScrollToTopButton />
         </div>
+        {filter !== "interior" && <DoorsCatalogues />}
       </div>
     </>
   );
@@ -142,5 +146,42 @@ function ScrollToTopButton() {
     >
       <ArrowBigUp />
     </Button>
+  );
+}
+
+
+function DoorsCatalogues() {
+  return (
+    <div className="mt-20">
+      <h2 className="pb-10 text-center text-2xl font-semibold">
+        Більше моделей вхідних дверей представлено в каталогаг:
+      </h2>
+      <div className="grid gap-10 md:grid-cols-2">
+        <a
+          href={magdaCatalogue}
+          target="_blank"
+          className="relative"
+        >
+          <img
+            src={magdaImg}
+            alt="magda doors catalogue"
+            className="rounded-md border"
+          />
+          <h3 className="absolute bottom-0 left-0 right-0 bg-blur px-container-padding py-4 text-2xl font-semibold">
+            Каталог Magda
+          </h3>
+        </a>
+        <a href={termoplastCatalogue} target="_blank" className="relative">
+          <img
+            src={termoplastImg}
+            alt="termoplast doors catalogue"
+            className="rounded-md border"
+          />
+          <h3 className="absolute bottom-0 left-0 right-0 bg-blur px-container-padding py-4 text-2xl font-semibold">
+            Каталог Termoplast
+          </h3>
+        </a>
+      </div>
+    </div>
   );
 }

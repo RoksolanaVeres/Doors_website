@@ -140,6 +140,7 @@ import ministryOfDoors_PU_triniti_temnyiImg from "@/assets/doors-img/ministry-of
 import ministryOfDoors_PU_versache_antratsytImg from "@/assets/doors-img/ministry-of-doors/MofD-PU-Versache-antratsyt.png";
 import ministryOfDoors_PU_versache_berhamoImg from "@/assets/doors-img/ministry-of-doors/MofD-PU-Versache-berhamo.png";
 import ministryOfDoors_PU_vitrazhImg from "@/assets/doors-img/ministry-of-doors/MofD-PU-Vitrazh.png";
+import ministryOfDoors_PO_21_venheStrukturnyiImg from "@/assets/doors-img/ministry-of-doors/MofD-PO-21-venhe-strukturnyi.png";
 
 
 
@@ -1023,6 +1024,17 @@ const doors = [
     description: "some description",
     colors: {
       lightGray: ministryOfDoors_PU_vitrazhImg,
+    },
+  },
+  {
+    id: "ministryOfDoors_20",
+    title: "ПО-21",
+    subtitle: "Венге структурний",
+    type: "exterior",
+    manufacturer: "Міністерство Дверей",
+    description: "some description",
+    colors: {
+      darkBrown: ministryOfDoors_PO_21_venheStrukturnyiImg,
     },
   },
 ];

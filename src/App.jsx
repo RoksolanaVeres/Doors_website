@@ -26,7 +26,6 @@ export default function App() {
 
 
 // to do:
-// - steel doors from Міністерство дверей https://ministerstvo-dverej.ua/kataloh/
 // - add pdf catalogues Magda & Termoplast 
 // - page / link to each door??? 
 // - some description???
