@@ -1,9 +1,15 @@
-import doorsData from "@/data";
+import {doorsData} from "@/data";
 
 import DoorCard from "../DoorCard";
 import { Helmet } from "react-helmet-async";
 import { Button } from "../ui/button";
 import { ArrowBigUp } from "lucide-react";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+
 
 import { useEffect, useState, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -55,37 +61,52 @@ export default function DoorsPage() {
         <title>Вікна & Двері | Двері </title>
       </Helmet>
       <div className="mx-auto w-full max-w-[1600px] px-container-padding py-24">
-        <div className="flex justify-end gap-1 pb-10">
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() =>
-              setSearchParams((params) => ({ ...params, type: "all" }))
-            }
-            className={`${filter === "all" && "bg-background_secondary"}`}
-          >
-            Всі
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() =>
-              setSearchParams((params) => ({ ...params, type: "interior" }))
-            }
-            className={`${filter === "interior" && "bg-background_secondary"}`}
-          >
-            Міжкімнатні
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() =>
-              setSearchParams((params) => ({ ...params, type: "exterior" }))
-            }
-            className={`${filter === "exterior" && "bg-background_secondary"}`}
-          >
-            Вхідні
-          </Button>
+        <div className="flex justify-between gap-1 pb-10 relative">
+          <Collapsible>
+            <CollapsibleTrigger>
+              <Button size="sm" variant="outline">
+                Ціни
+              </Button>
+            </CollapsibleTrigger>
+            <CollapsibleContent className="pt-2 absolute top-12 z-10 bg-muted-foreground p-4 rounded-md text-accent">
+              У зв'язку з нестабільною економічною ситуацією в країні, актуальні
+              ціни можна дізнатися безпосередньо у продавця-консультанта за
+              номером <span className="font-semibold">+380992236426</span>.
+              <p className="font-semibold">Дякуємо за розуміння та приносимо вибачення за незручності!</p>
+            </CollapsibleContent>
+          </Collapsible>
+          <div className="flex justify-end gap-1">
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() =>
+                setSearchParams((params) => ({ ...params, type: "all" }))
+              }
+              className={`${filter === "all" && "bg-background_secondary"}`}
+            >
+              Всі
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() =>
+                setSearchParams((params) => ({ ...params, type: "interior" }))
+              }
+              className={`${filter === "interior" && "bg-background_secondary"}`}
+            >
+              Міжкімнатні
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() =>
+                setSearchParams((params) => ({ ...params, type: "exterior" }))
+              }
+              className={`${filter === "exterior" && "bg-background_secondary"}`}
+            >
+              Вхідні
+            </Button>
+          </div>
         </div>
         <div className="grid grid-cols-auto-fill-265 gap-10">
           {doorsToDisplay.map((door) => {

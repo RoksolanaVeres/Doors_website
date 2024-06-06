@@ -142,8 +142,15 @@ import ministryOfDoors_PU_versache_berhamoImg from "@/assets/doors-img/ministry-
 import ministryOfDoors_PU_vitrazhImg from "@/assets/doors-img/ministry-of-doors/MofD-PU-Vitrazh.png";
 import ministryOfDoors_PO_21_venheStrukturnyiImg from "@/assets/doors-img/ministry-of-doors/MofD-PO-21-venhe-strukturnyi.png";
 
-
-
+//windows
+import kommerling_70_ST_PlusImg from "@/assets/doors-img/windows/KOMMERLING-70-ST-PLUS.png";
+import kommerling_76_AD_Img from "@/assets/doors-img/windows/KOMMERLING-76-AD.png";
+import kommerling_76_MD_Img from "@/assets/doors-img/windows/KOMMERLING-76-MD.png";
+import wds_5_S_Img from "@/assets/doors-img/windows/WDS-5-S.png";
+import wds_6_S_Img from "@/assets/doors-img/windows/WDS-6-S.png";
+import wds_8_S_Img from "@/assets/doors-img/windows/WDS-8-S.png";
+import wds_76_AD_Img from "@/assets/doors-img/windows/WDS-76-AD.png";
+import wds_76_MD_Img from "@/assets/doors-img/windows/WDS-76-MD.png";
 
 
 const druidColors = {
@@ -159,7 +166,7 @@ const druidColors = {
   filadelfiiaCrem: ColorFiladelfiiaCrem,
 };
 
-const doors = [
+export const doorsData = [
   {
     id: "druid_1",
     title: "Акорд",
@@ -1039,6 +1046,101 @@ const doors = [
   },
 ];
 
-export default doors;
-
-             
+export const windowsData = [
+  {
+    id: "window_1",
+    title: "Kömmerling 70 ST Plus",
+    manufacturer: "Kömmerling",
+    characteristics: {
+      mountingDepth: 70,
+      glazingUnit: 40,
+      chambers: 6,
+      gasketContours: 2,
+    },
+    image: kommerling_70_ST_PlusImg,
+  },
+  {
+    id: "window_2",
+    title: "Kömmerling 76 AD",
+    manufacturer: "Kömmerling",
+    characteristics: {
+      mountingDepth: 76,
+      glazingUnit: 44,
+      chambers: 5,
+      gasketContours: 2,
+    },
+    image: kommerling_76_AD_Img,
+  },
+  {
+    id: "window_3",
+    title: "Kömmerling 76 MD",
+    manufacturer: "Kömmerling",
+    characteristics: {
+      mountingDepth: 76,
+      glazingUnit: 44,
+      chambers: 6,
+      gasketContours: 3,
+    },
+    image: kommerling_76_MD_Img,
+  },
+  {
+    id: "window_4",
+    title: "WDS 5S",
+    manufacturer: "WDS",
+    characteristics: {
+      mountingDepth: 60,
+      glazingUnit: 32,
+      chambers: 5,
+      gasketContours: 2,
+    },
+    image: wds_5_S_Img,
+  },
+  {
+    id: "window_5",
+    title: "WDS 6S",
+    manufacturer: "WDS",
+    characteristics: {
+      mountingDepth: 70,
+      glazingUnit: 40,
+      chambers: 6,
+      gasketContours: 2,
+    },
+    image: wds_6_S_Img,
+  },
+  {
+    id: "window_6",
+    title: "WDS 8S",
+    manufacturer: "WDS",
+    characteristics: {
+      mountingDepth: 82,
+      glazingUnit: 44,
+      chambers: 6,
+      gasketContours: 3,
+    },
+    image: wds_8_S_Img,
+  },
+  {
+    id: "window_7",
+    title: "WDS 76AD",
+    manufacturer: "WDS",
+    characteristics: {
+      mountingDepth: 76,
+      glazingUnit: 48,
+      chambers: 5,
+      gasketContours: 2,
+    },
+    image: wds_76_AD_Img,
+  },
+  {
+    id: "window_8",
+    title: "WDS 76MD",
+    manufacturer: "WDS",
+    characteristics: {
+      mountingDepth: 76,
+      glazingUnit: 48,
+      chambers: 6,
+      gasketContours: 3,
+    },
+    image: wds_76_MD_Img,
+  },
+];
