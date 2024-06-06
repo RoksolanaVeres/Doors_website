@@ -1,4 +1,4 @@
-import {doorsData} from "@/data";
+import { doorsData } from "@/data";
 
 import DoorCard from "../DoorCard";
 import { Helmet } from "react-helmet-async";
@@ -10,7 +10,6 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 
-
 import { useEffect, useState, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
@@ -18,9 +17,9 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 import magdaCatalogue from "@/assets/catalogues/Magda_doors-catalogue.pdf";
-import termoplastCatalogue from "@/assets/catalogues/Termoplast_doors-catalogue.pdf"
-import magdaImg from "@/assets/catalogues/magda-img.png"
-import termoplastImg from "@/assets/catalogues/termoplast-img.png"
+import termoplastCatalogue from "@/assets/catalogues/Termoplast_doors-catalogue.pdf";
+import magdaImg from "@/assets/catalogues/magda-img.png";
+import termoplastImg from "@/assets/catalogues/termoplast-img.png";
 
 const PER_PAGE = 8;
 
@@ -61,18 +60,20 @@ export default function DoorsPage() {
         <title>Вікна & Двері | Двері </title>
       </Helmet>
       <div className="mx-auto w-full max-w-[1600px] px-container-padding py-24">
-        <div className="flex justify-between gap-1 pb-10 relative">
+        <div className="relative flex justify-between gap-1 pb-10">
           <Collapsible>
             <CollapsibleTrigger>
               <Button size="sm" variant="outline">
                 Ціни
               </Button>
             </CollapsibleTrigger>
-            <CollapsibleContent className="pt-2 absolute top-12 z-10 bg-muted-foreground p-4 rounded-md text-accent">
+            <CollapsibleContent className="absolute left-0 right-0 top-12 z-10 rounded-md bg-muted-foreground p-4 pt-2 text-accent shadow-lg">
               У зв'язку з нестабільною економічною ситуацією в країні, актуальні
               ціни можна дізнатися безпосередньо у продавця-консультанта за
               номером <span className="font-semibold">+380992236426</span>.
-              <p className="font-semibold">Дякуємо за розуміння та приносимо вибачення за незручності!</p>
+              <p className="font-semibold">
+                Дякуємо за розуміння та приносимо вибачення за незручності!
+              </p>
             </CollapsibleContent>
           </Collapsible>
           <div className="flex justify-end gap-1">
@@ -170,7 +171,6 @@ function ScrollToTopButton() {
   );
 }
 
-
 function DoorsCatalogues() {
   return (
     <div className="mt-20">
@@ -178,11 +178,7 @@ function DoorsCatalogues() {
         Більше моделей вхідних дверей представлено у каталогах:
       </h2>
       <div className="grid gap-10 md:grid-cols-2">
-        <a
-          href={magdaCatalogue}
-          target="_blank"
-          className="relative"
-        >
+        <a href={magdaCatalogue} target="_blank" className="relative">
           <img
             src={magdaImg}
             alt="magda doors catalogue"

@@ -17,14 +17,14 @@ export default function WindowsPage() {
         <title>Вікна & Двері | Вікна</title>
       </Helmet>
       <div className="mx-auto w-full max-w-[1600px] px-container-padding py-24">
-        <div className="relative pb-10 flex justify-end">
+        <div className="relative flex justify-end pb-10">
           <Collapsible>
             <CollapsibleTrigger>
               <Button size="sm" variant="outline">
                 Ціни
               </Button>
             </CollapsibleTrigger>
-            <CollapsibleContent className="absolute right-0 left-0 top-12 z-10 rounded-md bg-muted-foreground p-4 pt-2 text-accent">
+            <CollapsibleContent className="absolute left-0 right-0 top-12 z-10 rounded-md bg-muted-foreground p-4 pt-2 text-accent shadow-lg">
               У зв'язку з нестабільною економічною ситуацією в країні, актуальні
               ціни можна дізнатися безпосередньо у продавця-консультанта за
               номером <span className="font-semibold">+380992236426</span>.
