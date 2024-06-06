@@ -154,7 +154,7 @@ function DoorsCatalogues() {
   return (
     <div className="mt-20">
       <h2 className="pb-10 text-center text-2xl font-semibold">
-        Більше моделей вхідних дверей представлено в каталогаг:
+        Більше моделей вхідних дверей представлено у каталогах:
       </h2>
       <div className="grid gap-10 md:grid-cols-2">
         <a
