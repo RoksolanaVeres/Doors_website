@@ -63,9 +63,7 @@ export default function DoorsPage() {
         <div className="relative flex justify-between gap-1 pb-10">
           <Collapsible>
             <CollapsibleTrigger>
-              <Button size="sm" variant="outline">
                 Ціни
-              </Button>
             </CollapsibleTrigger>
             <CollapsibleContent className="absolute left-0 right-0 top-12 z-10 rounded-md bg-muted-foreground p-4 pt-2 text-accent shadow-lg">
               У зв'язку з нестабільною економічною ситуацією в країні, актуальні

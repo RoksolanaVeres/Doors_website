@@ -12,8 +12,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
-
-import { FaHeart } from "react-icons/fa6";
+import { useState, useEffect } from "react";
 
 const OUR_ADVANTAGES = [
   {
@@ -76,6 +75,17 @@ const OUR_ADVANTAGES = [
 ];
 
 export default function HomePage() {
+  const [animationPlayed, setAnimationPlayed] = useState(sessionStorage.getItem("animationPlayed") || false);
+
+  useEffect(() => {
+    const animationHasAlreadyPlayed = sessionStorage.getItem("animationPlayed")
+  
+    if (!animationHasAlreadyPlayed) {
+      setAnimationPlayed(true);
+      sessionStorage.setItem("animationPlayed", "true");
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -87,7 +97,7 @@ export default function HomePage() {
       >
         <motion.div
           className="flex h-full w-2/3 flex-col justify-center gap-10 bg-blur px-container-padding backdrop-blur-sm md:w-1/2"
-          animate={{ x: ["-100%", 0] }}
+          animate={animationPlayed === "true" ? { x: ["0%", 0] } : { x: ["-100%", 0] }}
           transition={{ ease: "easeOut", duration: 0.5 }}
         >
           <h1 className="font-lora text-3xl font-semibold uppercase text-brand-main md:text-5xl">
@@ -132,7 +142,7 @@ export default function HomePage() {
                   </h3>
                   <p className="text-muted-foreground">{advantage.details}</p>
                   {advantage.highlight && (
-                    <p className="pt-3 text-brand-main text-sm font-semibold tracking-wider">
+                    <p className="pt-3 text-sm font-semibold tracking-wider text-brand-main">
                       {advantage.highlight}
                     </p>
                   )}
@@ -180,7 +190,7 @@ export default function HomePage() {
         <div className="flex w-full flex-wrap justify-between gap-10">
           <Link to="/doors?type=exterior" className="flex-1">
             <motion.div
-              className="grid h-[500px] min-w-[300px] items-end bg-cover bg-center"
+              className="grid h-[500px] min-w-[300px] items-end rounded-md bg-cover bg-center"
               style={{ backgroundImage: `url(${exteriorDoorsImg})` }}
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", duration: 0.5 }}
@@ -193,7 +203,7 @@ export default function HomePage() {
 
           <Link to="/doors?type=interior" className="flex-1">
             <motion.div
-              className="grid h-[500px] min-w-[300px] items-end bg-cover bg-center"
+              className="grid h-[500px] min-w-[300px] items-end rounded-md bg-cover bg-center"
               style={{ backgroundImage: `url(${interiorDoorsImg})` }}
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", duration: 0.5 }}
@@ -206,7 +216,7 @@ export default function HomePage() {
 
           <Link to="/windows" className="flex-1">
             <motion.div
-              className="grid h-[500px] min-w-[300px] items-end bg-cover bg-center"
+              className="grid h-[500px] min-w-[300px] items-end rounded-md bg-cover bg-center"
               style={{ backgroundImage: `url(${windowImg})` }}
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", duration: 0.5 }}
