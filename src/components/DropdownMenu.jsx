@@ -1,8 +1,16 @@
-import { useContext } from "react";
+// components
 import NavigationLinkItems from "./NavigationLinkItems";
+
+// hooks
+import { useContext } from "react";
+
+//constexts
 import { MenuContext } from "./store/MenuContext";
+
+// framer motion
 import { motion } from "framer-motion";
 
+// variables
 const dropdownBlockVariants = {
   hidden: { x: "-100%", transition: { duration: 0.3 } },
   visible: { x: 0 },
@@ -27,7 +35,7 @@ export default function DropdownMenu() {
       transition={{ ease: "easeOut", duration: 0.5 }}
     >
       <motion.ul
-        className="grid gap-10 text-lg w-fit"
+        className="grid w-fit gap-10 text-lg"
         variants={dropdownListVariants}
       >
         <NavigationLinkItems />

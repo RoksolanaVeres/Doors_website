@@ -1,14 +1,18 @@
+// data & images
 import counsultingImg from "@/assets/doors-img/unsplash-images/consulting.jpg";
 import deliveryImg from "@/assets/doors-img/unsplash-images/delivery.jpg";
 import doorInstallationImg from "@/assets/doors-img/unsplash-images/doors-installation.jpg";
 import glassCuttingImg from "@/assets/doors-img/unsplash-images/glass-cutting.jpg";
 import electricalAppliancesImg from "@/assets/doors-img/unsplash-images/electrical-appliances.jpg";
 
+// components
 import { ArrowBigUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
+// hooks
 import { useEffect } from "react";
 
+// variables
 const OUR_SERVICES = [
   {
     id: 1,
@@ -97,7 +101,7 @@ export default function ServicesPage() {
                 >
                   <div
                     id="service-text-container"
-                    className={`cursor-pointer group order-2 [perspective:1000px] md:z-10 md:h-5/6 ${service.id % 2 === 1 ? "md:order-2 md:-ml-10" : "md:-mr-10"}`}
+                    className={`group order-2 cursor-pointer [perspective:1000px] md:z-10 md:h-5/6 ${service.id % 2 === 1 ? "md:order-2 md:-ml-10" : "md:-mr-10"}`}
                   >
                     <div className="relative h-[350px] shadow-xl transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] md:h-full">
                       <div className="absolute inset-0">

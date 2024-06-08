@@ -1,15 +1,25 @@
-import { Helmet } from "react-helmet-async";
+// data & images
 import { windowsData } from "@/data";
-import WindowCard from "../WindowCard";
-import { Button } from "../ui/button";
 
+// components
+import { Helmet } from "react-helmet-async";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import WindowCard from "../WindowCard";
+import ScrollToTopButton from "../ScrollToTopButton";
+
+// hooks
+import { useRef } from "react";
+
+// framer motion
+import { motion } from "framer-motion";
+
 
 export default function WindowsPage() {
+  const ref = useRef();
   const windows = windowsData;
   return (
     <>
@@ -34,8 +44,20 @@ export default function WindowsPage() {
         </div>
         <div className="grid grid-cols-auto-fill-265 gap-10">
           {windows.map((window) => {
-            return <WindowCard window={window} key={window.id} />;
+            return (
+              <motion.div
+                key={window.id}
+                initial={{ scale: 0.5 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+              >
+                <WindowCard window={window} />
+              </motion.div>
+            );
           })}
+        </div>
+        <div className="h-1 w-full" ref={ref}>
+          <ScrollToTopButton />
         </div>
       </div>
     </>

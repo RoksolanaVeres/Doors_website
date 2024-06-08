@@ -1,5 +1,15 @@
+// data & images
+// components
 import { Helmet } from "react-helmet-async";
 import Map from "../Map";
+
+// hooks
+import { useEffect } from "react";
+
+// framer motion
+// variables
+
+//icons
 import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { IoHome } from "react-icons/io5";
@@ -7,9 +17,6 @@ import { GrSchedule } from "react-icons/gr";
 import { FaViber } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 
-import openDoorImg from "@/assets/doors-img/unsplash-images/reserve/open-door-3.jpg"
-
-import { useEffect } from "react";
 
 export default function ContactsPage() {
   useEffect(() => {
@@ -22,16 +29,6 @@ export default function ContactsPage() {
         <title>Вікна & Двері | Контакти</title>
       </Helmet>
       <div id="ourContacts" className="pt-20">
-        {/* <div
-          id="contactsHeader"
-          style={{ backgroundImage: `url(${openDoorImg})` }}
-          className="flex h-[300px] items-center justify-center bg-cover bg-center"
-        >
-          <h1 className="font-roboto text-3xl font-semibold">
-         Наші двері завжди відчинені для Вас
-          </h1>
-        </div> */}
-
         <div
           id="contactsInfo"
           className="mx-auto grid max-w-[1600px] gap-10 px-container-padding py-20 md:grid-cols-3"
@@ -140,7 +137,9 @@ export default function ContactsPage() {
               <p className="text-secondary-foreground">
                 м.Івано-Франківськ, вулиця Тичини 19А
               </p>
-              <p className="text-sm">Орієнтир: між ТЦ "Бельведер" та "Майстер"</p>
+              <p className="text-sm">
+                Орієнтир: між ТЦ "Бельведер" та "Майстер"
+              </p>
             </div>
           </div>
 

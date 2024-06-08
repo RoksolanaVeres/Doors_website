@@ -1,19 +1,25 @@
+// data & images
 import roomInteriorImg from "../../assets/doors-img/unsplash-images/room-interior.jpg";
 import exteriorDoorsImg from "../../assets/doors-img/unsplash-images/steel-door.jpg";
 import interiorDoorsImg from "../../assets/doors-img/unsplash-images/interior-door.jpg";
 import windowImg from "../../assets/doors-img/unsplash-images/window.jpg";
-
 import saveTimeImg from "../../assets/doors-img/unsplash-images/time-doorhandle-keys.jpg";
 import doorServicesImg from "../../assets/doors-img/unsplash-images/door-fix.jpg";
 import qualitySecurityImg from "../../assets/doors-img/unsplash-images/door-handle.jpg";
 import saveMoneyImg from "../../assets/doors-img/unsplash-images/save-money.jpg";
 
+// components
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { Button } from "../ui/button";
+
+// hooks
 import { useState, useEffect } from "react";
 
+// framer motion
+import { motion } from "framer-motion";
+
+// variables
 const OUR_ADVANTAGES = [
   {
     id: 1,
@@ -75,11 +81,13 @@ const OUR_ADVANTAGES = [
 ];
 
 export default function HomePage() {
-  const [animationPlayed, setAnimationPlayed] = useState(sessionStorage.getItem("animationPlayed") || false);
+  const [animationPlayed, setAnimationPlayed] = useState(
+    sessionStorage.getItem("animationPlayed") || false,
+  );
 
   useEffect(() => {
-    const animationHasAlreadyPlayed = sessionStorage.getItem("animationPlayed")
-  
+    const animationHasAlreadyPlayed = sessionStorage.getItem("animationPlayed");
+
     if (!animationHasAlreadyPlayed) {
       setAnimationPlayed(true);
       sessionStorage.setItem("animationPlayed", "true");
@@ -97,7 +105,9 @@ export default function HomePage() {
       >
         <motion.div
           className="flex h-full w-2/3 flex-col justify-center gap-10 bg-blur px-container-padding backdrop-blur-sm md:w-1/2"
-          animate={animationPlayed === "true" ? { x: ["0%", 0] } : { x: ["-100%", 0] }}
+          animate={
+            animationPlayed === "true" ? { x: ["0%", 0] } : { x: ["-100%", 0] }
+          }
           transition={{ ease: "easeOut", duration: 0.5 }}
         >
           <h1 className="font-lora text-3xl font-semibold uppercase text-brand-main md:text-5xl">

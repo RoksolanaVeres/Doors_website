@@ -1,26 +1,30 @@
+// data & images
 import { doorsData } from "@/data";
-
-import DoorCard from "../DoorCard";
-import { Helmet } from "react-helmet-async";
-import { Button } from "../ui/button";
-import { ArrowBigUp } from "lucide-react";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-
-import { useEffect, useState, useRef } from "react";
-import { useSearchParams } from "react-router-dom";
-import { useInView } from "react-intersection-observer";
-
-import { motion } from "framer-motion";
-
 import magdaCatalogue from "@/assets/catalogues/Magda_doors-catalogue.pdf";
 import termoplastCatalogue from "@/assets/catalogues/Termoplast_doors-catalogue.pdf";
 import magdaImg from "@/assets/catalogues/magda-img.png";
 import termoplastImg from "@/assets/catalogues/termoplast-img.png";
 
+// components
+import { Helmet } from "react-helmet-async";
+import { Button } from "../ui/button";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import ScrollToTopButton from "../ScrollToTopButton";
+import DoorCard from "../DoorCard";
+
+// hooks
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
+
+// framer motion
+import { motion } from "framer-motion";
+
+// variables
 const PER_PAGE = 8;
 
 export default function DoorsPage() {
@@ -127,45 +131,6 @@ export default function DoorsPage() {
         {filter !== "interior" && <DoorsCatalogues />}
       </div>
     </>
-  );
-}
-
-function ScrollToTopButton() {
-  const buttonRef = useRef(null);
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
-  const scrollHandler = () => {
-    const threshold = 350;
-    const button = buttonRef.current;
-    if (window.scrollY > threshold) {
-      button.classList.remove("hidden");
-    } else {
-      button.classList.add("hidden");
-    }
-  };
-
-  useEffect(() => {
-    buttonRef.current.classList.add("hidden");
-    window.addEventListener("scroll", scrollHandler);
-
-    return () => {
-      window.scroll(0, 0);
-      window.removeEventListener("scroll", scrollHandler);
-    };
-  }, []);
-
-  return (
-    <Button
-      ref={buttonRef}
-      variant="outline"
-      className="fixed bottom-3 right-3 shadow-lg"
-      onClick={scrollToTop}
-    >
-      <ArrowBigUp />
-    </Button>
   );
 }
 

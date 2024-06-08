@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-
+// components
 import {
   Card,
   CardContent,
@@ -10,6 +8,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+// hooks
+import { useState } from "react";
+
+// framer motion
+import { motion } from "framer-motion";
+
+// variables
 const btnColors = {
   white: "bg-door-white",
   beige: "bg-door-beige",
@@ -46,7 +51,11 @@ export default function DoorCard({ door }) {
       <CardHeader>
         <CardTitle>
           <p>{door.title}</p>
-          {door.subtitle && <p className="text-base text-secondary-foreground">{door.subtitle}</p>}
+          {door.subtitle && (
+            <p className="text-base text-secondary-foreground">
+              {door.subtitle}
+            </p>
+          )}
         </CardTitle>
         <CardDescription>{door.manufacturer}</CardDescription>
       </CardHeader>

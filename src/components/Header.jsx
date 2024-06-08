@@ -1,15 +1,19 @@
-import { useContext } from "react";
-import { ThemeContext } from "./store/ThemeContext";
-import { MenuContext } from "./store/MenuContext";
-
-import { motion, AnimatePresence } from "framer-motion";
-
+// components
 import "@theme-toggles/react/css/DarkSide.css";
 import { DarkSide } from "@theme-toggles/react";
 import { Separator } from "@/components/ui/separator";
-
 import DropdownMenu from "./DropdownMenu";
 import NavigationLinkItems from "./NavigationLinkItems";
+
+// hooks
+import { useContext } from "react";
+
+//contexts
+import { ThemeContext } from "./store/ThemeContext";
+import { MenuContext } from "./store/MenuContext";
+
+// framer motion
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const { menuIsOpen, toggleMenuOpenState } = useContext(MenuContext);
@@ -46,7 +50,7 @@ function DesktopHeader() {
   return (
     <header
       id="desktopHeader"
-      className="hidden w-full justify-between px-container-padding py-8 md:flex items-center"
+      className="hidden w-full items-center justify-between px-container-padding py-8 md:flex"
     >
       <nav id="desktopNav">
         <ul className="flex w-full justify-between gap-5">

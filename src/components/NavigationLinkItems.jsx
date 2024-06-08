@@ -1,6 +1,10 @@
+// components
 import { NavLink } from "react-router-dom";
+
+// framer motion
 import { motion } from "framer-motion";
 
+// variables
 const LINKS = [
   { page: "Головна", path: "/" },
   { page: "Двері", path: "/doors?type=all" },
@@ -28,8 +32,8 @@ export default function NavigationLinkItems() {
               to={link.path}
               className={({ isActive }) =>
                 isActive
-                  ? "font-semibold after:scale-100 text-accent-main after:mt-0.5 after:block after:h-0.5 after:w-auto after:bg-accent-main after:transition-transform after:duration-400 after:ease-in-out after:content-['']"
-                  : "after:scale-50 font-semibold text-muted-foreground after:content-[''] hover:text-accent-main"
+                  ? "after:duration-400 font-semibold text-accent-main after:mt-0.5 after:block after:h-0.5 after:w-auto after:scale-100 after:bg-accent-main after:transition-transform after:ease-in-out after:content-['']"
+                  : "font-semibold text-muted-foreground after:scale-50 after:content-[''] hover:text-accent-main"
               }
             >
               {link.page}
