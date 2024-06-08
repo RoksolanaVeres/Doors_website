@@ -97,7 +97,7 @@ export default function ServicesPage() {
                 >
                   <div
                     id="service-text-container"
-                    className={`group order-2 [perspective:1000px] md:z-10 md:h-5/6 ${service.id % 2 === 1 ? "md:order-2 md:-ml-10" : "md:-mr-10"}`}
+                    className={`cursor-pointer group order-2 [perspective:1000px] md:z-10 md:h-5/6 ${service.id % 2 === 1 ? "md:order-2 md:-ml-10" : "md:-mr-10"}`}
                   >
                     <div className="relative h-[350px] shadow-xl transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] md:h-full">
                       <div className="absolute inset-0">
@@ -119,7 +119,7 @@ export default function ServicesPage() {
                           </div>
                         </div>
                       </div>
-                      <div className="absolute inset-0 flex w-full items-center justify-center rounded-md bg-brand-main px-12 text-center text-slate-200 [backface-visibility:hidden] [transform:rotateY(180deg)] md:h-full">
+                      <div className="absolute inset-0 flex w-full items-center justify-center rounded-md bg-muted-foreground px-12 text-center text-accent [backface-visibility:hidden] [transform:rotateY(180deg)] md:h-full">
                         <div className="grid gap-2 p-5 md:p-10">
                           <h3>{service.backCard.header}</h3>
                           <div>

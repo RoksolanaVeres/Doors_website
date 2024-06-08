@@ -10,13 +10,13 @@ export default function Map() {
         className="h-96"
         center={position}
         zoom={17}
-        scrollWheelZoom={true}
+        scrollWheelZoom={false}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position} className="text-red-600">
+        <Marker position={position}>
           <Popup>
             Магазин 100 Гц <br /> м.Івано-Франківськ, Тичини 19а
           </Popup>
