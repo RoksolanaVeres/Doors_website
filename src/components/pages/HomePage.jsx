@@ -15,6 +15,7 @@ import { Button } from "../ui/button";
 
 // hooks
 import { useState, useEffect, useRef } from "react";
+import { useAnimationOncePerSession } from "@/hooks/useAnimationOncePerSession";
 
 // framer motion
 import { motion, useInView } from "framer-motion";
@@ -81,18 +82,7 @@ const OUR_ADVANTAGES = [
 ];
 
 export default function HomePage() {
-  const [animationPlayed, setAnimationPlayed] = useState(
-    sessionStorage.getItem("animationPlayed") || false,
-  );
-
-  useEffect(() => {
-    const animationHasAlreadyPlayed = sessionStorage.getItem("animationPlayed");
-
-    if (!animationHasAlreadyPlayed) {
-      setAnimationPlayed(true);
-      sessionStorage.setItem("animationPlayed", "true");
-    }
-  }, []);
+  const mainAnimationHasPlayed = useAnimationOncePerSession("mainAnimation");
 
   return (
     <>
@@ -106,7 +96,7 @@ export default function HomePage() {
         <motion.div
           className="flex h-full w-2/3 flex-col justify-center gap-10 bg-blur px-container-padding backdrop-blur-sm md:w-1/2"
           animate={
-            animationPlayed === "true" ? { x: ["0%", 0] } : { x: ["-100%", 0] }
+            mainAnimationHasPlayed ? { x: ["0%", 0] } : { x: ["-100%", 0] }
           }
           transition={{ ease: "easeOut", duration: 0.5 }}
         >
@@ -194,7 +184,12 @@ export default function HomePage() {
 
 function Advantage({ advantage }) {
   const advantageRef = useRef(null);
-  const advantageIsInView = useInView(advantageRef, { once: true, margin: "-200px" });
+  const advantageIsInView = useInView(advantageRef, {
+    once: true,
+    margin: "-200px",
+  });
+  const advantageAnimationHasPlayed =
+    useAnimationOncePerSession("advantageAnimation");
 
   return (
     <li
@@ -205,13 +200,17 @@ function Advantage({ advantage }) {
       <div
         id="advantage-text-container"
         className={`py-10 md:px-10 ${advantage.id % 2 === 0 && "md:order-2"}`}
-        style={{
-          transform: advantageIsInView
-            ? "none"
-            : `translateX(${advantage.id % 2 === 0 ? "200px" : "-200px"})`,
-          opacity: advantageIsInView ? 1 : 0,
-          transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-        }}
+        style={
+          !advantageAnimationHasPlayed
+            ? {
+                transform: advantageIsInView
+                  ? "none"
+                  : `translateX(${advantage.id % 2 === 0 ? "200px" : "-200px"})`,
+                opacity: advantageIsInView ? 1 : 0,
+                transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              }
+            : {}
+        }
       >
         <p id="advantage-number" className="pb-4 text-neutral">
           <span className="tracking-widest">причина # </span>
@@ -246,13 +245,17 @@ function Advantage({ advantage }) {
       >
         <motion.img
           src={advantage.img}
-          className="w-[300px] rounded-md opacity-0 md:w-[400px]"
+          className="w-[300px] rounded-md md:w-[400px]"
           alt={advantage.header}
-          animate={{
-            scale: advantageIsInView ? 1 : 0.7,
-            opacity: advantageIsInView ? 1 : 0,
-          }}
-          transition={{ ease: "easeOut", duration: 0.5 }}
+          animate={
+            !advantageAnimationHasPlayed
+              ? {
+                  scale: advantageIsInView ? 1 : 0.7,
+                  opacity: advantageIsInView ? [0, 1] : 0,
+                  transition: { duration: 0.4 },
+                }
+              : {}
+          }
         />
       </div>
     </li>
