@@ -12,15 +12,19 @@ import WindowCard from "../WindowCard";
 import ScrollToTopButton from "../ScrollToTopButton";
 
 // hooks
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 // framer motion
 import { motion } from "framer-motion";
 
-
 export default function WindowsPage() {
   const ref = useRef();
   const windows = windowsData;
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <>
       <Helmet>

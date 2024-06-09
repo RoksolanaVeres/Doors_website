@@ -14,10 +14,10 @@ import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 
 // hooks
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // framer motion
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 // variables
 const OUR_ADVANTAGES = [
@@ -133,57 +133,7 @@ export default function HomePage() {
         </h2>
         <ol className="grid gap-20">
           {OUR_ADVANTAGES.map((advantage) => {
-            return (
-              <li
-                id="advantage-container"
-                key={advantage.id}
-                className="grid md:grid-cols-2"
-              >
-                <div
-                  id="advantage-text-container"
-                  className={`py-10 md:px-10 ${advantage.id % 2 === 0 && "md:order-2"}`}
-                >
-                  <p id="advantage-number" className="pb-4 text-neutral">
-                    <span className="tracking-widest">причина # </span>
-                    <span className="text-5xl">0{advantage.id}</span>
-                  </p>
-                  <h3 className="pb-2 text-2xl font-semibold">
-                    {advantage.header}
-                  </h3>
-                  <p className="text-muted-foreground">{advantage.details}</p>
-                  {advantage.highlight && (
-                    <p className="pt-3 text-sm font-semibold tracking-wider text-brand-main">
-                      {advantage.highlight}
-                    </p>
-                  )}
-                  <div id="advantage-button-container" className="flex gap-4">
-                    {advantage.buttons.map((button) => {
-                      return (
-                        <Link
-                          key={button.buttonCaption}
-                          to={button.path}
-                          className="pt-8"
-                        >
-                          <Button className="bg-brand-main">
-                            {button.buttonCaption}
-                          </Button>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-                <div
-                  id="advantages-image-container"
-                  className="flex items-center justify-center rounded-md bg-background_secondary"
-                >
-                  <img
-                    src={advantage.img}
-                    className="w-[300px] rounded-md md:w-[400px]"
-                    alt=""
-                  />
-                </div>
-              </li>
-            );
+            return <Advantage key={advantage.id} advantage={advantage} />;
           })}
         </ol>
       </div>
@@ -239,5 +189,72 @@ export default function HomePage() {
         </div>
       </div>
     </>
+  );
+}
+
+function Advantage({ advantage }) {
+  const advantageRef = useRef(null);
+  const advantageIsInView = useInView(advantageRef, { once: true, margin: "-200px" });
+
+  return (
+    <li
+      id="advantage-container"
+      className="grid md:grid-cols-2"
+      ref={advantageRef}
+    >
+      <div
+        id="advantage-text-container"
+        className={`py-10 md:px-10 ${advantage.id % 2 === 0 && "md:order-2"}`}
+        style={{
+          transform: advantageIsInView
+            ? "none"
+            : `translateX(${advantage.id % 2 === 0 ? "200px" : "-200px"})`,
+          opacity: advantageIsInView ? 1 : 0,
+          transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
+        <p id="advantage-number" className="pb-4 text-neutral">
+          <span className="tracking-widest">причина # </span>
+          <span className="text-5xl">0{advantage.id}</span>
+        </p>
+        <h3 className="pb-2 text-2xl font-semibold">{advantage.header}</h3>
+        <p className="text-muted-foreground">{advantage.details}</p>
+        {advantage.highlight && (
+          <p className="pt-3 text-sm font-semibold tracking-wider text-brand-main">
+            {advantage.highlight}
+          </p>
+        )}
+        <div id="advantage-button-container" className="flex gap-4">
+          {advantage.buttons.map((button) => {
+            return (
+              <Link
+                key={button.buttonCaption}
+                to={button.path}
+                className="pt-8"
+              >
+                <Button className="bg-brand-main">
+                  {button.buttonCaption}
+                </Button>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+      <div
+        id="advantages-image-container"
+        className="flex items-center justify-center rounded-md bg-background_secondary"
+      >
+        <motion.img
+          src={advantage.img}
+          className="w-[300px] rounded-md opacity-0 md:w-[400px]"
+          alt={advantage.header}
+          animate={{
+            scale: advantageIsInView ? 1 : 0.7,
+            opacity: advantageIsInView ? 1 : 0,
+          }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+        />
+      </div>
+    </li>
   );
 }
