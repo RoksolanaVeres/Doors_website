@@ -12,7 +12,7 @@ export default function RootLayout() {
       >
         <div id="header-mainContent__container" className="flex-1">
           <Header />
-          <main id="pageContent__container">
+          <main id="pageContent__container" className="overflow-hidden">
             <Outlet />
           </main>
         </div>
