@@ -16,6 +16,14 @@ import { motion, useInView } from "framer-motion";
 
 export default function HomePage() {
   const mainAnimationHasPlayed = useAnimationOncePerSession("mainAnimation");
+  const mainAnimationVariants = {
+    slideIn: {
+      x: ["-100%", 0],
+      transition: { ease: "easeOut", duration: 0.5 },
+    },
+  };
+
+  // sessionStorage.clear();
 
   return (
     <>
@@ -29,10 +37,8 @@ export default function HomePage() {
       >
         <motion.div
           className="flex h-full w-2/3 flex-col justify-center gap-10 bg-blur px-container-padding backdrop-blur-sm md:w-1/2"
-          animate={
-            mainAnimationHasPlayed ? { x: ["0%", 0] } : { x: ["-100%", 0] }
-          }
-          transition={{ ease: "easeOut", duration: 0.5 }}
+          variants={mainAnimationVariants}
+          animate={!mainAnimationHasPlayed ? "slideIn" : null}
         >
           <h1 className="font-lora text-3xl font-semibold uppercase text-brand-main md:text-5xl">
             Вікна
@@ -77,8 +83,40 @@ function AdvantageItem({ advantage }) {
     once: true,
     margin: "-200px",
   });
+
   const advantageAnimationHasPlayed =
     useAnimationOncePerSession("advantageAnimation");
+
+  const advantageTextAnimationVariants = !advantageAnimationHasPlayed
+    ? {
+        slideFromLeft: {
+          x: ["-100%", 0],
+          opacity: [0, 1],
+          transition: { ease: "easeOut", duration: 0.7 },
+        },
+        slideFromRight: {
+          x: ["100%", 0],
+          opacity: [0, 1],
+          transition: { ease: "easeOut", duration: 0.7 },
+        },
+        hidden: {
+          opacity: 0,
+        },
+      }
+    : {};
+
+  const advantageImageAnimationVariants = !advantageAnimationHasPlayed
+    ? {
+        visible: {
+          scale: [0.7, 1],
+          opacity: [0, 1],
+          transition: { ease: "easeOut", duration: 0.4 },
+        },
+        hidden: {
+          opacity: 0,
+        },
+      }
+    : {};
 
   return (
     <li
@@ -86,19 +124,16 @@ function AdvantageItem({ advantage }) {
       className="grid md:grid-cols-2"
       ref={advantageRef}
     >
-      <div
+      <motion.div
         id="advantage-text-container"
         className={`py-10 md:px-10 ${advantage.id % 2 === 0 && "md:order-2"}`}
-        style={
-          !advantageAnimationHasPlayed
-            ? {
-                transform: advantageIsInView
-                  ? "none"
-                  : `translateX(${advantage.id % 2 === 0 ? "200px" : "-200px"})`,
-                opacity: advantageIsInView ? 1 : 0,
-                transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-              }
-            : {}
+        variants={advantageTextAnimationVariants}
+        animate={
+          !advantageIsInView
+            ? "hidden"
+            : advantage.id % 2 === 0
+              ? "slideFromRight"
+              : "slideFromLeft"
         }
       >
         <p id="advantage-number" className="pb-4 text-neutral">
@@ -127,7 +162,7 @@ function AdvantageItem({ advantage }) {
             );
           })}
         </div>
-      </div>
+      </motion.div>
       <div
         id="advantages-image-container"
         className="flex items-center justify-center rounded-md bg-background_secondary"
@@ -136,15 +171,8 @@ function AdvantageItem({ advantage }) {
           src={advantage.img}
           className="w-[300px] rounded-md md:w-[400px]"
           alt={advantage.header}
-          animate={
-            !advantageAnimationHasPlayed
-              ? {
-                  scale: advantageIsInView ? 1 : 0.7,
-                  opacity: advantageIsInView ? [0, 1] : 0,
-                  transition: { duration: 0.4 },
-                }
-              : {}
-          }
+          variants={advantageImageAnimationVariants}
+          animate={advantageIsInView ? "visible" : "hidden"}
         />
       </div>
     </li>
@@ -152,6 +180,32 @@ function AdvantageItem({ advantage }) {
 }
 
 function OurAssortment() {
+  const assortmentRef = useRef(null);
+  const assortmentIsInView = useInView(assortmentRef, {
+    once: true,
+    margin: "-200px",
+  });
+  const assortmentAnimationHasPlayed = useAnimationOncePerSession(
+    "assortmentAnimation",
+  );
+
+  const assortmentVariants = !assortmentAnimationHasPlayed
+    ? {
+        visible: {
+          opacity: [0.5, 1],
+          scale: [0.5, 1],
+          transition: {
+            staggerChildren: 0.4,
+            duration: 0.4,
+            ease: "easeOut",
+          },
+        },
+        hidden: {
+          opacity: 0,
+        },
+      }
+    : {};
+
   return (
     <div
       id="assortment-block"
@@ -162,23 +216,29 @@ function OurAssortment() {
         <span className="text-4xl md:text-6xl">Асортимент</span>
       </h2>
 
-      <ul className="flex w-full flex-wrap justify-between gap-10">
+      <motion.ul
+        variants={assortmentVariants}
+        animate={assortmentIsInView ? "visible" : "hidden"}
+        className="flex w-full flex-wrap justify-between gap-10"
+        ref={assortmentRef}
+      >
         {OUR_ASSORTMENT.map((assortmentItem) => {
           return (
             <AssortmentItem
               key={assortmentItem.id}
               assortmentItem={assortmentItem}
+              animationVariants={assortmentVariants}
             />
           );
         })}
-      </ul>
+      </motion.ul>
     </div>
   );
 }
 
-function AssortmentItem({ assortmentItem }) {
+function AssortmentItem({ assortmentItem, animationVariants }) {
   return (
-    <li className="flex-1">
+    <motion.li className="flex-1" variants={animationVariants}>
       <Link to={assortmentItem.link}>
         <motion.div
           className="grid h-[500px] min-w-[300px] items-end rounded-md bg-cover bg-center"
@@ -191,6 +251,6 @@ function AssortmentItem({ assortmentItem }) {
           </h3>
         </motion.div>
       </Link>
-    </li>
+    </motion.li>
   );
 }
