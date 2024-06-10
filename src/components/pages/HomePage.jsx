@@ -1,12 +1,6 @@
 // data & images
+import { OUR_ADVANTAGES, OUR_ASSORTMENT } from "@/data";
 import roomInteriorImg from "../../assets/doors-img/unsplash-images/room-interior.jpg";
-import exteriorDoorsImg from "../../assets/doors-img/unsplash-images/steel-door.jpg";
-import interiorDoorsImg from "../../assets/doors-img/unsplash-images/interior-door.jpg";
-import windowImg from "../../assets/doors-img/unsplash-images/window.jpg";
-import saveTimeImg from "../../assets/doors-img/unsplash-images/time-doorhandle-keys.jpg";
-import doorServicesImg from "../../assets/doors-img/unsplash-images/door-fix.jpg";
-import qualitySecurityImg from "../../assets/doors-img/unsplash-images/door-handle.jpg";
-import saveMoneyImg from "../../assets/doors-img/unsplash-images/save-money.jpg";
 
 // components
 import { Helmet } from "react-helmet-async";
@@ -14,72 +8,11 @@ import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 
 // hooks
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useAnimationOncePerSession } from "@/hooks/useAnimationOncePerSession";
 
 // framer motion
 import { motion, useInView } from "framer-motion";
-
-// variables
-const OUR_ADVANTAGES = [
-  {
-    id: 1,
-    header: "Безпека та якість",
-    img: qualitySecurityImg,
-    details: `Нашому дверному бізнесу вже понад 20 років. За цей час ми ретельно вивчили всіх можливих виробників дверей
-    та вікон, обрали найкращих для того, щоб з впевненістю гарантувати Вам довговічність та надійність наших виробів.`,
-    buttons: [
-      {
-        buttonCaption: "Тут двері",
-        path: "./doors?type=all",
-      },
-      {
-        buttonCaption: "А тут вікна",
-        path: "./windows",
-      },
-    ],
-  },
-  {
-    id: 2,
-    header: "Повний сервіс",
-    img: doorServicesImg,
-    details: `Наші послуги включають не лише продаж, а й професійний монтаж (а при потребі й демонтаж старих вікон чи дверей). 
-    Крім цього, у нас Ви можете замовити привіз свого замовлення та виїзд майстра додому для заміру дверного або віконного отвору.`,
-    buttons: [
-      {
-        buttonCaption: "Всі послуги",
-        path: "./services",
-      },
-    ],
-  },
-  {
-    id: 3,
-    header: "Економія часу",
-    img: saveTimeImg,
-    details: `Країна у смартфоні - це про нас. Звісно, двері через Дію ми Вам не встановимо, але переважну більшість наших послуг
-    можна отримати просто зв'язавшись з нами по телефону.`,
-    buttons: [
-      {
-        buttonCaption: "Зв'язатися з нами",
-        path: "./contacts",
-      },
-    ],
-  },
-  {
-    id: 4,
-    header: "Адекватні ціни",
-    img: saveMoneyImg,
-    details: `Ми розуміємо з якими труднощами Ви стикаєтесь, коли наважуєтесь розпочати ремонт в оселі, особливо в цей нелегкий час,
-    тому подбали про те, щоб попри все, наші ціни залишалися конкурентними, зберігаючи високу якість виробу.`,
-    highlight: `Для військових, які захищають наш спокій, пропонуємо приємні знижки - це наш спосіб сказати "Дякую"!`,
-    buttons: [
-      {
-        buttonCaption: "Наші контакти",
-        path: "./contacts",
-      },
-    ],
-  },
-];
 
 export default function HomePage() {
   const mainAnimationHasPlayed = useAnimationOncePerSession("mainAnimation");
@@ -90,6 +23,7 @@ export default function HomePage() {
         <title>Вікна & Двері</title>
       </Helmet>
       <div
+        id="main-block"
         className="h-screen bg-cover bg-[90%] md:bg-center"
         style={{ backgroundImage: `url(${roomInteriorImg})` }}
       >
@@ -112,77 +46,32 @@ export default function HomePage() {
           </div>
         </motion.div>
       </div>
-
-      <div
-        id="ourAdvantages"
-        className="mx-auto flex flex-col items-center px-container-padding pt-10 md:pt-20 xl:w-2/3 xl:px-0"
-      >
-        <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase text-brand-main md:pb-20 md:text-4xl">
-          Чому варто <br />
-          <span className="text-4xl md:text-6xl">обрати нас?</span>
-        </h2>
-        <ol className="grid gap-20">
-          {OUR_ADVANTAGES.map((advantage) => {
-            return <Advantage key={advantage.id} advantage={advantage} />;
-          })}
-        </ol>
-      </div>
-
-      <div
-        id="assortment"
-        className="flex flex-col items-center px-container-padding py-10 md:py-20"
-      >
-        <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase text-brand-main md:pb-20 md:text-4xl">
-          Наш <br />
-          <span className="text-4xl md:text-6xl">Асортимент</span>
-        </h2>
-
-        <div className="flex w-full flex-wrap justify-between gap-10">
-          <Link to="/doors?type=exterior" className="flex-1">
-            <motion.div
-              className="grid h-[500px] min-w-[300px] items-end rounded-md bg-cover bg-center"
-              style={{ backgroundImage: `url(${exteriorDoorsImg})` }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", duration: 0.5 }}
-            >
-              <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
-                Вхідні Двері
-              </h3>
-            </motion.div>
-          </Link>
-
-          <Link to="/doors?type=interior" className="flex-1">
-            <motion.div
-              className="grid h-[500px] min-w-[300px] items-end rounded-md bg-cover bg-center"
-              style={{ backgroundImage: `url(${interiorDoorsImg})` }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", duration: 0.5 }}
-            >
-              <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
-                Міжкімнатні Двері
-              </h3>
-            </motion.div>
-          </Link>
-
-          <Link to="/windows" className="flex-1">
-            <motion.div
-              className="grid h-[500px] min-w-[300px] items-end rounded-md bg-cover bg-center"
-              style={{ backgroundImage: `url(${windowImg})` }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", duration: 0.5 }}
-            >
-              <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
-                Вікна
-              </h3>
-            </motion.div>
-          </Link>
-        </div>
-      </div>
+      <OurAdvantages />
+      <OurAssortment />
     </>
   );
 }
 
-function Advantage({ advantage }) {
+function OurAdvantages() {
+  return (
+    <div
+      id="ourAdvantages-block"
+      className="mx-auto flex flex-col items-center px-container-padding pt-10 md:pt-20 xl:w-2/3 xl:px-0"
+    >
+      <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase text-brand-main md:pb-20 md:text-4xl">
+        Чому варто <br />
+        <span className="text-4xl md:text-6xl">обрати нас?</span>
+      </h2>
+      <ol className="grid gap-20">
+        {OUR_ADVANTAGES.map((advantage) => {
+          return <AdvantageItem key={advantage.id} advantage={advantage} />;
+        })}
+      </ol>
+    </div>
+  );
+}
+
+function AdvantageItem({ advantage }) {
   const advantageRef = useRef(null);
   const advantageIsInView = useInView(advantageRef, {
     once: true,
@@ -258,6 +147,50 @@ function Advantage({ advantage }) {
           }
         />
       </div>
+    </li>
+  );
+}
+
+function OurAssortment() {
+  return (
+    <div
+      id="assortment-block"
+      className="flex flex-col items-center px-container-padding py-10 md:py-20"
+    >
+      <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase text-brand-main md:pb-20 md:text-4xl">
+        Наш <br />
+        <span className="text-4xl md:text-6xl">Асортимент</span>
+      </h2>
+
+      <ul className="flex w-full flex-wrap justify-between gap-10">
+        {OUR_ASSORTMENT.map((assortmentItem) => {
+          return (
+            <AssortmentItem
+              key={assortmentItem.id}
+              assortmentItem={assortmentItem}
+            />
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
+function AssortmentItem({ assortmentItem }) {
+  return (
+    <li className="flex-1">
+      <Link to={assortmentItem.link}>
+        <motion.div
+          className="grid h-[500px] min-w-[300px] items-end rounded-md bg-cover bg-center"
+          style={{ backgroundImage: `url(${assortmentItem.img})` }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", duration: 0.5 }}
+        >
+          <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
+            {assortmentItem.header}
+          </h3>
+        </motion.div>
+      </Link>
     </li>
   );
 }

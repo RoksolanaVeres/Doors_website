@@ -1144,3 +1144,96 @@ export const windowsData = [
     image: wds_76_MD_Img,
   },
 ];
+
+// HomePage Text
+// Advantages block
+import saveTimeImg from "@/assets/doors-img/unsplash-images/time-doorhandle-keys.jpg";
+import doorServicesImg from "@/assets/doors-img/unsplash-images/door-fix.jpg";
+import qualitySecurityImg from "@/assets/doors-img/unsplash-images/door-handle.jpg";
+import saveMoneyImg from "@/assets/doors-img/unsplash-images/save-money.jpg";
+
+export const OUR_ADVANTAGES = [
+  {
+    id: 1,
+    header: "Безпека та якість",
+    img: qualitySecurityImg,
+    details: `Нашому дверному бізнесу вже понад 20 років. За цей час ми ретельно вивчили всіх можливих виробників дверей
+    та вікон, обрали найкращих для того, щоб з впевненістю гарантувати Вам довговічність та надійність наших виробів.`,
+    buttons: [
+      {
+        buttonCaption: "Тут двері",
+        path: "./doors?type=all",
+      },
+      {
+        buttonCaption: "А тут вікна",
+        path: "./windows",
+      },
+    ],
+  },
+  {
+    id: 2,
+    header: "Повний сервіс",
+    img: doorServicesImg,
+    details: `Наші послуги включають не лише продаж, а й професійний монтаж (а при потребі й демонтаж старих вікон чи дверей). 
+    Крім цього, у нас Ви можете замовити привіз свого замовлення та виїзд майстра додому для заміру дверного або віконного отвору.`,
+    buttons: [
+      {
+        buttonCaption: "Всі послуги",
+        path: "./services",
+      },
+    ],
+  },
+  {
+    id: 3,
+    header: "Економія часу",
+    img: saveTimeImg,
+    details: `Країна у смартфоні - це про нас. Звісно, двері через Дію ми Вам не встановимо, але переважну більшість наших послуг
+    можна отримати просто зв'язавшись з нами по телефону.`,
+    buttons: [
+      {
+        buttonCaption: "Зв'язатися з нами",
+        path: "./contacts",
+      },
+    ],
+  },
+  {
+    id: 4,
+    header: "Адекватні ціни",
+    img: saveMoneyImg,
+    details: `Ми розуміємо з якими труднощами Ви стикаєтесь, коли наважуєтесь розпочати ремонт в оселі, особливо в цей нелегкий час,
+    тому подбали про те, щоб попри все, наші ціни залишалися конкурентними, зберігаючи високу якість виробу.`,
+    highlight: `Для військових, які захищають наш спокій, пропонуємо приємні знижки - це наш спосіб сказати "Дякую"!`,
+    buttons: [
+      {
+        buttonCaption: "Наші контакти",
+        path: "./contacts",
+      },
+    ],
+  },
+];
+
+// Assortment block
+import exteriorDoorsImg from "@/assets/doors-img/unsplash-images/steel-door.jpg";
+import interiorDoorsImg from "@/assets/doors-img/unsplash-images/interior-door.jpg";
+import windowImg from "@/assets/doors-img/unsplash-images/window.jpg";
+
+export const OUR_ASSORTMENT = [
+  {
+    id: 1,
+    header: "Вхідні Двері",
+    img: exteriorDoorsImg,
+    link: "/doors?type=exterior",
+  },
+  {
+    id: 2,
+    header: "Міжкімнатні Двері",
+    img: interiorDoorsImg,
+    link: "/doors?type=interior",
+  },
+  {
+    id: 3,
+    header: "Вікна",
+    img: windowImg,
+    link: "/windows",
+  },
+];
