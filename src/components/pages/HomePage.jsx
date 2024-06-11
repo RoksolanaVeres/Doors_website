@@ -23,7 +23,7 @@ export default function HomePage() {
     },
   };
 
-  // sessionStorage.clear();
+  sessionStorage.clear();
 
   return (
     <>
@@ -78,16 +78,26 @@ function OurAdvantages() {
 }
 
 function AdvantageItem({ advantage }) {
-  const advantageRef = useRef(null);
-  const advantageIsInView = useInView(advantageRef, {
+  const advantageTextRef = useRef(null);
+  const advantageImageRef = useRef(null);
+
+  const advantageImageIsInView = useInView(advantageImageRef, {
     once: true,
     margin: "-200px",
   });
 
-  const advantageAnimationHasPlayed =
-    useAnimationOncePerSession("advantageAnimation");
+  const advantageTextIsInView = useInView(advantageTextRef, {
+    once: true,
+    margin: "-200px",
+  });
 
-  const advantageTextAnimationVariants = !advantageAnimationHasPlayed
+  const advantageTextAnimationHasPlayed =
+    useAnimationOncePerSession("advantageTextAnimation");
+
+  const advantageImageAnimationHasPlayed =
+    useAnimationOncePerSession("advantageImageAnimation");
+
+  const advantageTextAnimationVariants = !advantageTextAnimationHasPlayed
     ? {
         slideFromLeft: {
           x: ["-100%", 0],
@@ -105,7 +115,7 @@ function AdvantageItem({ advantage }) {
       }
     : {};
 
-  const advantageImageAnimationVariants = !advantageAnimationHasPlayed
+  const advantageImageAnimationVariants = !advantageImageAnimationHasPlayed
     ? {
         visible: {
           scale: [0.7, 1],
@@ -119,17 +129,14 @@ function AdvantageItem({ advantage }) {
     : {};
 
   return (
-    <li
-      id="advantage-container"
-      className="grid md:grid-cols-2"
-      ref={advantageRef}
-    >
+    <li id="advantage-container" className="grid md:grid-cols-2">
       <motion.div
+        ref={advantageTextRef}
         id="advantage-text-container"
         className={`py-10 md:px-10 ${advantage.id % 2 === 0 && "md:order-2"}`}
         variants={advantageTextAnimationVariants}
         animate={
-          !advantageIsInView
+          !advantageTextIsInView
             ? "hidden"
             : advantage.id % 2 === 0
               ? "slideFromRight"
@@ -168,11 +175,12 @@ function AdvantageItem({ advantage }) {
         className="flex items-center justify-center rounded-md bg-background_secondary"
       >
         <motion.img
+          ref={advantageImageRef}
           src={advantage.img}
           className="w-[300px] rounded-md md:w-[400px]"
           alt={advantage.header}
           variants={advantageImageAnimationVariants}
-          animate={advantageIsInView ? "visible" : "hidden"}
+          animate={advantageImageIsInView ? "visible" : "hidden"}
         />
       </div>
     </li>
