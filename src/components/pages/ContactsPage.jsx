@@ -1,10 +1,9 @@
 // data & images
 // components
 import { Helmet } from "react-helmet-async";
-import Map from "../Map";
 
 // hooks
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 
 // framer motion
 // variables
@@ -17,6 +16,9 @@ import { GrSchedule } from "react-icons/gr";
 import { FaViber } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 
+import { lazy } from "react";
+
+const Map = lazy(() => import("../Map"));
 
 export default function ContactsPage() {
   useEffect(() => {
@@ -144,7 +146,9 @@ export default function ContactsPage() {
           </div>
 
           <div className="col-span-2">
-            <Map />
+            <Suspense fallback={<div>Loading the map...</div>}>
+              <Map />
+            </Suspense>
           </div>
 
           <div
