@@ -1,18 +1,12 @@
-// data & images
 import counsultingImg from "@/assets/doors-img/unsplash-images/consulting.jpg";
 import deliveryImg from "@/assets/doors-img/unsplash-images/delivery.jpg";
 import doorInstallationImg from "@/assets/doors-img/unsplash-images/doors-installation.jpg";
-import glassCuttingImg from "@/assets/doors-img/unsplash-images/glass-cutting.jpg";
 import electricalAppliancesImg from "@/assets/doors-img/unsplash-images/electrical-appliances.jpg";
-
-// components
+import glassCuttingImg from "@/assets/doors-img/unsplash-images/glass-cutting.jpg";
 import { ArrowBigUp } from "lucide-react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
-// hooks
-import { useEffect } from "react";
-
-// variables
 const OUR_SERVICES = [
   {
     id: 1,
@@ -86,6 +80,7 @@ export default function ServicesPage() {
       <Helmet>
         <title>Вікна & Двері | Послуги</title>
       </Helmet>
+    
       <div id="ourServices" className="bg-background_secondary py-20">
         <div
           id="services-content-container"

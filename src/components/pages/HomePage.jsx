@@ -1,18 +1,11 @@
-// data & images
 import { OUR_ADVANTAGES, OUR_ASSORTMENT } from "@/data";
-import roomInteriorImg from "../../assets/doors-img/unsplash-images/room-interior.jpg";
-
-// components
+import { useAnimationOncePerSession } from "@/hooks/useAnimationOncePerSession";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import roomInteriorImg from "../../assets/doors-img/unsplash-images/room-interior.jpg";
 import { Button } from "../ui/button";
-
-// hooks
-import { useRef } from "react";
-import { useAnimationOncePerSession } from "@/hooks/useAnimationOncePerSession";
-
-// framer motion
-import { motion, useInView } from "framer-motion";
 
 export default function HomePage() {
   const mainAnimationHasPlayed = useAnimationOncePerSession("mainAnimation");
@@ -23,7 +16,7 @@ export default function HomePage() {
     },
   };
 
-  sessionStorage.clear();
+  // sessionStorage.clear();
 
   return (
     <>

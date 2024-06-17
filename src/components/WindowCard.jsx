@@ -1,4 +1,3 @@
-// components
 import {
   Card,
   CardContent,

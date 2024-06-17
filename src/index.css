@@ -60,40 +60,6 @@
     --door-selected: 22, 73%, 40%;
     --radius: 0.5rem;
   }
-
-  .dark {
-    --background: 45.88,41.46%,8.04%;
-    --foreground:  15, 40%, 96%; 
-
-    --background_secondary: 42.35,21.52%,15.49%;  /* header, footer bg */
-
-    --card:26, 84%, 5%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 13, 19%, 76%; /*inactive Navlink*/
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --accent-main: 13, 75%, 95%; /*main heading, active Navlink*/
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 42.35,21.52%,15.49%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  }
 }
 
 @layer base {

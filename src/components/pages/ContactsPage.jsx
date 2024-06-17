@@ -1,22 +1,10 @@
-// data & images
-// components
+import { Suspense, lazy, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-
-// hooks
-import { Suspense, useEffect } from "react";
-
-// framer motion
-// variables
-
-//icons
-import { IoIosMail } from "react-icons/io";
+import { FaTelegramPlane, FaViber } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
-import { IoHome } from "react-icons/io5";
 import { GrSchedule } from "react-icons/gr";
-import { FaViber } from "react-icons/fa";
-import { FaTelegramPlane } from "react-icons/fa";
-
-import { lazy } from "react";
+import { IoIosMail } from "react-icons/io";
+import { IoHome } from "react-icons/io5";
 
 const Map = lazy(() => import("../Map"));
 

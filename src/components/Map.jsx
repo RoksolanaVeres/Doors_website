@@ -1,7 +1,7 @@
-import { Helmet } from "react-helmet-async";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Icon } from "leaflet";
+import markerIconPng from "leaflet/dist/images/marker-icon.png";
+import { Helmet } from "react-helmet-async";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 const markerIcon = new Icon({
   iconUrl: markerIconPng,

@@ -1,4 +1,3 @@
-// components
 import {
   Card,
   CardContent,
@@ -7,14 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-// hooks
+import { motion } from "framer-motion";
 import { useState } from "react";
 
-// framer motion
-import { motion } from "framer-motion";
-
-// variables
 const btnColors = {
   white: "bg-door-white",
   beige: "bg-door-beige",

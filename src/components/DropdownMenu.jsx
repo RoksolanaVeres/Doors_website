@@ -1,16 +1,8 @@
-// components
-import NavigationLinkItems from "./NavigationLinkItems";
-
-// hooks
+import { motion } from "framer-motion";
 import { useContext } from "react";
-
-//constexts
+import NavigationLinkItems from "./NavigationLinkItems";
 import { MenuContext } from "./store/MenuContext";
 
-// framer motion
-import { motion } from "framer-motion";
-
-// variables
 const dropdownBlockVariants = {
   hidden: { x: "-100%", transition: { duration: 0.3 } },
   visible: { x: 0 },

@@ -1,19 +1,9 @@
-// components
-import "@theme-toggles/react/css/DarkSide.css";
-import { DarkSide } from "@theme-toggles/react";
 import { Separator } from "@/components/ui/separator";
+import { AnimatePresence, motion } from "framer-motion";
+import { useContext } from "react";
 import DropdownMenu from "./DropdownMenu";
 import NavigationLinkItems from "./NavigationLinkItems";
-
-// hooks
-import { useContext } from "react";
-
-//contexts
-import { ThemeContext } from "./store/ThemeContext";
 import { MenuContext } from "./store/MenuContext";
-
-// framer motion
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const { menuIsOpen, toggleMenuOpenState } = useContext(MenuContext);
@@ -57,7 +47,11 @@ function DesktopHeader() {
           <NavigationLinkItems />
         </ul>
       </nav>
-      <LanguageAndThemeSwitchers screenSize="desktop" />
+      <div className="flex gap-2">
+        <button>УКР</button>
+        <Separator orientation="vertical" className="h-[20px]" />
+        <button>ENG</button>
+      </div>
     </header>
   );
 }
@@ -91,29 +85,12 @@ function MobileHeader() {
             className={"h-0.5 bg-black"}
           ></motion.div>
         </button>
-        <LanguageAndThemeSwitchers screenSize="mobile" />
+        <div className="flex gap-2">
+          <button>УКР</button>
+          <Separator orientation="vertical" />
+          <button>ENG</button>
+        </div>
       </header>
     </>
-  );
-}
-
-function LanguageAndThemeSwitchers({ screenSize }) {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-
-  return (
-    <div
-      id="languageAndThemeSwitchers"
-      className={`flex ${screenSize === "mobile" ? "gap-1" : "gap-2"}`}
-    >
-      <button>УКР</button>
-      <Separator orientation="vertical" />
-      <button>ENG</button>
-      <DarkSide
-        duration={300}
-        onToggle={toggleTheme}
-        toggled={theme === "light"}
-        className={`ml-2 flex ${screenSize === "mobile" ? "text-lg" : "text-2xl"}`}
-      />
-    </div>
   );
 }

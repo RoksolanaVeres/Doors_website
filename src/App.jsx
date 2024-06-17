@@ -8,6 +8,12 @@ const WindowsPage = lazy(() => import("./components/pages/WindowsPage"));
 const ServicesPage = lazy(() => import("./components/pages/ServicesPage"));
 const ContactsPage = lazy(() => import("./components/pages/ContactsPage"));
 
+const fallback = (
+  <p className="absolute left-[50%] top-[50%] -translate-x-[50%] text-xl tracking-widest text-brand-main">
+    Loading...
+  </p>
+);
+
 export default function App() {
   const router = createBrowserRouter([
     {
@@ -18,7 +24,7 @@ export default function App() {
         {
           path: "/doors",
           element: (
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={fallback}>
               <DoorsPage />
             </Suspense>
           ),
@@ -26,7 +32,7 @@ export default function App() {
         {
           path: "/windows",
           element: (
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={fallback}>
               <WindowsPage />
             </Suspense>
           ),
@@ -34,7 +40,7 @@ export default function App() {
         {
           path: "/services",
           element: (
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={fallback}>
               <ServicesPage />
             </Suspense>
           ),
@@ -42,7 +48,7 @@ export default function App() {
         {
           path: "/contacts",
           element: (
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={fallback}>
               <ContactsPage />
             </Suspense>
           ),
@@ -53,10 +59,3 @@ export default function App() {
 
   return <RouterProvider router={router} />;
 }
-
-// to do:
-// - add pdf catalogues Magda & Termoplast
-// - page / link to each door???
-// - some description???
-// - Windows from https://plamet.ua/vikna/
-// - add to favourite feature

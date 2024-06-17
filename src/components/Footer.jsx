@@ -1,11 +1,9 @@
-//icons
 import {
-  FaViber,
+  FaEnvelope,
   FaLocationDot,
   FaPhoneVolume,
-  FaEnvelope,
+  FaViber,
 } from "react-icons/fa6";
-
 import { HiLockClosed } from "react-icons/hi2";
 
 export default function Footer() {

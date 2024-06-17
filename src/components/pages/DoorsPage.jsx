@@ -1,30 +1,22 @@
-// data & images
-import { doorsData } from "@/data";
 import magdaCatalogue from "@/assets/catalogues/Magda_doors-catalogue.pdf";
 import termoplastCatalogue from "@/assets/catalogues/Termoplast_doors-catalogue.pdf";
 import magdaImg from "@/assets/catalogues/magda-img.png";
 import termoplastImg from "@/assets/catalogues/termoplast-img.png";
-
-// components
-import { Helmet } from "react-helmet-async";
-import { Button } from "../ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import ScrollToTopButton from "../ScrollToTopButton";
-import DoorCard from "../DoorCard";
-
-// hooks
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { useInView } from "react-intersection-observer";
-
-// framer motion
+import { doorsData } from "@/data";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { useInView } from "react-intersection-observer";
+import { useSearchParams } from "react-router-dom";
+import DoorCard from "../DoorCard";
+import ScrollToTopButton from "../ScrollToTopButton";
+import { Button } from "../ui/button";
 
-// variables
 const PER_PAGE = 8;
 
 export default function DoorsPage() {

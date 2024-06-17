@@ -1,5 +1,5 @@
 import { ArrowBigUp } from "lucide-react";
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 
 export default function ScrollToTopButton() {

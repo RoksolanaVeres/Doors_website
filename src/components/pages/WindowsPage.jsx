@@ -1,21 +1,14 @@
-// data & images
-import { windowsData } from "@/data";
-
-// components
-import { Helmet } from "react-helmet-async";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import WindowCard from "../WindowCard";
-import ScrollToTopButton from "../ScrollToTopButton";
-
-// hooks
-import { useRef, useEffect } from "react";
-
-// framer motion
+import { windowsData } from "@/data";
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
+import ScrollToTopButton from "../ScrollToTopButton";
+import WindowCard from "../WindowCard";
 
 export default function WindowsPage() {
   const ref = useRef();

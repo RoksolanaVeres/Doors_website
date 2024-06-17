@@ -1,8 +1,5 @@
-// components
-import { NavLink } from "react-router-dom";
-
-// framer motion
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 // variables
 const LINKS = [
