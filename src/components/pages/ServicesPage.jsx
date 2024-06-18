@@ -3,77 +3,86 @@ import deliveryImg from "@/assets/doors-img/unsplash-images/delivery.jpg";
 import doorInstallationImg from "@/assets/doors-img/unsplash-images/doors-installation.jpg";
 import electricalAppliancesImg from "@/assets/doors-img/unsplash-images/electrical-appliances.jpg";
 import glassCuttingImg from "@/assets/doors-img/unsplash-images/glass-cutting.jpg";
-import { ArrowBigUp } from "lucide-react";
-import { useEffect, useRef } from "react";
-import { Helmet } from "react-helmet-async";
-import { useInView } from "framer-motion";
 import { useAnimationOncePerSession } from "@/hooks/useAnimationOncePerSession";
-import { motion } from "framer-motion";
-
-const OUR_SERVICES = [
-  {
-    id: 1,
-    header: "Професійна консультація",
-    subheader: "з питань вікон та дверей",
-    img: counsultingImg,
-    details: `Якщо серед різноманіття вибору, яке ми пропонуємо, Вам важко обрати саме ті двері чи вікна, наші досвідчені консультанти 
-    завжди готові прийти на допомогу. Ми врахуємо всі Ваші побажання і порадимо найкращий варіант.`,
-    backCard: {
-      header: "Отримати консультацію можна за телефоном:",
-      phones: ["(068) 234-94-04 - Тарас", "(099) 223-64-26 - Оксана"],
-    },
-  },
-  {
-    id: 2,
-    header: "Привіз замовлення",
-    subheader: "в межах Івано-Франківська та поза ним",
-    img: deliveryImg,
-    details: `Купуючи у нас товари, Вам не варто хвилюватися про їх доставлення, адже ми також надаємо послуги 
-    з вантажного перевезення.`,
-    backCard: {
-      header: "З питань доставки звертайтесь за телефоном:",
-      phones: ["(068) 234-94-04 - Тарас", "(099) 223-64-26 - Оксана"],
-    },
-  },
-  {
-    id: 3,
-    header: "Монтаж дверей та вікон",
-    subheader: "а також демонтаж старих дверей та вікон",
-    img: doorInstallationImg,
-    details: `Наші спеціалісти забезпечать встановлення вікон та дверей з дотриманням найвищих стандартів якості. 
-    Також можливий виклик майстра додому для зняття попередніх замірів.`,
-    backCard: {
-      header: "Обговорити деталі можна за телефоном:",
-      phones: ["(068) 234-94-04 - Тарас", "(099) 223-64-26 - Оксана"],
-    },
-  },
-  {
-    id: 4,
-    header: "Порізка скла",
-    subheader: "та дзеркал будь-якої складності",
-    img: glassCuttingImg,
-    details: `Для Вашої зручності, одразу поряд з магазином знаходиться майстерня по порізці скла, куди Ви можете звернутися
-    у випадку, якщо Вам потрібно засклити двері чи вікна, або просто врізати скло.`,
-    backCard: {
-      header: "Дізнатись деталі можна за телефоном:",
-      phones: ["(099) 956-87-89 - Богдан"],
-    },
-  },
-  {
-    id: 5,
-    header: "Ремонт побутової техніки",
-    subheader: "та діагностика поломки",
-    img: electricalAppliancesImg,
-    details: `Неочікувано, але факт: в магазині працює телерадіомайстерня, де Ви можете зремонтувати техніку, 
-    яка вийшла з ладу, а також придбати супутні товари (тюнер, пульт, антену, блок живлення тощо).`,
-    backCard: {
-      header: "З питань ремонту техніки дзвоніть за телефоном:",
-      phones: [" (095) 924-62-08 - Микола"],
-    },
-  },
-];
+import { l10n } from "@/textTranslation";
+import { motion, useInView } from "framer-motion";
+import { ArrowBigUp } from "lucide-react";
+import { useContext, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
+import { LanguageContext } from "../store/LanguageContext";
 
 export default function ServicesPage() {
+  const { language } = useContext(LanguageContext);
+  const servicesText = l10n[language].servicesPage;
+
+  const OUR_SERVICES = [
+    {
+      id: 1,
+      img: counsultingImg,
+      header: servicesText.consulting.header,
+      subheader: servicesText.consulting.subheader,
+      details: servicesText.consulting.details,
+      backCard: {
+        header: servicesText.consulting.backCard.header,
+        phones: servicesText.consulting.backCard.phones,
+        visitUs: servicesText.visitUs.text,
+        address: servicesText.visitUs.address,
+      },
+    },
+    {
+      id: 2,
+      img: deliveryImg,
+      header: servicesText.delivery.header,
+      subheader: servicesText.delivery.subheader,
+      details: servicesText.delivery.details,
+      backCard: {
+        header: servicesText.delivery.backCard.header,
+        phones: servicesText.delivery.backCard.phones,
+        visitUs: servicesText.visitUs.text,
+        address: servicesText.visitUs.address,
+      },
+    },
+    {
+      id: 3,
+      img: doorInstallationImg,
+      header: servicesText.installation.header,
+      subheader: servicesText.installation.subheader,
+      details: servicesText.installation.details,
+      backCard: {
+        header: servicesText.installation.backCard.header,
+        phones: servicesText.installation.backCard.phones,
+        visitUs: servicesText.visitUs.text,
+        address: servicesText.visitUs.address,
+      },
+    },
+    {
+      id: 4,
+      img: glassCuttingImg,
+      header: servicesText.glassCutting.header,
+      subheader: servicesText.glassCutting.subheader,
+      details: servicesText.glassCutting.details,
+      backCard: {
+        header: servicesText.glassCutting.backCard.header,
+        phones: servicesText.glassCutting.backCard.phones,
+        visitUs: servicesText.visitUs.text,
+        address: servicesText.visitUs.address,
+      },
+    },
+    {
+      id: 5,
+      img: electricalAppliancesImg,
+      header: servicesText.repair.header,
+      subheader: servicesText.repair.subheader,
+      details: servicesText.repair.details,
+      backCard: {
+        header: servicesText.repair.backCard.header,
+        phones: servicesText.repair.backCard.phones,
+        visitUs: servicesText.visitUs.text,
+        address: servicesText.visitUs.address,
+      },
+    },
+  ];
+
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -103,30 +112,29 @@ export default function ServicesPage() {
 }
 
 function ServiceItem({ service }) {
-  const serviceRef = useRef(null)
-    const serviceIsInView = useInView(serviceRef, {
-      once: true,
-      margin: "-200px",
-    });
-    const serviceAnimationHasPlayed = useAnimationOncePerSession(
-      "serviceAnimation",
-    );
+  const serviceRef = useRef(null);
+  const serviceIsInView = useInView(serviceRef, {
+    once: true,
+    margin: "-200px",
+  });
+  const serviceAnimationHasPlayed =
+    useAnimationOncePerSession("serviceAnimation");
 
-    const serviceVariants = !serviceAnimationHasPlayed
-      ? {
-          visible: {
-            opacity: [0.5, 1],
-            scale: [0.7, 1],
-            transition: {
-              duration: 0.4,
-              ease: "easeOut",
-            },
+  const serviceVariants = !serviceAnimationHasPlayed
+    ? {
+        visible: {
+          opacity: [0.5, 1],
+          scale: [0.7, 1],
+          transition: {
+            duration: 0.4,
+            ease: "easeOut",
           },
-          hidden: {
-            opacity: 0,
-          },
-        }
-      : {};
+        },
+        hidden: {
+          opacity: 0,
+        },
+      }
+    : {};
 
   return (
     <motion.li
@@ -164,8 +172,8 @@ function ServiceItem({ service }) {
                   return <p key={phone}>{phone}</p>;
                 })}
               </div>
-              <h3 className="mt-4">Або завітайте до нас особисто:</h3>
-              <p>м.Івано-Франківськ, вул.Тичини 19А</p>
+              <h3 className="mt-4">{service.backCard.visitUs}</h3>
+              <p>{service.backCard.address}</p>
             </div>
           </div>
         </div>

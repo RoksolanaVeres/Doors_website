@@ -58,6 +58,64 @@ export const l10n = {
         },
       },
     },
+    servicesPage: {
+      visitUs: {
+        text: "Or visit us in person:",
+        address: "Ivano-Frankivsk city, 19A Tychyna str.",
+      },
+      consulting: {
+        header: "Professional consultation",
+        subheader: "on windows and doors",
+        details: `Struggling to choose the perfect doors or windows from our wide range of options? 
+        Our skilled consultants are at your service! We'll take into account all your preferences and guide 
+        you to the best choice possible. Let's find the ideal solution together!`,
+        backCard: {
+          header: "To get a consultation, just call us:",
+          phones: ["(068) 234-94-04 - Taras", "(099) 223-64-26 - Oksana"],
+        },
+      },
+      delivery: {
+        header: "Delivery services",
+        subheader: "within Ivano-Frankivsk and surrounding areas",
+        details: `When you buy from us, you don't need to worry about delivery since 
+        we also provide freight transportation services.`,
+        backCard: {
+          header: "For delivery details, please contact us at:",
+          phones: ["(068) 234-94-04 - Taras", "(099) 223-64-26 - Oksana"],
+        },
+      },
+      installation: {
+        header: "Installation of doors and windows",
+        subheader: "and removal of old ones",
+        details: `Our experts guarantee top-quality installation of windows and doors, tailored to the highest standards.
+        We also offer the option of scheduling a home visit for preliminary measurements.`,
+        backCard: {
+          header: "Feel free to discuss the details over the phone:",
+          phones: ["(068) 234-94-04 - Taras", "(099) 223-64-26 - Oksana"],
+        },
+      },
+      glassCutting: {
+        header: "Glass and mirror cutting",
+        subheader: "of any complexity",
+        details: `For your convenience, there is a glass cutting workshop right next to our store. 
+       Whether you need to glaze doors or windows or simply cut glass, we will take care of it!`,
+        backCard: {
+          header: "We can answer all your questions over the phone:",
+          phones: ["(099) 956-87-89 - Bohdan"],
+        },
+      },
+      repair: {
+        header: "Repair of household appliances",
+        subheader: "and diagnostics of malfunctions",
+        details: `Surprise, surprise: our store has also a tele-radio workshop where you can fix your appliances 
+        and find all the extras you need — like tuners, remote controls, antennas, power supplies, and more!`,
+        backCard: {
+          header:
+            "For questions about appliance repairs, feel free to reach out to us by phone:",
+          phones: ["(095) 924-62-08 - Mykola"],
+        },
+      },
+    },
   },
   ua: {
     title: "Вікна & Двері",
@@ -114,6 +172,64 @@ export const l10n = {
           entranceDoors: "Вхідні Двері",
           interiorDoors: "Міжкімнатні Двері",
           windows: "Вікна",
+        },
+      },
+    },
+    servicesPage: {
+      visitUs: {
+        text: "Або завітайте до нас особисто:",
+        address: "м.Івано-Франківськ, вул.Тичини 19А",
+      },
+      consulting: {
+        header: "Професійна консультація",
+        subheader: "з питань вікон та дверей",
+        details: `Якщо серед різноманіття вибору, яке ми пропонуємо, Вам важко обрати саме ті двері 
+        чи вікна, наші досвідчені консультанти завжди готові прийти на допомогу. 
+        Ми врахуємо всі Ваші побажання і порадимо найкращий варіант.`,
+        backCard: {
+          header: "Отримати консультацію можна за телефоном:",
+          phones: ["(068) 234-94-04 - Тарас", "(099) 223-64-26 - Оксана"],
+        },
+      },
+      delivery: {
+        header: "Привіз замовлення",
+        subheader: "в межах Івано-Франківська та поза ним",
+        details: `Купуючи у нас товари, Вам не варто хвилюватися про їх доставлення, адже ми також надаємо послуги 
+        з вантажного перевезення.`,
+        backCard: {
+          header: "З питань доставки звертайтесь за телефоном:",
+          phones: ["(068) 234-94-04 - Тарас", "(099) 223-64-26 - Оксана"],
+        },
+      },
+      installation: {
+        header: "Монтаж дверей та вікон",
+        subheader: "а також демонтаж старих дверей та вікон",
+        details: `Наші спеціалісти забезпечать встановлення вікон та дверей з дотриманням 
+        найвищих стандартів якості. Також можливий виклик майстра додому для зняття попередніх замірів.`,
+        backCard: {
+          header: "Обговорити деталі можна за телефоном:",
+          phones: ["(068) 234-94-04 - Тарас", "(099) 223-64-26 - Оксана"],
+        },
+      },
+      glassCutting: {
+        header: "Порізка скла та дзеркал",
+        subheader: "будь-якої складності",
+        details: `Для Вашої зручності, одразу поряд з магазином знаходиться майстерня по порізці скла, 
+        куди Ви можете звернутися у випадку, якщо Вам потрібно засклити двері чи вікна, 
+        або просто врізати скло.`,
+        backCard: {
+          header: "Дізнатись деталі можна за телефоном:",
+          phones: ["(099) 956-87-89 - Богдан"],
+        },
+      },
+      repair: {
+        header: "Ремонт побутової техніки",
+        subheader: "та діагностика поломки",
+        details: `Неочікувано, але факт: в магазині працює телерадіомайстерня, де Ви можете зремонтувати техніку, 
+        яка вийшла з ладу, а також придбати супутні товари (тюнер, пульт, антену, блок живлення тощо).`,
+        backCard: {
+          header: "З питань ремонту техніки дзвоніть за телефоном:",
+          phones: ["(095) 924-62-08 - Микола"],
         },
       },
     },
