@@ -5,17 +5,17 @@ import "./index.css";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/roboto-slab";
 import { HelmetProvider } from "react-helmet-async";
-import ThemeContextProvider from "./components/store/ThemeContext.jsx";
 import MenuContextProvider from "./components/store/MenuContext.jsx";
+import LanguageContextProvider from "./components/store/LanguageContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ThemeContextProvider>
+    <LanguageContextProvider>
       <MenuContextProvider>
         <HelmetProvider>
           <App />
         </HelmetProvider>
       </MenuContextProvider>
-    </ThemeContextProvider>
+    </LanguageContextProvider>
   </React.StrictMode>,
 );

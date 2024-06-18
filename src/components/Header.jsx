@@ -4,6 +4,7 @@ import { useContext } from "react";
 import DropdownMenu from "./DropdownMenu";
 import NavigationLinkItems from "./NavigationLinkItems";
 import { MenuContext } from "./store/MenuContext";
+import { LanguageContext } from "./store/LanguageContext";
 
 export default function Header() {
   const { menuIsOpen, toggleMenuOpenState } = useContext(MenuContext);
@@ -37,6 +38,9 @@ export default function Header() {
 }
 
 function DesktopHeader() {
+  const { language, setUkrainianLanguage, setEnglishLanguage } =
+    useContext(LanguageContext);
+
   return (
     <header
       id="desktopHeader"
@@ -48,9 +52,19 @@ function DesktopHeader() {
         </ul>
       </nav>
       <div className="flex gap-2">
-        <button>УКР</button>
+        <button
+          onClick={setUkrainianLanguage}
+          className={`${language === "ua" && "border-b-2 border-accent-main"}`}
+        >
+          УКР
+        </button>
         <Separator orientation="vertical" className="h-[20px]" />
-        <button>ENG</button>
+        <button
+          onClick={setEnglishLanguage}
+          className={`${language === "en" && "border-b-2 border-accent-main"}`}
+        >
+          ENG
+        </button>
       </div>
     </header>
   );
@@ -58,6 +72,8 @@ function DesktopHeader() {
 
 function MobileHeader() {
   const { toggleMenuOpenState, menuIsOpen } = useContext(MenuContext);
+  const { language, setUkrainianLanguage, setEnglishLanguage } =
+    useContext(LanguageContext);
 
   return (
     <>
@@ -86,9 +102,19 @@ function MobileHeader() {
           ></motion.div>
         </button>
         <div className="flex gap-2">
-          <button>УКР</button>
+          <button
+            onClick={setUkrainianLanguage}
+            className={`${language === "ua" && "border-b-2 border-accent-main"}`}
+          >
+            УКР
+          </button>
           <Separator orientation="vertical" />
-          <button>ENG</button>
+          <button
+            onClick={setEnglishLanguage}
+            className={`${language === "en" && "border-b-2 border-accent-main"}`}
+          >
+            ENG
+          </button>
         </div>
       </header>
     </>

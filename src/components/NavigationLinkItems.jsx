@@ -1,14 +1,8 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-
-// variables
-const LINKS = [
-  { page: "Головна", path: "/" },
-  { page: "Двері", path: "/doors?type=all" },
-  { page: "Вікна", path: "/windows" },
-  { page: "Послуги", path: "/services" },
-  { page: "Контакти", path: "/contacts" },
-];
+import { l10n } from "@/textTranslation";
+import { useContext } from "react";
+import { LanguageContext } from "./store/LanguageContext";
 
 const linkVariants = {
   hidden: { opacity: 0, y: -100 },
@@ -16,6 +10,15 @@ const linkVariants = {
 };
 
 export default function NavigationLinkItems() {
+  const {language} = useContext(LanguageContext)
+  const LINKS = [
+    { page: l10n[language].navLinks.homePage, path: "/" },
+    { page: l10n[language].navLinks.doors, path: "/doors?type=all" },
+    { page: l10n[language].navLinks.windows, path: "/windows" },
+    { page: l10n[language].navLinks.services, path: "/services" },
+    { page: l10n[language].navLinks.contacts, path: "/contacts" },
+  ];
+
   return (
     <>
       {LINKS.map((link) => {
