@@ -1,18 +1,18 @@
-import { Suspense, lazy, useEffect } from "react";
+import { l10n } from "@/textTranslation";
+import { Suspense, lazy, useContext, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { FaTelegramPlane, FaViber } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { GrSchedule } from "react-icons/gr";
 import { IoIosMail } from "react-icons/io";
 import { IoHome } from "react-icons/io5";
-import { l10n } from "@/textTranslation";
-import { useContext } from "react";
 import { LanguageContext } from "../store/LanguageContext";
 
 const Map = lazy(() => import("../Map"));
 
 export default function ContactsPage() {
   const { language } = useContext(LanguageContext);
+  const contactsText = l10n[language].contactsPage;
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -36,7 +36,9 @@ export default function ContactsPage() {
           >
             <div className="grid w-full content-start justify-center gap-2 text-center">
               <IoIosMail className="mx-auto text-2xl" />
-              <h2 className="font-semibold uppercase tracking-wider">Пишіть</h2>
+              <h2 className="font-semibold uppercase tracking-wider">
+                {contactsText.emailsCard.header}
+              </h2>
               <a
                 href="mailto:taras-oksana@ukr.net"
                 className="flex items-center gap-2 text-secondary-foreground"
@@ -61,11 +63,11 @@ export default function ContactsPage() {
             <div className="grid w-full content-start justify-center gap-2 text-center">
               <FaPhone className="mx-auto text-xl text-secondary-foreground" />
               <h2 className="font-semibold uppercase tracking-wider">
-                Дзвоніть
+                {contactsText.phonesCard.header}
               </h2>
               <div id="doors-phones">
                 <h3 className="text-secondary-foreground">
-                  З питань вікон та дверей:
+                  {contactsText.phonesCard.windowsDoorsPhones.header}
                 </h3>
                 <ul>
                   <li className="flex justify-center gap-2 text-sm">
@@ -75,7 +77,11 @@ export default function ContactsPage() {
                     >
                       +380992236426
                     </a>
-                    <p>(Оксана)</p>
+                    <p>
+                      ({" "}
+                      {contactsText.phonesCard.windowsDoorsPhones.phoneNames[0]}
+                      )
+                    </p>
                   </li>
                   <li className="flex justify-center gap-2 text-sm">
                     <a
@@ -84,13 +90,20 @@ export default function ContactsPage() {
                     >
                       +380682349404
                     </a>
-                    <p>(Тарас)</p>
+                    <p>
+                      {" "}
+                      (
+                      {contactsText.phonesCard.windowsDoorsPhones.phoneNames[1]}
+                      )
+                    </p>
                   </li>
                 </ul>
               </div>
 
               <div id="glass-phone">
-                <h3 className="text-secondary-foreground">Порізка скла:</h3>
+                <h3 className="text-secondary-foreground">
+                  {contactsText.phonesCard.glassCuttingPhones.header}
+                </h3>
                 <div className="flex justify-center gap-2 text-sm">
                   <a
                     href="tel:+380999568789"
@@ -98,13 +111,15 @@ export default function ContactsPage() {
                   >
                     +380999568789
                   </a>
-                  <p>(Богдан)</p>
+                  <p>
+                    ({contactsText.phonesCard.glassCuttingPhones.phoneNames[0]})
+                  </p>
                 </div>
               </div>
 
               <div id="electronics-phone">
                 <h3 className="text-secondary-foreground">
-                  Телерадіомайстерня:
+                  {contactsText.phonesCard.electronicsPhones.header}
                 </h3>
                 <div
                   id="electronics-phone"
@@ -116,7 +131,9 @@ export default function ContactsPage() {
                   >
                     +380959246208
                   </a>
-                  <p>(Микола)</p>
+                  <p>
+                    ({contactsText.phonesCard.electronicsPhones.phoneNames[0]})
+                  </p>
                 </div>
               </div>
             </div>
@@ -129,14 +146,12 @@ export default function ContactsPage() {
             <div className="grid w-full content-start justify-center gap-2 text-center">
               <IoHome className="mx-auto text-2xl text-accent-foreground" />
               <h2 className="font-semibold uppercase tracking-wider">
-                Заходьте
+                {contactsText.addressCard.header}
               </h2>
               <p className="text-secondary-foreground">
-                м.Івано-Франківськ, вулиця Тичини 19А
+                {contactsText.addressCard.address}
               </p>
-              <p className="text-sm">
-                Орієнтир: між ТЦ "Бельведер" та "Майстер"
-              </p>
+              <p className="text-sm">{contactsText.addressCard.landmark}</p>
             </div>
           </div>
 
@@ -153,17 +168,22 @@ export default function ContactsPage() {
             <div className="grid w-full content-start justify-center gap-2 text-center">
               <GrSchedule className="mx-auto text-2xl text-secondary-foreground" />
               <h2 className="font-semibold uppercase tracking-wider">
-                Графік роботи
+                {contactsText.scheduleCard.header}
               </h2>
               <dl>
                 <dt className="mt-1 text-secondary-foreground">
-                  Понеділок - Пятниця:
+                  {contactsText.scheduleCard.workDays}:
                 </dt>
                 <dd>9:00 - 17:00</dd>
-                <dt className="mt-1 text-secondary-foreground">Субота:</dt>
+                <dt className="mt-1 text-secondary-foreground">
+                  {" "}
+                  {contactsText.scheduleCard.saturday}:
+                </dt>
                 <dd>9:00 - 16:00</dd>
-                <dt className="mt-3">Неділя:</dt>
-                <dd className="text-destructive">Вихідний</dd>
+                <dt className="mt-3">{contactsText.scheduleCard.sunday}:</dt>
+                <dd className="text-destructive">
+                  {contactsText.scheduleCard.closed}
+                </dd>
               </dl>
             </div>
           </div>

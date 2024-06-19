@@ -2,6 +2,9 @@ import { Icon } from "leaflet";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Helmet } from "react-helmet-async";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { useContext } from "react";
+import { LanguageContext } from "./store/LanguageContext";
+import { l10n } from "@/textTranslation";
 
 const markerIcon = new Icon({
   iconUrl: markerIconPng,
@@ -11,6 +14,8 @@ const markerIcon = new Icon({
 
 export default function Map() {
   const position = [48.92532, 24.70516];
+  const {language} = useContext(LanguageContext)
+  const mapText = l10n[language].contactsPage.map;
 
   return (
     <div>
@@ -35,7 +40,7 @@ export default function Map() {
         />
         <Marker position={position} icon={markerIcon}>
           <Popup>
-            Магазин 100 Гц <br /> м.Івано-Франківськ, Тичини 19а
+            {mapText.popup.header} <br /> {mapText.popup.address}
           </Popup>
         </Marker>
       </MapContainer>

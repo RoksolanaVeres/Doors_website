@@ -119,11 +119,11 @@ export const l10n = {
       repair: {
         header: "Repair of household appliances",
         subheader: "and diagnostics of malfunctions",
-        details: `Surprise, surprise: our store has also a tele-radio workshop where you can fix your appliances 
+        details: `Surprise, surprise: our store has also an electronics repair shop where you can fix your appliances 
         and find all the extras you need — like tuners, remote controls, antennas, power supplies, and more!`,
         backCard: {
           header:
-            "For questions about appliance repairs, feel free to reach out to us by phone:",
+            "For questions about electronics repairs, feel free to reach out to us by phone:",
           phones: ["(095) 924-62-08 - Mykola"],
         },
       },
@@ -149,6 +149,44 @@ export const l10n = {
         glazingUnit: "Glazing unit (mm):",
         chambers: "Chambers number:",
         gasketContours: "Gasket contours:",
+      },
+    },
+    contactsPage: {
+      emailsCard: {
+        header: "Write to Us",
+      },
+      phonesCard: {
+        header: "Call Us",
+        windowsDoorsPhones: {
+          header: "Regarding windows and doors:",
+          phoneNames: ["Oksana", "Taras"],
+        },
+        glassCuttingPhones: {
+          header: "Glass cutting:",
+          phoneNames: ["Bohdan"],
+        },
+        electronicsPhones: {
+          header: "Electronics repair shop:",
+          phoneNames: ["Mykola"],
+        },
+      },
+      addressCard: {
+        header: "Visit Us",
+        address: "Ivano-Frankivsk city, 19A Tychyna str.",
+        landmark: "Landmark: between Belvedere and Maister shopping centers",
+      },
+      scheduleCard: {
+        header: "Working hours",
+        workDays: "Monday - Friday",
+        saturday: "Saturday",
+        sunday: "Sunday",
+        closed: "Closed",
+      },
+      map: {
+        popup: {
+          header: "100 HZ Shop",
+          address: "Ivano-Frankivsk city, 19A Tychyna str.",
+        },
       },
     },
   },
@@ -301,6 +339,44 @@ export const l10n = {
         glazingUnit: "Товщина склопакетів (мм):",
         chambers: "Кількість камер:",
         gasketContours: "Контури ущільнення:",
+      },
+    },
+    contactsPage: {
+      emailsCard: {
+        header: "Пишіть",
+      },
+      phonesCard: {
+        header: "Дзвоніть",
+        windowsDoorsPhones: {
+          header: "З питань вікон та дверей:",
+          phoneNames: ["Оксана", "Тарас"],
+        },
+        glassCuttingPhones: {
+          header: "Порізка скла:",
+          phoneNames: ["Богдан"],
+        },
+        electronicsPhones: {
+          header: "Телерадіомайстерня:",
+          phoneNames: ["Микола"],
+        },
+      },
+      addressCard: {
+        header: "Заходьте",
+        address: "м.Івано-Франківськ, вулиця Тичини 19А",
+        landmark: 'Орієнтир: між ТЦ "Бельведер" та "Майстер"',
+      },
+      scheduleCard: {
+        header: "Графік роботи",
+        workDays: "Понеділок - П'ятниця",
+        saturday: "Субота",
+        sunday: "Неділя",
+        closed: "Вихідний",
+      },
+      map: {
+        popup: {
+          header: "Магазин 100 Гц",
+          address: "м.Івано-Франківськ, Тичини 19а",
+        },
       },
     },
   },
