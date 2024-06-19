@@ -23,6 +23,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
+        <meta name="description" content={l10n[language].metaTags.description}></meta>
         <title>{l10n[language].title.main}</title>
       </Helmet>
       <div
