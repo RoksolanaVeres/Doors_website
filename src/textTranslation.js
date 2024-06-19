@@ -20,6 +20,14 @@ export const l10n = {
         please contact our sales consultant directly for up-to-date pricing information: `,
       apologise: `We appreciate your understanding and apologize for any inconvenience!`,
     },
+    footer: {
+      address: ["Ivano-Frankivsk city", "19A Tychyna str."],
+      workingHours: {
+        workdays: "Mon - Fri",
+        saturday: "Sat",
+        sunday: "Sun",
+      },
+    },
     homePage: {
       mainBanner: {
         header: ["Windows", "Doors"],
@@ -210,6 +218,14 @@ export const l10n = {
       announcement: `У зв'язку з нестабільною економічною ситуацією в країні, актуальні ціни можна 
         дізнатися безпосередньо у продавця-консультанта за номером:`,
       apologise: `Дякуємо за розуміння та приносимо вибачення за незручності!`,
+    },
+    footer: {
+      address: ["м.Івано-Франківськ", "вул. Тичини 19А"],
+      workingHours: {
+        workdays: "пн - пт",
+        saturday: "сб",
+        sunday: "нд",
+      },
     },
     homePage: {
       mainBanner: {

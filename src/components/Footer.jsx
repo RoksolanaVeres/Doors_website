@@ -1,3 +1,5 @@
+import { l10n } from "@/textTranslation";
+import { useContext } from "react";
 import {
   FaEnvelope,
   FaLocationDot,
@@ -5,8 +7,11 @@ import {
   FaViber,
 } from "react-icons/fa6";
 import { HiLockClosed } from "react-icons/hi2";
+import { LanguageContext } from "./store/LanguageContext";
 
 export default function Footer() {
+  const { language } = useContext(LanguageContext);
+  const footerText = l10n[language].footer;
   return (
     <div className="flex justify-center bg-background_secondary font-inter">
       <footer className="max-w-large flex w-full flex-wrap justify-between gap-5 px-container-padding py-5 text-base">
@@ -15,19 +20,20 @@ export default function Footer() {
             <div className="flex gap-2">
               <FaLocationDot className="mt-2" />
               <p className="">
-                м.Івано-Франківськ,
+                {footerText.address[0]},
                 <br />
-                вул. Тичини 19А
+                {footerText.address[1]}
               </p>
             </div>
           </a>
         </div>
 
         <div id="footer-col-2" className="">
-          <p>пн-пт: 9:00-17:00</p>
-          <p>сб: 9:00-16:00</p>
+          <p>{footerText.workingHours.workdays}: 9:00-17:00</p>
+          <p>{footerText.workingHours.saturday}: 9:00-16:00</p>
           <p className="flex items-center gap-2">
-            нд: <HiLockClosed className="text-destructive" />
+            {footerText.workingHours.sunday}:{" "}
+            <HiLockClosed className="text-destructive" />
           </p>
         </div>
 
