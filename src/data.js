@@ -152,7 +152,6 @@ import wds_8_S_Img from "@/assets/doors-img/windows/WDS-8-S.png";
 import wds_76_AD_Img from "@/assets/doors-img/windows/WDS-76-AD.png";
 import wds_76_MD_Img from "@/assets/doors-img/windows/WDS-76-MD.png";
 
-
 const druidColors = {
   bileDerevo: ColorBileDerevo,
   astanaRozvud: ColorAstanaRozvud,
@@ -169,10 +168,12 @@ const druidColors = {
 export const doorsData = [
   {
     id: "druid_1",
-    title: "Акорд",
+    title: {
+      en: "Akord",
+      ua: "Акорд",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidAkordImg,
       ...druidColors,
@@ -180,10 +181,12 @@ export const doorsData = [
   },
   {
     id: "druid_2",
-    title: "Акра",
+    title: {
+      en: "Akra",
+      ua: "Акра",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidAkraImg,
       ...druidColors,
@@ -191,10 +194,12 @@ export const doorsData = [
   },
   {
     id: "druid_3",
-    title: "Аляска",
+    title: {
+      en: "Alaska",
+      ua: "Аляска",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       lightGray: DruidAlaskaImg,
       ...druidColors,
@@ -202,10 +207,12 @@ export const doorsData = [
   },
   {
     id: "druid_4",
-    title: "Аргентина",
+    title: {
+      en: "Argentina",
+      ua: "Аргентина",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       beige: DruidArhentynaImg,
       ...druidColors,
@@ -213,10 +220,12 @@ export const doorsData = [
   },
   {
     id: "druid_5",
-    title: "Берлін",
+    title: {
+      en: "Berlin",
+      ua: "Берлін",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       gray: DruidBerlinImg,
       ...druidColors,
@@ -224,10 +233,12 @@ export const doorsData = [
   },
   {
     id: "druid_6",
-    title: "Бразилія",
+    title: {
+      en: "Brazil",
+      ua: "Бразилія",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidBrazilImg,
       ...druidColors,
@@ -235,10 +246,12 @@ export const doorsData = [
   },
   {
     id: "druid_7",
-    title: "Канада",
+    title: {
+      en: "Canada",
+      ua: "Канада",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       beige: DruidCanadaImg,
       ...druidColors,
@@ -246,10 +259,12 @@ export const doorsData = [
   },
   {
     id: "druid_8",
-    title: "Сіті Лайт",
+    title: {
+      en: "City Light",
+      ua: "Сіті Лайт",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       brown: DruidCityLightImg,
       ...druidColors,
@@ -257,10 +272,12 @@ export const doorsData = [
   },
   {
     id: "druid_9",
-    title: "Сіті Спейс",
+    title: {
+      en: "City Space",
+      ua: "Сіті Спейс",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidCitySpaceImg,
       ...druidColors,
@@ -268,10 +285,12 @@ export const doorsData = [
   },
   {
     id: "druid_10",
-    title: "Сіті",
+    title: {
+      en: "City",
+      ua: "Сіті",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       lightGray: DruidCityImg,
       ...druidColors,
@@ -279,10 +298,12 @@ export const doorsData = [
   },
   {
     id: "druid_11",
-    title: "Данія",
+    title: {
+      en: "Denmark",
+      ua: "Данія",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidDaniiaImg,
       ...druidColors,
@@ -290,10 +311,12 @@ export const doorsData = [
   },
   {
     id: "druid_12",
-    title: "Дабл",
+    title: {
+      en: "Double",
+      ua: "Дабл",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       brown: DruidDoubleImg,
       ...druidColors,
@@ -301,10 +324,12 @@ export const doorsData = [
   },
   {
     id: "druid_13",
-    title: "Дубай",
+    title: {
+      en: "Dubai",
+      ua: "Дубай",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       brown: DruidDubaiImg,
       ...druidColors,
@@ -312,10 +337,12 @@ export const doorsData = [
   },
   {
     id: "druid_14",
-    title: "Фортуна",
+    title: {
+      en: "Fortune",
+      ua: "Фортуна",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       brown: DruidFortunaImg,
       ...druidColors,
@@ -323,10 +350,12 @@ export const doorsData = [
   },
   {
     id: "druid_15",
-    title: "Греція",
+    title: {
+      en: "Greece",
+      ua: "Греція",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       darkBrown: DruidGreeceImg,
       ...druidColors,
@@ -334,10 +363,13 @@ export const doorsData = [
   },
   {
     id: "druid_16",
+    title: {
+      en: "Kongo Double",
+      ua: "Конго Дабл",
+    },
     title: "Конго Дабл",
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       darkBrown: DruidKonhoDoubleImg,
       ...druidColors,
@@ -345,10 +377,12 @@ export const doorsData = [
   },
   {
     id: "druid_17",
-    title: "Конго",
+    title: {
+      en: "Kongo",
+      ua: "Конго",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidKonhoImg,
       ...druidColors,
@@ -356,10 +390,12 @@ export const doorsData = [
   },
   {
     id: "druid_18",
-    title: "Лео",
+    title: {
+      en: "Leo",
+      ua: "Лео",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       brown: DruidLeoImg,
       ...druidColors,
@@ -367,10 +403,12 @@ export const doorsData = [
   },
   {
     id: "druid_19",
-    title: "Лайн",
+    title: {
+      en: "Line",
+      ua: "Лайн",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       beige: DruidLineImg,
       ...druidColors,
@@ -378,10 +416,12 @@ export const doorsData = [
   },
   {
     id: "druid_20",
-    title: "Лондон Класік",
+    title: {
+      en: "London Classic",
+      ua: "Лондон Класік",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidLondonClasicImg,
       ...druidColors,
@@ -389,10 +429,12 @@ export const doorsData = [
   },
   {
     id: "druid_21",
-    title: "Лондон",
+    title: {
+      en: "London",
+      ua: "Лондон",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidLondonImg,
       ...druidColors,
@@ -400,10 +442,12 @@ export const doorsData = [
   },
   {
     id: "druid_22",
-    title: "Мальта",
+    title: {
+      en: "Malta",
+      ua: "Мальта",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidMaltaImg,
       ...druidColors,
@@ -411,10 +455,12 @@ export const doorsData = [
   },
   {
     id: "druid_23",
-    title: "Манхетен Дабл",
+    title: {
+      en: "Manhattan Double",
+      ua: "Манхетен Дабл",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidManhetenDoubleImg,
       ...druidColors,
@@ -422,10 +468,12 @@ export const doorsData = [
   },
   {
     id: "druid_24",
-    title: "Манхетен",
+    title: {
+      en: "Manhattan",
+      ua: "Манхетен",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidManhetenImg,
       ...druidColors,
@@ -433,10 +481,12 @@ export const doorsData = [
   },
   {
     id: "druid_25",
-    title: "Марокко",
+    title: {
+      en: "Morocco",
+      ua: "Марокко",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidMaroccoImg,
       ...druidColors,
@@ -444,10 +494,12 @@ export const doorsData = [
   },
   {
     id: "druid_26",
-    title: "Марс",
+    title: {
+      en: "Mars",
+      ua: "Марс",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidMarsImg,
       ...druidColors,
@@ -455,10 +507,12 @@ export const doorsData = [
   },
   {
     id: "druid_27",
-    title: "Мілан",
+    title: {
+      en: "Milan",
+      ua: "Мілан",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidMilanImg,
       ...druidColors,
@@ -466,10 +520,12 @@ export const doorsData = [
   },
   {
     id: "druid_28",
-    title: "Нью Йорк",
+    title: {
+      en: "New York",
+      ua: "Нью Йорк",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       brown: DruidNewYorkImg,
       ...druidColors,
@@ -477,10 +533,12 @@ export const doorsData = [
   },
   {
     id: "druid_29",
-    title: "Ніцца",
+    title: {
+      en: "Nice",
+      ua: "Ніцца",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidNizzaImg,
       ...druidColors,
@@ -488,10 +546,12 @@ export const doorsData = [
   },
   {
     id: "druid_30",
-    title: "Париж",
+    title: {
+      en: "Paris",
+      ua: "Париж",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       beige: DruidParisImg,
       ...druidColors,
@@ -499,10 +559,12 @@ export const doorsData = [
   },
   {
     id: "druid_31",
-    title: "Пекін New",
+    title: {
+      en: "Beijing New",
+      ua: "Пекін New",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       lighterGray: DruidPekinNewImg,
       ...druidColors,
@@ -510,10 +572,12 @@ export const doorsData = [
   },
   {
     id: "druid_32",
-    title: "Пекін Спейс",
+    title: {
+      en: "Beijing Space",
+      ua: "Пекін Спейс",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       beige: DruidPekinSpaceImg,
       ...druidColors,
@@ -521,10 +585,12 @@ export const doorsData = [
   },
   {
     id: "druid_33",
-    title: "Пекін",
+    title: {
+      en: "Beijing",
+      ua: "Пекін",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       beige: DruidPekinImg,
       ...druidColors,
@@ -532,10 +598,12 @@ export const doorsData = [
   },
   {
     id: "druid_34",
-    title: "Піраміда N",
+    title: {
+      en: "Pyramid N",
+      ua: "Піраміда N",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidPiramidaNImg,
       ...druidColors,
@@ -543,10 +611,12 @@ export const doorsData = [
   },
   {
     id: "druid_35",
-    title: "Прага",
+    title: {
+      en: "Prague",
+      ua: "Прага",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidPrahaImg,
       ...druidColors,
@@ -554,10 +624,12 @@ export const doorsData = [
   },
   {
     id: "druid_36",
-    title: "Рим",
+    title: {
+      en: "Rome",
+      ua: "Рим",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       darkBrown: DruidRomeImg,
       ...druidColors,
@@ -565,10 +637,12 @@ export const doorsData = [
   },
   {
     id: "druid_37",
-    title: "Сахара",
+    title: {
+      en: "Sahara",
+      ua: "Сахара",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidSakharaImg,
       ...druidColors,
@@ -576,10 +650,12 @@ export const doorsData = [
   },
   {
     id: "druid_38",
-    title: "Сакура 2",
+    title: {
+      en: "Sakura 2",
+      ua: "Сакура 2",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       brown: DruidSakura2Img,
       ...druidColors,
@@ -587,10 +663,12 @@ export const doorsData = [
   },
   {
     id: "druid_39",
-    title: "Сакура",
+    title: {
+      en: "Sakura",
+      ua: "Сакура",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidSakuraImg,
       ...druidColors,
@@ -598,10 +676,12 @@ export const doorsData = [
   },
   {
     id: "druid_40",
-    title: "Шотландія",
+    title: {
+      en: "Scotland",
+      ua: "Шотландія",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidScotlandImg,
       ...druidColors,
@@ -609,10 +689,12 @@ export const doorsData = [
   },
   {
     id: "druid_41",
-    title: "Сідней",
+    title: {
+      en: "Sydney",
+      ua: "Сідней",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       darkBrown: DruidSidneyImg,
       ...druidColors,
@@ -620,10 +702,12 @@ export const doorsData = [
   },
   {
     id: "druid_42",
-    title: "Спейс",
+    title: {
+      en: "Space",
+      ua: "Спейс",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       beige: DruidSpaceImg,
       ...druidColors,
@@ -631,10 +715,12 @@ export const doorsData = [
   },
   {
     id: "druid_43",
-    title: "Тріо",
+    title: {
+      en: "Trio",
+      ua: "Тріо",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidTrioImg,
       ...druidColors,
@@ -642,10 +728,12 @@ export const doorsData = [
   },
   {
     id: "druid_44",
-    title: "Венеція",
+    title: {
+      en: "Venice",
+      ua: "Венеція",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidVeneciiaImg,
       ...druidColors,
@@ -653,10 +741,12 @@ export const doorsData = [
   },
   {
     id: "druid_45",
-    title: "Венера",
+    title: {
+      en: "Venus",
+      ua: "Венера",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       beige: DruidVeneraImg,
       ...druidColors,
@@ -664,10 +754,12 @@ export const doorsData = [
   },
   {
     id: "druid_46",
-    title: "Женева",
+    title: {
+      en: "Geneva",
+      ua: "Женева",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       beige: DruidZhenevaImg,
       ...druidColors,
@@ -675,10 +767,12 @@ export const doorsData = [
   },
   {
     id: "druid_47",
-    title: "Злата",
+    title: {
+      en: "Zlata",
+      ua: "Злата",
+    },
     type: "interior",
-    manufacturer: "Друїд",
-    description: "some description",
+    manufacturer: { en: "Druid", ua: "Друїд" },
     colors: {
       white: DruidZlataImg,
       ...druidColors,
@@ -686,10 +780,12 @@ export const doorsData = [
   },
   {
     id: "gorgania_1",
-    title: "Бескид",
+    title: {
+      en: "Beskyd",
+      ua: "Бескид",
+    },
     type: "interior",
-    manufacturer: "Gorgania",
-    description: "some description",
+    manufacturer: { en: "Gorgania", ua: "Горганія" },
     colors: {
       brown: GorganiaBeskydBrownImg,
       lightGray: GorganiaBeskydLightGrayImg,
@@ -700,10 +796,12 @@ export const doorsData = [
   },
   {
     id: "gorgania_2",
-    title: "Говерла",
+    title: {
+      en: "Hoverla",
+      ua: "Говерла",
+    },
     type: "interior",
-    manufacturer: "Gorgania",
-    description: "some description",
+    manufacturer: { en: "Gorgania", ua: "Горганія" },
     colors: {
       white: GorganiaHoverlaWhiteImg,
       brown: GorganiaHoverlaBrownImg,
@@ -714,10 +812,12 @@ export const doorsData = [
   },
   {
     id: "gorgania_3",
-    title: "Грофа",
+    title: {
+      en: "Hrofa",
+      ua: "Грофа",
+    },
     type: "interior",
-    manufacturer: "Gorgania",
-    description: "some description",
+    manufacturer: { en: "Gorgania", ua: "Горганія" },
     colors: {
       lighterGray: GorganiaHrofaLighterGrayImg,
       gray: GorganiaHrofaGrayImg,
@@ -728,10 +828,12 @@ export const doorsData = [
   },
   {
     id: "gorgania_4",
-    title: "Красія",
+    title: {
+      en: "Krasiia",
+      ua: "Красія",
+    },
     type: "interior",
-    manufacturer: "Gorgania",
-    description: "some description",
+    manufacturer: { en: "Gorgania", ua: "Горганія" },
     colors: {
       brown: GorganiaKrasiiaBrownImg,
       gray: GorganiaKrasiiaGrayImg,
@@ -742,10 +844,12 @@ export const doorsData = [
   },
   {
     id: "gorgania_5",
-    title: "Магура",
+    title: {
+      en: "Mahura",
+      ua: "Магура",
+    },
     type: "interior",
-    manufacturer: "Gorgania",
-    description: "some description",
+    manufacturer: { en: "Gorgania", ua: "Горганія" },
     colors: {
       gray: GorganiaMahuraGrayImg,
       brown: GorganiaMahuraBrownImg,
@@ -756,10 +860,12 @@ export const doorsData = [
   },
   {
     id: "gorgania_6",
-    title: "Петрос",
+    title: {
+      en: "Petros",
+      ua: "Петрос",
+    },
     type: "interior",
-    manufacturer: "Gorgania",
-    description: "some description",
+    manufacturer: { en: "Gorgania", ua: "Горганія" },
     colors: {
       lightGray: GorganiaPetrosLightGrayImg,
       gray: GorganiaPetrosGrayImg,
@@ -770,10 +876,13 @@ export const doorsData = [
   },
   {
     id: "gorgania_7",
+    title: {
+      en: "Plai",
+      ua: "Плай",
+    },
     title: "Плай",
     type: "interior",
-    manufacturer: "Gorgania",
-    description: "some description",
+    manufacturer: { en: "Gorgania", ua: "Горганія" },
     colors: {
       white: GorganiaPlaiWhiteImg,
       gray: GorganiaPlaiGrayImg,
@@ -784,10 +893,12 @@ export const doorsData = [
   },
   {
     id: "gorgania_8",
-    title: "Стіг",
+    title: {
+      en: "Stih",
+      ua: "Стіг",
+    },
     type: "interior",
-    manufacturer: "Gorgania",
-    description: "some description",
+    manufacturer: { en: "Gorgania", ua: "Горганія" },
     colors: {
       lighterGray: GorganiaStihLighterGrayImg,
       gray: GorganiaStihGrayImg,
@@ -798,10 +909,12 @@ export const doorsData = [
   },
   {
     id: "gorgania_9",
-    title: "Стримба",
+    title: {
+      en: "Strymba",
+      ua: "Стримба",
+    },
     type: "interior",
-    manufacturer: "Gorgania",
-    description: "some description",
+    manufacturer: { en: "Gorgania", ua: "Горганія" },
     colors: {
       brown: GorganiaStrymbaBrownImg,
       gray: GorganiaStrymbaGrayImg,
@@ -812,10 +925,12 @@ export const doorsData = [
   },
   {
     id: "gorgania_10",
-    title: "Яворина",
+    title: {
+      en: "Yavoryna",
+      ua: "Яворина",
+    },
     type: "interior",
-    manufacturer: "Gorgania",
-    description: "some description",
+    manufacturer: { en: "Gorgania", ua: "Горганія" },
     colors: {
       gray: GorganiaYavorynaGrayImg,
       brown: GorganiaYavorynaBrownImg,
@@ -826,220 +941,241 @@ export const doorsData = [
   },
   {
     id: "ministryOfDoors_1",
-    title: "ПБУ-01",
-    subtitle: "Горіх морений",
+    title: {
+      en: "PBU-01-1",
+      ua: "ПБУ-01-1",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       darkBrown: ministryOfDoors_PBU_01_horikhMorenyiImg,
     },
   },
   {
     id: "ministryOfDoors_2",
-    title: "ПБУ-01",
-    subtitle: "Горіх морений (гладкі)",
+    title: {
+      en: "PBU-01-2",
+      ua: "ПБУ-01-2",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       darkBrown: ministryOfDoors_PBU_01_horikhMorenyiHladkyiImg,
     },
   },
   {
     id: "ministryOfDoors_3",
-    title: "ПБ-202",
-    subtitle: "Дуб грифель",
+    title: {
+      en: "PB-202-1",
+      ua: "ПБ-202-1",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       lighterGray: ministryOfDoors_PB_202_dubHryfelImg,
     },
   },
   {
     id: "ministryOfDoors_4",
-    title: "ПБ-202",
-    subtitle: "Пломбір",
+    title: {
+      en: "PB-202-2",
+      ua: "ПБ-202-2",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       white: ministryOfDoors_PB_202_plombirImg,
     },
   },
   {
     id: "ministryOfDoors_5",
-    title: "ПО-262",
-    subtitle: "Коньячний",
+    title: {
+      en: "PO-262-1",
+      ua: "ПО-262-1",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       brown: ministryOfDoors_PO_262_koniachnyiImg,
     },
   },
   {
     id: "ministryOfDoors_6",
-    title: "ПО-262",
-    subtitle: "Медовий",
+    title: {
+      en: "PO-262-2",
+      ua: "ПО-262-2",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       karpatskaYalyna: ministryOfDoors_PO_262_medovyiImg,
     },
   },
   {
     id: "ministryOfDoors_7",
-    title: "ПО-361",
+    title: {
+      en: "PO-361-1",
+      ua: "ПО-361-1",
+    },
     subtitle: "Оксид темний",
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       gray: ministryOfDoors_PO_361_oksydTemnyiImg,
     },
   },
   {
     id: "ministryOfDoors_8",
-    title: "ПО-361",
-    subtitle: "Оксид світлий",
+    title: {
+      en: "PO-361-2",
+      ua: "ПО-361-2",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       lightGray: ministryOfDoors_PO_361_oksydSvitlyiImg,
     },
   },
   {
     id: "ministryOfDoors_9",
-    title: "ПУ-Версаче",
-    subtitle: "Бергамо",
+    title: {
+      en: "PU-Versace-1",
+      ua: "ПУ-Версаче-1",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       darkBrown: ministryOfDoors_PU_versache_berhamoImg,
     },
   },
   {
     id: "ministryOfDoors_10",
-    title: "ПУ-Версаче",
-    subtitle: "Антрацит",
+    title: {
+      en: "PU-Versace-2",
+      ua: "ПУ-Версаче-2",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       lightGray: ministryOfDoors_PU_versache_antratsytImg,
     },
   },
   {
     id: "ministryOfDoors_11",
-    title: "ПК-352",
-    subtitle: "Дуб грифель",
+    title: {
+      en: "PK-352-1",
+      ua: "ПК-352-1",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       lighterGray: ministryOfDoors_PK_352_hryfelImg,
     },
   },
   {
     id: "ministryOfDoors_12",
-    title: "ПК-352",
-    subtitle: "Пломбір",
+    title: {
+      en: "PK-352-2",
+      ua: "ПК-352-2",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       white: ministryOfDoors_PK_352_plombirImg,
     },
   },
   {
     id: "ministryOfDoors_13",
-    title: "ПК-360",
-    subtitle: "Оксид темний",
+    title: {
+      en: "PK-360-1",
+      ua: "ПК-360-1",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       lighterGray: ministryOfDoors_PK_360_oksydTemnyiImg,
     },
   },
   {
     id: "ministryOfDoors_14",
-    title: "ПК-360",
-    subtitle: "Оксид світлий",
+    title: {
+      en: "PK-360-2",
+      ua: "ПК-360-2",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       lightGray: ministryOfDoors_PK_360_oksydSvitlyiImg,
     },
   },
   {
     id: "ministryOfDoors_15",
-    title: "ПУ-Трініті",
-    subtitle: "Оксид",
+    title: {
+      en: "PU-Trinity-1",
+      ua: "ПУ-Трініті-1",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       lightGray: ministryOfDoors_PU_triniti_oksydImg,
     },
   },
   {
     id: "ministryOfDoors_16",
-    title: "ПУ-Трініті",
-    subtitle: "Темний",
+    title: {
+      en: "PU-Trinity-2",
+      ua: "ПУ-Трініті-2",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       gray: ministryOfDoors_PU_triniti_temnyiImg,
     },
   },
   {
     id: "ministryOfDoors_17",
-    title: "П-ЗК-366",
-    subtitle: "Оксид темний",
+    title: {
+      en: "P-ZK-366-1",
+      ua: "П-ЗК-366-1",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       gray: ministryOfDoors_P_ZK_366_oksydTemnyiImg,
     },
   },
   {
     id: "ministryOfDoors_18",
-    title: "П-ЗК-366",
-    subtitle: "Оксид світлий",
+    title: {
+      en: "P-ZK-366-2",
+      ua: "П-ЗК-366-2",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       lightGray: ministryOfDoors_P_ZK_366_oksydSvitlyiImg,
     },
   },
   {
     id: "ministryOfDoors_19",
-    title: "ПУ-Вітраж",
-    subtitle: "Антрацит",
+    title: {
+      en: "PU-Vitrazh",
+      ua: "ПУ-Вітраж",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       lightGray: ministryOfDoors_PU_vitrazhImg,
     },
   },
   {
     id: "ministryOfDoors_20",
-    title: "ПО-21",
-    subtitle: "Венге структурний",
+    title: {
+      en: "PO-21",
+      ua: "ПО-21",
+    },
     type: "exterior",
-    manufacturer: "Міністерство Дверей",
-    description: "some description",
+    manufacturer: { en: "Ministry of Doors", ua: "Міністерство Дверей" },
     colors: {
       darkBrown: ministryOfDoors_PO_21_venheStrukturnyiImg,
     },

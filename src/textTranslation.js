@@ -8,6 +8,12 @@ export const l10n = {
       services: "Services",
       contacts: "Contacts",
     },
+    prices: {
+      buttonCaption: "Prices",
+      announcement: `Due to the unstable economic situation in the country, 
+        please contact our sales consultant directly for up-to-date pricing information: `,
+      apologise: `We appreciate your understanding and apologize for any inconvenience!`,
+    },
     homePage: {
       mainBanner: {
         header: ["Windows", "Doors"],
@@ -27,7 +33,7 @@ export const l10n = {
           fullService: {
             header: "Full Service",
             details: `Our services go beyond mere sales — we offer expert installation, and if needed, 
-            removal of old windows or doors. Additionally, you can rely on us for delivery of your order.  
+            dismantling of old windows or doors. Additionally, you can rely on us for delivery of your order.  
             If you're unsure about taking accurate measurements of your door openings yourself, 
             our experts are here to assist with that too.`,
             buttonCaptions: ["All services"],
@@ -52,7 +58,7 @@ export const l10n = {
       assortment: {
         header: ["Our", "Assortment"],
         assortmentItem: {
-          entranceDoors: "Entrance Doors",
+          entranceDoors: "Exterior Doors",
           interiorDoors: "Interior Doors",
           windows: "Windows",
         },
@@ -86,7 +92,7 @@ export const l10n = {
       },
       installation: {
         header: "Installation of doors and windows",
-        subheader: "and removal of old ones",
+        subheader: "and dismantling of old ones",
         details: `Our experts guarantee top-quality installation of windows and doors, tailored to the highest standards.
         We also offer the option of scheduling a home visit for preliminary measurements.`,
         backCard: {
@@ -116,6 +122,21 @@ export const l10n = {
         },
       },
     },
+    doorsPage: {
+      filterButtons: {
+        all: "All",
+        interior: "Interior",
+        exterior: "Exterior",
+      },
+      doorCard: {
+        availableColors: "Available colors:",
+      },
+      catalogues: {
+        header: "You can find more models of exterior doors in the catalogues:",
+        magda: "Magda Catalogue",
+        termoplast: "Termoplast Catalogue",
+      },
+    },
   },
   ua: {
     title: "Вікна & Двері",
@@ -125,6 +146,12 @@ export const l10n = {
       windows: "Вікна",
       services: "Послуги",
       contacts: "Контакти",
+    },
+    prices: {
+      buttonCaption: "Ціни",
+      announcement: `У зв'язку з нестабільною економічною ситуацією в країні, актуальні ціни можна 
+        дізнатися безпосередньо у продавця-консультанта за номером:`,
+      apologise: `Дякуємо за розуміння та приносимо вибачення за незручності!`,
     },
     homePage: {
       mainBanner: {
@@ -231,6 +258,21 @@ export const l10n = {
           header: "З питань ремонту техніки дзвоніть за телефоном:",
           phones: ["(095) 924-62-08 - Микола"],
         },
+      },
+    },
+    doorsPage: {
+      filterButtons: {
+        all: "Всі",
+        interior: "Міжкімнатні",
+        exterior: "Вхідні",
+      },
+      doorCard: {
+        availableColors: "Доступні кольори:",
+      },
+      catalogues: {
+        header: "Більше моделей вхідних дверей представлено в каталогах:",
+        magda: "Каталог Magda",
+        termoplast: "Каталог Termoplast",
       },
     },
   },

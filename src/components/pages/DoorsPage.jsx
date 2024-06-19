@@ -9,17 +9,20 @@ import {
 } from "@/components/ui/collapsible";
 import { doorsData } from "@/data";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useInView } from "react-intersection-observer";
 import { useSearchParams } from "react-router-dom";
 import DoorCard from "../DoorCard";
 import ScrollToTopButton from "../ScrollToTopButton";
 import { Button } from "../ui/button";
+import { LanguageContext } from "../store/LanguageContext";
+import { l10n } from "@/textTranslation";
 
 const PER_PAGE = 8;
 
 export default function DoorsPage() {
+  const { language } = useContext(LanguageContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const filter = searchParams.get("type");
   const [page, setPage] = useState(1);
@@ -59,15 +62,12 @@ export default function DoorsPage() {
         <div className="relative flex justify-between gap-1 pb-10">
           <Collapsible>
             <CollapsibleTrigger className="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md border border-input bg-background px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
-              Ціни
+              {l10n[language].prices.buttonCaption}
             </CollapsibleTrigger>
             <CollapsibleContent className="absolute left-0 right-0 top-12 z-10 rounded-md bg-muted-foreground p-4 pt-2 text-accent shadow-lg">
-              У зв'язку з нестабільною економічною ситуацією в країні, актуальні
-              ціни можна дізнатися безпосередньо у продавця-консультанта за
-              номером <span className="font-semibold">+380992236426</span>.
-              <p className="font-semibold">
-                Дякуємо за розуміння та приносимо вибачення за незручності!
-              </p>
+              {l10n[language].prices.announcement}
+              <span className="font-semibold">+380992236426</span>.
+              <p className="font-semibold">{l10n[language].prices.apologise}</p>
             </CollapsibleContent>
           </Collapsible>
           <div className="flex justify-end gap-1">
@@ -79,7 +79,7 @@ export default function DoorsPage() {
               }
               className={`${filter === "all" && "bg-background_secondary"}`}
             >
-              Всі
+              {l10n[language].doorsPage.filterButtons.all}
             </Button>
             <Button
               size="sm"
@@ -89,7 +89,7 @@ export default function DoorsPage() {
               }
               className={`${filter === "interior" && "bg-background_secondary"}`}
             >
-              Міжкімнатні
+              {l10n[language].doorsPage.filterButtons.interior}
             </Button>
             <Button
               size="sm"
@@ -99,7 +99,7 @@ export default function DoorsPage() {
               }
               className={`${filter === "exterior" && "bg-background_secondary"}`}
             >
-              Вхідні
+              {l10n[language].doorsPage.filterButtons.exterior}
             </Button>
           </div>
         </div>
@@ -127,10 +127,11 @@ export default function DoorsPage() {
 }
 
 function DoorsCatalogues() {
+  const { language } = useContext(LanguageContext);
   return (
     <div className="mt-20">
       <h2 className="pb-10 text-center text-2xl font-semibold">
-        Більше моделей вхідних дверей представлено у каталогах:
+        {l10n[language].doorsPage.catalogues.header}
       </h2>
       <div className="grid gap-10 md:grid-cols-2">
         <a href={magdaCatalogue} target="_blank" className="relative">
@@ -140,7 +141,7 @@ function DoorsCatalogues() {
             className="rounded-md border"
           />
           <h3 className="absolute bottom-0 left-0 right-0 bg-blur px-container-padding py-4 text-2xl font-semibold">
-            Каталог Magda
+            {l10n[language].doorsPage.catalogues.magda}
           </h3>
         </a>
         <a href={termoplastCatalogue} target="_blank" className="relative">
@@ -150,7 +151,7 @@ function DoorsCatalogues() {
             className="rounded-md border"
           />
           <h3 className="absolute bottom-0 left-0 right-0 bg-blur px-container-padding py-4 text-2xl font-semibold">
-            Каталог Termoplast
+            {l10n[language].doorsPage.catalogues.termoplast}
           </h3>
         </a>
       </div>

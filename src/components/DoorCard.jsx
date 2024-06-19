@@ -7,7 +7,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { LanguageContext } from "./store/LanguageContext";
+import { l10n } from "@/textTranslation";
 
 const btnColors = {
   white: "bg-door-white",
@@ -33,6 +35,7 @@ const btnColors = {
 };
 
 export default function DoorCard({ door }) {
+  const { language } = useContext(LanguageContext);
   const defaultColor = Object.keys(door.colors)[0];
   const [doorColor, setDoorColor] = useState(defaultColor);
 
@@ -44,23 +47,21 @@ export default function DoorCard({ door }) {
     <Card className="relative grid justify-center">
       <CardHeader>
         <CardTitle>
-          <p>{door.title}</p>
-          {door.subtitle && (
-            <p className="text-base text-secondary-foreground">
-              {door.subtitle}
-            </p>
-          )}
+          <p>{door.title[language]}</p>
         </CardTitle>
-        <CardDescription>{door.manufacturer}</CardDescription>
+        <CardDescription>{door.manufacturer[language]}</CardDescription>
       </CardHeader>
       <CardContent className="flex h-[360px] items-center">
-        <img
-          src={door.colors[doorColor] || Object.values(door.colors)[0]}
-          className="mx-auto max-h-[300px] w-[150px]"
-        />
+        <div className="mx-auto">
+          <img
+            src={door.colors[doorColor] || Object.values(door.colors)[0]}
+            className="mx-auto max-h-[300px] w-[150px]"
+          />
+          {/* <p className="text-center pt-4">color</p> */}
+        </div>
       </CardContent>
       <CardFooter className="flex-col gap-2">
-        <p>Доступні кольори:</p>
+        <p>{l10n[language].doorsPage.doorCard.availableColors}</p>
         <div className="flex flex-wrap gap-3">
           {Object.keys(door.colors).map((color) => {
             return (
