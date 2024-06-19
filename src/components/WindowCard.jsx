@@ -27,7 +27,11 @@ export default function WindowCard({ window }) {
         <CardDescription>{window.manufacturer}</CardDescription>
       </CardHeader>
       <CardContent className="flex h-[280px] items-center">
-        <img src={window.image} className="mx-auto max-h-[300px] w-[150px]" />
+        <img
+          src={window.image}
+          alt={window.title}
+          className="mx-auto max-h-[300px] w-[150px]"
+        />
       </CardContent>
       <CardFooter className="flex-col gap-2">
         <ul>

@@ -56,6 +56,7 @@ export default function DoorCard({ door }) {
           <img
             src={door.colors[doorColor] || Object.values(door.colors)[0]}
             className="mx-auto max-h-[300px] w-[150px]"
+            alt={door.title[language]}
           />
           {/* <p className="text-center pt-4">color</p> */}
         </div>
