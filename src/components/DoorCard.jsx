@@ -6,10 +6,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { motion } from "framer-motion";
-import { useState, useContext } from "react";
-import { LanguageContext } from "./store/LanguageContext";
 import { l10n } from "@/textTranslation";
+import { motion } from "framer-motion";
+import { useContext, useState } from "react";
+import { LanguageContext } from "./store/LanguageContext";
 
 const btnColors = {
   white: "bg-door-white",

@@ -6,8 +6,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { l10n } from "@/textTranslation";
+import { useContext } from "react";
+import { LanguageContext } from "./store/LanguageContext";
 
 export default function WindowCard({ window }) {
+  const { language } = useContext(LanguageContext);
+  const windowCardText = l10n[language].windowsPage.windowCard;
   return (
     <Card className="relative grid justify-center">
       <CardHeader>
@@ -27,25 +32,25 @@ export default function WindowCard({ window }) {
       <CardFooter className="flex-col gap-2">
         <ul>
           <li>
-            Монтажна глибина (мм):{" "}
+            {windowCardText.mountingDepth}{" "}
             <span className="text-xl font-bold text-secondary-foreground">
               {window.characteristics.mountingDepth}
             </span>
           </li>
           <li>
-            Товщина склопакетів (мм):{" "}
+            {windowCardText.glazingUnit}{" "}
             <span className="text-xl font-bold text-secondary-foreground">
               {window.characteristics.glazingUnit}
             </span>
           </li>
           <li>
-            Кількість камер:{" "}
+            {windowCardText.chambers}{" "}
             <span className="text-xl font-bold text-secondary-foreground">
               {window.characteristics.chambers}
             </span>
           </li>
           <li>
-            Контури ущільнення:{" "}
+            {windowCardText.gasketContours}{" "}
             <span className="text-xl font-bold text-secondary-foreground">
               {window.characteristics.gasketContours}
             </span>

@@ -92,7 +92,10 @@ export default function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>Вікна & Двері | Послуги</title>
+        <title>
+          {" "}
+          {l10n[language].title.main} | {l10n[language].title.servicesPage}
+        </title>
       </Helmet>
 
       <div id="ourServices" className="bg-background_secondary md:py-20">

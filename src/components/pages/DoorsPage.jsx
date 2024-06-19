@@ -2,22 +2,18 @@ import magdaCatalogue from "@/assets/catalogues/Magda_doors-catalogue.pdf";
 import termoplastCatalogue from "@/assets/catalogues/Termoplast_doors-catalogue.pdf";
 import magdaImg from "@/assets/catalogues/magda-img.png";
 import termoplastImg from "@/assets/catalogues/termoplast-img.png";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 import { doorsData } from "@/data";
+import { l10n } from "@/textTranslation";
 import { motion } from "framer-motion";
-import { useEffect, useState, useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useInView } from "react-intersection-observer";
 import { useSearchParams } from "react-router-dom";
 import DoorCard from "../DoorCard";
+import PricesCollapsible from "../PricesCollapsible";
 import ScrollToTopButton from "../ScrollToTopButton";
-import { Button } from "../ui/button";
 import { LanguageContext } from "../store/LanguageContext";
-import { l10n } from "@/textTranslation";
+import { Button } from "../ui/button";
 
 const PER_PAGE = 8;
 
@@ -56,20 +52,13 @@ export default function DoorsPage() {
   return (
     <>
       <Helmet>
-        <title>Вікна & Двері | Двері </title>
+        <title>
+          {l10n[language].title.main} | {l10n[language].title.doorsPage}{" "}
+        </title>
       </Helmet>
       <div className="mx-auto w-full max-w-[1600px] px-container-padding py-24">
         <div className="relative flex justify-between gap-1 pb-10">
-          <Collapsible>
-            <CollapsibleTrigger className="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md border border-input bg-background px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
-              {l10n[language].prices.buttonCaption}
-            </CollapsibleTrigger>
-            <CollapsibleContent className="absolute left-0 right-0 top-12 z-10 rounded-md bg-muted-foreground p-4 pt-2 text-accent shadow-lg">
-              {l10n[language].prices.announcement}
-              <span className="font-semibold">+380992236426</span>.
-              <p className="font-semibold">{l10n[language].prices.apologise}</p>
-            </CollapsibleContent>
-          </Collapsible>
+          <PricesCollapsible />
           <div className="flex justify-end gap-1">
             <Button
               size="sm"

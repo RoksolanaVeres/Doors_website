@@ -5,10 +5,14 @@ import { FaPhone } from "react-icons/fa6";
 import { GrSchedule } from "react-icons/gr";
 import { IoIosMail } from "react-icons/io";
 import { IoHome } from "react-icons/io5";
+import { l10n } from "@/textTranslation";
+import { useContext } from "react";
+import { LanguageContext } from "../store/LanguageContext";
 
 const Map = lazy(() => import("../Map"));
 
 export default function ContactsPage() {
+  const { language } = useContext(LanguageContext);
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -16,7 +20,10 @@ export default function ContactsPage() {
   return (
     <>
       <Helmet>
-        <title>Вікна & Двері | Контакти</title>
+        <title>
+          {" "}
+          {l10n[language].title.main} | {l10n[language].title.contactsPage}
+        </title>
       </Helmet>
       <div id="ourContacts" className="pt-20">
         <div

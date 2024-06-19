@@ -23,7 +23,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>{l10n[language].title}</title>
+        <title>{l10n[language].title.main}</title>
       </Helmet>
       <div
         id="main-block"

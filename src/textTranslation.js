@@ -1,6 +1,12 @@
 export const l10n = {
   en: {
-    title: "Windows & Doors",
+    title: {
+      main: "Windows & Doors",
+      doorsPage: "Doors",
+      windowsPage: "Windows",
+      servicesPage: "Services",
+      contactsPage: "Contacts",
+    },
     navLinks: {
       homePage: "Home",
       doors: "Doors",
@@ -137,9 +143,23 @@ export const l10n = {
         termoplast: "Termoplast Catalogue",
       },
     },
+    windowsPage: {
+      windowCard: {
+        mountingDepth: "Mounting depth (mm):",
+        glazingUnit: "Glazing unit (mm):",
+        chambers: "Chambers number:",
+        gasketContours: "Gasket contours:",
+      },
+    },
   },
   ua: {
-    title: "Вікна & Двері",
+    title: {
+      main: "Вікна & Двері",
+      doorsPage: "Двері",
+      windowsPage: "Вікна",
+      servicesPage: "Послуги",
+      contactsPage: "Контакти",
+    },
     navLinks: {
       homePage: "Головна",
       doors: "Двері",
@@ -273,6 +293,14 @@ export const l10n = {
         header: "Більше моделей вхідних дверей представлено в каталогах:",
         magda: "Каталог Magda",
         termoplast: "Каталог Termoplast",
+      },
+    },
+    windowsPage: {
+      windowCard: {
+        mountingDepth: "Монтажна глибина (мм):",
+        glazingUnit: "Товщина склопакетів (мм):",
+        chambers: "Кількість камер:",
+        gasketContours: "Контури ущільнення:",
       },
     },
   },
