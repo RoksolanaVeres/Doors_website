@@ -87,8 +87,6 @@ export default function ServicesPage() {
     window.scroll(0, 0);
   }, []);
 
-  sessionStorage.clear();
-
   return (
     <>
       <Helmet>

@@ -28,7 +28,7 @@ export default function ContactsPage() {
       <div id="ourContacts" className="pt-20">
         <div
           id="contactsInfo"
-          className="mx-auto grid max-w-[1600px] gap-10 px-container-padding py-20 md:grid-cols-3"
+          className="mx-auto grid max-w-[1600px] gap-10 px-container-padding md:grid-cols-2 md:py-20 lg:grid-cols-3"
         >
           <div
             id="email-container"
@@ -78,7 +78,7 @@ export default function ContactsPage() {
                       +380992236426
                     </a>
                     <p>
-                      ({" "}
+                      (
                       {contactsText.phonesCard.windowsDoorsPhones.phoneNames[0]}
                       )
                     </p>
@@ -155,12 +155,6 @@ export default function ContactsPage() {
             </div>
           </div>
 
-          <div className="col-span-2">
-            <Suspense fallback={<div>Loading the map...</div>}>
-              <Map />
-            </Suspense>
-          </div>
-
           <div
             id="workingHours-container"
             className="flex justify-center rounded-md bg-background_secondary p-10 shadow-lg"
@@ -186,6 +180,12 @@ export default function ContactsPage() {
                 </dd>
               </dl>
             </div>
+          </div>
+
+          <div className="md:col-span-2">
+            <Suspense fallback={<div>Loading the map...</div>}>
+              <Map />
+            </Suspense>
           </div>
         </div>
       </div>
