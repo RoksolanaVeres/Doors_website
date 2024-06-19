@@ -64,8 +64,6 @@ export const l10n = {
             especially during these turbulent times. That's why we've ensured our prices remain competitive 
             without compromising on quality.`,
             buttonCaptions: ["Our contacts"],
-            highlight: `For the military personnel who protect our peace, we offer special discounts
-             as our way of saying "Thank you!"`,
           },
         },
       },

@@ -43,7 +43,7 @@ export default function HomePage() {
             </span>
           </h1>
           <div>
-            <p className="font-roboto text-2xl">
+            <p className="font-roboto text-lg md:text-2xl">
               {l10n[language].homePage.mainBanner.slogan}
             </p>
           </div>
