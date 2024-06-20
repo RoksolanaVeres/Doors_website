@@ -25,45 +25,10 @@ export default function HomePage() {
       <Helmet>
         <meta
           name="description"
-          content="some description"
-        />
-        <title>Windows & Doors Home Page</title>
-        <meta
-          property="og:title"
-          content="Windows and Doors in Ivano-Frankivsk"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.vikna-dveri.if.ua/" />
-        <meta property="og:image" content="/room-interior-mini.jpg" />
-        {/* <meta property="og:image:type" content="image/jpeg" /> */}
-        <meta property="og:image:width" content="400" />
-        <meta property="og:image:height" content="266" />
-        <meta
-          property="og:description"
-          content="Some description fro home Page"
-        />
-      </Helmet>
-      {/* <Helmet>
-        <meta
-          name="description"
           content={l10n[language].metaTags.description.homePage}
         />
         <title>{l10n[language].title.main}</title>
-        <meta
-          property="og:title"
-          content={l10n[language].metaTags.openGraph.title.homePage}
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.vikna-dveri.if.ua/" />
-        <meta property="og:image" content="/room-interior-mini.jpg" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="400" />
-        <meta property="og:image:height" content="266" />
-        <meta
-          property="og:description"
-          content={l10n[language].metaTags.openGraph.description.homePage}
-        />
-      </Helmet> */}
+      </Helmet>
       <div
         id="main-block"
         className="h-screen bg-cover bg-[90%] md:bg-center"

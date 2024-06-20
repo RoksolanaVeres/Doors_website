@@ -18,16 +18,6 @@ export const l10n = {
       about products, services, or need assistance, our friendly team is here to help. Reach out to us via 
       phone or email, or visit our location to speak with us in person.`,
       },
-      openGraph: {
-        title: {
-          homePage: `Windows & Doors, Ivano-Frankivsk`,
-        },
-        description: {
-          homePage: `Discover a wide variety of windows and doors in Ivano-Frankivsk, 
-          full cycle of services: from professional consultation to delivery and installation 
-          - all offered at fair prices`,
-        },
-      },
     },
     title: {
       main: "Windows & Doors",
@@ -246,16 +236,6 @@ export const l10n = {
         contactsPage: `Звертайтеся до магазину Вікна-Двері щоб задовільнити всі Ваші потреби щодо дверей та вікон. 
       Незалежно від того, чи є у вас питання щодо асортименту, послуг або вам потрібна допомога, наш дружній колектив завжди готовий 
       допомогти. Зв'яжіться з нами по телефону або електронною поштою, а краще завітайте до нас особисто.`,
-      },
-      openGraph: {
-        title: {
-          homePage: `Вікна & Двері, Івано-Франківськ`,
-        },
-        description: {
-          homePage: `Пропонуємо широкий вибір вікон та дверей в Івано-Франківську. Ми надаємо повний цикл послуг, 
-          що включають консультацію, доставку, зняття замірів та монтаж дверей та вікон 
-          - все це за помірними цінами`,
-        },
       },
     },
     title: {
