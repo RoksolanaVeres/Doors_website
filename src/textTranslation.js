@@ -5,19 +5,29 @@ export const l10n = {
         homePage: `Discover high-quality doors and windows at our shop. Browse our extensive collection 
       of modern and traditional styles, including interior and exterior doors, energy-efficient windows, and more. 
       Transform your home with durable, stylish products. Call us today for expert advice and excellent customer service.`,
-      },
-      doorsPage: `Discover a variety of high-quality doors at our shop. Choose from stylish wooden and steel doors 
+        doorsPage: `Discover a variety of high-quality doors at our shop. Choose from stylish wooden and steel doors 
       to enhance your home's aesthetic and security. Find the perfect door that fits your style and budget. 
       Visit us today to explore our collection and get expert guidance.`,
-      windowsPage: `Explore energy-efficient windows at our shop. We offer a range of styles to suit every home. 
+        windowsPage: `Explore energy-efficient windows at our shop. We offer a range of styles to suit every home. 
       Enhance your living space with our durable and aesthetically pleasing window solutions. 
       Visit us today to find the right windows for your needs.`,
-      servicesPage: `Discover our comprehensive services at Windows and Doors shop. From installation and repair 
+        servicesPage: `Discover our comprehensive services at Windows and Doors shop. From installation and repair 
       to custom fittings, our skilled team ensures your doors and windows are installed perfectly. Count on us 
       for reliable service and exceptional craftsmanship. Contact us today to discuss your project needs.`,
-      contactsPage: `Contact us for all your doors and windows needs. Whether you have questions
+        contactsPage: `Contact us for all your doors and windows needs. Whether you have questions
       about products, services, or need assistance, our friendly team is here to help. Reach out to us via 
       phone or email, or visit our location to speak with us in person.`,
+      },
+      openGraph: {
+        title: {
+          homePage: `Windows & Doors, Ivano-Frankivsk`,
+        },
+        description: {
+          homePage: `Discover a wide variety of windows and doors in Ivano-Frankivsk, 
+          full cycle of services: from professional consultation to delivery and installation 
+          - all offered at fair prices`,
+        },
+      },
     },
     title: {
       main: "Windows & Doors",
@@ -221,23 +231,32 @@ export const l10n = {
         homePage: `Ласкаво просимо до світу вікон та дверей – вашого першого вибору для високоякісних дверей та вікон.
       Перегляньте наш широкий вибір сучасних та традиційних стилів і трансформуйте свій дім з нашими надійними 
       та стильними продуктами. Відвідайте нас сьогодні для професійної консультації та відмінного обслуговування.`,
-      },
-      doorsPage: `Відкрийте для себе світ високоякісних дверей в нашому магазині Вікна-Двері. Оберіть стильні дерев'яні 
+        doorsPage: `Відкрийте для себе світ високоякісних дверей в нашому магазині Вікна-Двері. Оберіть стильні дерев'яні 
       або металеві двері, які неодмінно підкреслять естетику та безпеку вашого дому. Знайдіть ідеальні двері, які 
       відповідають вашому стилю та бюджету. Завітайте до нас сьогодні, щоб дізнатися більше та отримати професійну 
       консультацію.`,
-      windowsPage: `Досліджуйте енергозберігаючі вікна в нашому магазині. Ми пропонуємо широкий вибір 
+        windowsPage: `Досліджуйте енергозберігаючі вікна в нашому магазині. Ми пропонуємо широкий вибір 
       металопластикових вікон, які підійдуть кожному будинку. Покращуйте ваш простір з нашими міцними 
       та естетично привабливими рішеннями для вікон. Відвідайте нас сьогодні, щоб знайти вікна, які відповідають 
       вашим потребам.`,
-      servicesPage: `Дізнайтеся про наші комплексні послуги в магазині Вікна-Двері. Ми займаємось не лише продажем, 
+        servicesPage: `Дізнайтеся про наші комплексні послуги в магазині Вікна-Двері. Ми займаємось не лише продажем, 
       а й пропонуємо професійний монтаж і/чи демонтаж старих вікон та дверей. Крім цього, у нас Ви можете замовити 
       доставку свого замовлення та виїзд майстра додому для зняття попередных замырыв. 
       Зв'яжіться з нами сьогодні, щоб обговорити Ваші потреби.`,
-      contactsPage: `Звертайтеся до магазину Вікна-Двері щоб задовільнити всі Ваші потреби щодо дверей та вікон. 
+        contactsPage: `Звертайтеся до магазину Вікна-Двері щоб задовільнити всі Ваші потреби щодо дверей та вікон. 
       Незалежно від того, чи є у вас питання щодо асортименту, послуг або вам потрібна допомога, наш дружній колектив завжди готовий 
-      допомогти. Зв'яжіться з нами по телефону або електронною поштою, а краще завітайте до нас особисто.  
-      `,
+      допомогти. Зв'яжіться з нами по телефону або електронною поштою, а краще завітайте до нас особисто.`,
+      },
+      openGraph: {
+        title: {
+          homePage: `Вікна & Двері, Івано-Франківськ`,
+        },
+        description: {
+          homePage: `Пропонуємо широкий вибір вікон та дверей в Івано-Франківську. Ми надаємо повний цикл послуг, 
+          що включають консультацію, доставку, зняття замірів та монтаж дверей та вікон 
+          - все це за помірними цінами`,
+        },
+      },
     },
     title: {
       main: "Вікна & Двері",

@@ -23,8 +23,25 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <meta name="description" content={l10n[language].metaTags.description.homePage}/>
+        <meta
+          name="description"
+          content={l10n[language].metaTags.description.homePage}
+        />
         <title>{l10n[language].title.main}</title>
+        <meta
+          property="og:title"
+          content={l10n[language].metaTags.openGraph.title.homePage}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.vikna-dveri.if.ua/" />
+        <meta property="og:image" content="/room-interior-mini.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="266" />
+        <meta
+          property="og:description"
+          content={l10n[language].metaTags.openGraph.description.homePage}
+        />
       </Helmet>
       <div
         id="main-block"
