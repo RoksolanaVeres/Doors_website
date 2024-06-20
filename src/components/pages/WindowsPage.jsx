@@ -20,6 +20,10 @@ export default function WindowsPage() {
   return (
     <>
       <Helmet>
+        <meta
+          name="description"
+          content={l10n[language].metaTags.description.windowsPage}
+        />
         <title>
           {l10n[language].title.main} | {l10n[language].title.windowsPage}{" "}
         </title>

@@ -20,8 +20,11 @@ export default function ContactsPage() {
   return (
     <>
       <Helmet>
+        <meta
+          name="description"
+          content={l10n[language].metaTags.description.contactsPage}
+        />
         <title>
-          {" "}
           {l10n[language].title.main} | {l10n[language].title.contactsPage}
         </title>
       </Helmet>
