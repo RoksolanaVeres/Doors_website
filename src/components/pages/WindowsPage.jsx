@@ -7,11 +7,18 @@ import PricesCollapsible from "../PricesCollapsible";
 import ScrollToTopButton from "../ScrollToTopButton";
 import WindowCard from "../WindowCard";
 import { LanguageContext } from "../store/LanguageContext";
+import { useAnimationOncePerSession } from "@/hooks/useAnimationOncePerSession";
 
 export default function WindowsPage() {
   const { language } = useContext(LanguageContext);
   const ref = useRef();
   const windows = windowsData;
+  const windowsAnimationHasPlayed = useAnimationOncePerSession("windowsAnimation");
+
+  const windowsVariants = {
+    initial: { scale: 0.5 },
+    animated: { scale: 1, transition: { duration: 0.2, ease: "easeOut" } },
+  };
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -37,9 +44,9 @@ export default function WindowsPage() {
             return (
               <motion.div
                 key={window.id}
-                initial={{ scale: 0.5 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
+                variants={windowsVariants}
+                initial={!windowsAnimationHasPlayed ? "initial" : null}
+                animate={!windowsAnimationHasPlayed ? "animated" : null}
               >
                 <WindowCard window={window} />
               </motion.div>
