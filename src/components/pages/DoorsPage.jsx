@@ -14,6 +14,7 @@ import PricesCollapsible from "../PricesCollapsible";
 import ScrollToTopButton from "../ScrollToTopButton";
 import { LanguageContext } from "../store/LanguageContext";
 import { Button } from "../ui/button";
+import { useAnimationOncePerSession } from "@/hooks/useAnimationOncePerSession";
 
 const PER_PAGE = 8;
 
@@ -23,6 +24,12 @@ export default function DoorsPage() {
   const filter = searchParams.get("type");
   const [page, setPage] = useState(1);
   const { ref, inView } = useInView(false);
+  const doorsAnimationHasPlayed = useAnimationOncePerSession("doorsAnimation");
+
+  const doorsVariants = {
+    initial: { scale: 0.5 },
+    animated: { scale: 1, transition: { duration: 0.2, ease: "easeOut" } },
+  };
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -101,9 +108,9 @@ export default function DoorsPage() {
             return (
               <motion.div
                 key={door.id}
-                initial={{ scale: 0.5 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
+                variants={doorsVariants}
+                initial={!doorsAnimationHasPlayed ? "initial" : null}
+                animate={!doorsAnimationHasPlayed ? "animated" : null}
               >
                 <DoorCard door={door} />
               </motion.div>
