@@ -25,7 +25,7 @@ module.exports = {
     },
     extend: {
       padding: {
-        "container-padding": "5%",
+        "container-padding": "20px",
       },
       gridTemplateColumns: {
         "auto-fill-265": "repeat(auto-fill, minmax(265px, 1fr))",

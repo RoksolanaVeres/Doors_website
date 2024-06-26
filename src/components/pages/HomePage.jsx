@@ -7,6 +7,7 @@ import roomInteriorImg from "../../assets/doors-img/unsplash-images/room-interio
 import OurAdvantages from "../OurAdvantages";
 import OurAssortment from "../OurAssortment";
 import { LanguageContext } from "../store/LanguageContext";
+import DropdownMenu from "../DropdownMenu";
 
 export default function HomePage() {
   const { language } = useContext(LanguageContext);
