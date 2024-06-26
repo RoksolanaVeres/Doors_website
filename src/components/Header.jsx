@@ -58,8 +58,7 @@ function DesktopHeader() {
 }
 
 function MobileHeader() {
-  const { toggleMenuOpenState, menuIsOpen, closeMenu, openMenu } =
-    useContext(MenuContext);
+  const { menuIsOpen, closeMenu, openMenu } = useContext(MenuContext);
   const { language, setUkrainianLanguage, setEnglishLanguage } =
     useContext(LanguageContext);
 
@@ -88,6 +87,13 @@ function MobileHeader() {
     openMenu();
   }
 
+  const dialogVariants = {
+    slideIn: {
+      x: ["-100%", 0],
+      transition: { ease: "easeOut", duration: 0.5 },
+    },
+  };
+
   return (
     <>
       <header
@@ -95,11 +101,13 @@ function MobileHeader() {
         className="flex w-full justify-between gap-5 px-container-padding py-6 text-sm md:hidden"
       >
         <dialog
+          variants={dialogVariants}
+          animate="slideIn"
           ref={dropdownMenu}
-          className="m-0 h-screen max-h-screen w-2/3 bg-background backdrop:bg-black/70"
+          className="m-0 h-screen max-h-screen w-2/3 bg-background backdrop:bg-black/70 open:animate-slide-in"
           onClick={handleDialogClick}
         >
-          <div className="h-full py-6 px-container-padding">
+          <div className="h-full px-container-padding py-6">
             <button className="pb-10">
               <XIcon
                 size={32}

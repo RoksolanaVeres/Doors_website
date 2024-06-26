@@ -13,6 +13,7 @@ export default function RootLayout() {
         className={`${
           menuIsOpen ? "h-screen overflow-hidden" : "h-fit"
         } relative flex min-h-screen flex-col justify-between`}
+        // className="relative flex h-fit min-h-screen flex-col justify-between"
       >
         <div id="header-mainContent__container" className="flex-1">
           <Header />
