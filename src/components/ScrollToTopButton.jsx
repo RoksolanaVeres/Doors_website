@@ -32,6 +32,7 @@ export default function ScrollToTopButton() {
   return (
     <Button
       ref={buttonRef}
+      size="normal"
       variant="outline"
       className="fixed bottom-3 right-3 shadow-lg"
       onClick={scrollToTop}

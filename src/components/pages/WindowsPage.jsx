@@ -47,7 +47,7 @@ export default function WindowsPage() {
           })}
         </div>
         <div className="h-1 w-full" ref={ref}>
-          <ScrollToTopButton />
+          {/* <ScrollToTopButton /> */}
         </div>
       </div>
     </>

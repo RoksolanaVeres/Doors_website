@@ -65,7 +65,7 @@ export default function DoorsPage() {
           <PricesCollapsible />
           <div className="flex justify-end gap-1">
             <Button
-              size="sm"
+              size="small"
               variant="outline"
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "all" }))
@@ -75,7 +75,7 @@ export default function DoorsPage() {
               {l10n[language].doorsPage.filterButtons.all}
             </Button>
             <Button
-              size="sm"
+              size="small"
               variant="outline"
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "interior" }))
@@ -85,7 +85,7 @@ export default function DoorsPage() {
               {l10n[language].doorsPage.filterButtons.interior}
             </Button>
             <Button
-              size="sm"
+              size="small"
               variant="outline"
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "exterior" }))
@@ -111,7 +111,7 @@ export default function DoorsPage() {
           })}
         </div>
         <div className="h-1 w-full" ref={ref}>
-          <ScrollToTopButton />
+          {/* <ScrollToTopButton /> */}
         </div>
         {filter !== "interior" && <DoorsCatalogues />}
       </div>
