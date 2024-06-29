@@ -149,7 +149,7 @@ function AdvantageItem({ advantage }) {
       <motion.div
         ref={advantageTextRef}
         id="advantage-text-container"
-        className={`pb-10 md:py-10 md:px-10 ${advantage.id % 2 === 0 && "md:order-2"}`}
+        className={`pb-10 md:px-10 md:py-10 ${advantage.id % 2 === 0 && "md:order-2"}`}
         variants={advantageTextAnimationVariants}
         animate={
           !advantageTextIsInView
@@ -163,7 +163,9 @@ function AdvantageItem({ advantage }) {
           <span className="tracking-widest">{advantageItemText.reason} # </span>
           <span className="text-3xl md:text-5xl">0{advantage.id}</span>
         </p>
-        <h3 className="pb-2 text-xl md:text-2xl font-semibold">{advantage.header}</h3>
+        <h3 className="pb-2 text-xl font-semibold md:text-2xl">
+          {advantage.header}
+        </h3>
         <p className="text-muted-foreground">{advantage.details}</p>
         <div id="advantage-button-container" className="flex gap-4">
           {advantage.buttons.map((button) => {
@@ -173,7 +175,7 @@ function AdvantageItem({ advantage }) {
                 to={button.path}
                 className="pt-4 md:pt-8"
               >
-                <Button className="bg-brand-main">
+                <Button size="normal" variant="normal" className="bg-brand-main">
                   {button.buttonCaption}
                 </Button>
               </Link>

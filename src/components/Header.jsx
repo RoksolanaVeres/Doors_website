@@ -1,4 +1,3 @@
-import { Separator } from "@/components/ui/separator";
 import { AnimatePresence, motion } from "framer-motion";
 import { useContext } from "react";
 import DropdownMenu from "./DropdownMenu";
@@ -45,7 +44,7 @@ function DesktopHeader() {
         >
           УКР
         </button>
-        <Separator orientation="vertical" className="h-[20px]" />
+        <div className="h-[22px] w-[1px] bg-border"></div>
         <button
           onClick={setEnglishLanguage}
           className={`${language === "en" && "border-b-2 border-accent-main"}`}
@@ -129,7 +128,7 @@ function MobileHeader() {
           >
             УКР
           </button>
-          <Separator orientation="vertical" />
+          <div className="h-[22px] w-[1px] bg-border"></div>
           <button
             onClick={setEnglishLanguage}
             className={`${language === "en" && "border-b-2 border-accent-main"}`}

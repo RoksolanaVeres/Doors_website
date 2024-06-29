@@ -3,7 +3,7 @@ import { l10n } from "@/textTranslation";
 import { motion } from "framer-motion";
 import { useContext, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
-import PricesCollapsible from "../PricesCollapsible";
+import PricesInfo from "../PricesInfo";
 import ScrollToTopButton from "../ScrollToTopButton";
 import WindowCard from "../WindowCard";
 import { LanguageContext } from "../store/LanguageContext";
@@ -37,8 +37,9 @@ export default function WindowsPage() {
       </Helmet>
       <div className="mx-auto w-full max-w-[1600px] px-container-padding py-24">
         <div className="relative flex justify-end pb-10">
-          <PricesCollapsible />
+          <PricesInfo />
         </div>
+
         <div className="grid grid-cols-auto-fill-265 gap-10">
           {windows.map((window) => {
             return (
@@ -54,7 +55,7 @@ export default function WindowsPage() {
           })}
         </div>
         <div className="h-1 w-full" ref={ref}>
-          <ScrollToTopButton />
+          {/* <ScrollToTopButton /> */}
         </div>
       </div>
     </>

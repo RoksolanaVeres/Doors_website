@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet-async";
 import { useInView } from "react-intersection-observer";
 import { useSearchParams } from "react-router-dom";
 import DoorCard from "../DoorCard";
-import PricesCollapsible from "../PricesCollapsible";
+import PricesInfo from "../PricesInfo";
 import ScrollToTopButton from "../ScrollToTopButton";
 import { LanguageContext } from "../store/LanguageContext";
 import { Button } from "../ui/button";
@@ -69,10 +69,10 @@ export default function DoorsPage() {
       </Helmet>
       <div className="mx-auto w-full max-w-[1600px] px-container-padding py-24">
         <div className="relative flex justify-between gap-1 pb-10">
-          <PricesCollapsible />
+          <PricesInfo />
           <div className="flex justify-end gap-1">
             <Button
-              size="sm"
+              size="small"
               variant="outline"
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "all" }))
@@ -82,7 +82,7 @@ export default function DoorsPage() {
               {l10n[language].doorsPage.filterButtons.all}
             </Button>
             <Button
-              size="sm"
+              size="small"
               variant="outline"
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "interior" }))
@@ -92,7 +92,7 @@ export default function DoorsPage() {
               {l10n[language].doorsPage.filterButtons.interior}
             </Button>
             <Button
-              size="sm"
+              size="small"
               variant="outline"
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "exterior" }))
@@ -118,7 +118,7 @@ export default function DoorsPage() {
           })}
         </div>
         <div className="h-1 w-full" ref={ref}>
-          <ScrollToTopButton />
+          {/* <ScrollToTopButton /> */}
         </div>
         {filter !== "interior" && <DoorsCatalogues />}
       </div>
