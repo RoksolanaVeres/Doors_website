@@ -8,10 +8,12 @@ export default function LanguageContextProvider({ children }) {
 
   function setUkrainianLanguage() {
     setLanguage("ua");
+    document.documentElement.setAttribute("lang", "ua")
   }
 
   function setEnglishLanguage() {
     setLanguage("en");
+    document.documentElement.setAttribute("lang", "en")
   }
 
   const value = { language, setUkrainianLanguage, setEnglishLanguage };
