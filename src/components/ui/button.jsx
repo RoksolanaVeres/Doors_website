@@ -7,7 +7,7 @@ export function Button({ children, size, className, variant, ...props }) {
   };
 
   const buttonVariant = {
-    outline: `border border-input bg-background hover:bg-accent hover:text-accent-foreground`,
+    outline: `border border-border bg-background hover:bg-border/90`,
     normal: `bg-primary text-primary-foreground hover:bg-primary/90`,
   };
 

@@ -9,7 +9,7 @@ const ServicesPage = lazy(() => import("./components/pages/ServicesPage"));
 const ContactsPage = lazy(() => import("./components/pages/ContactsPage"));
 
 const fallback = (
-  <p className="absolute left-[50%] top-[50%] -translate-x-[50%] text-xl tracking-widest text-brand-main">
+  <p className="absolute left-[50%] top-[50%] -translate-x-[50%] text-xl tracking-widest text-primary">
     Loading...
   </p>
 );

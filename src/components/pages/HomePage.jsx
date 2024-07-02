@@ -35,11 +35,11 @@ export default function HomePage() {
         style={{ backgroundImage: `url(${roomInteriorImg})` }}
       >
         <motion.div
-          className="flex h-full w-2/3 flex-col justify-center gap-10 bg-blur px-container-padding font-lora backdrop-blur-sm md:w-1/2"
+          className="flex h-full w-2/3 flex-col justify-center gap-10 bg-background-blur px-container-padding font-lora backdrop-blur-sm md:w-1/2"
           variants={mainAnimationVariants}
           animate={!mainAnimationHasPlayed ? "slideIn" : null}
         >
-          <h1 className="text-3xl font-semibold uppercase text-brand-main md:text-5xl">
+          <h1 className="text-3xl font-semibold uppercase text-primary md:text-5xl">
             {l10n[language].homePage.mainBanner.header[0]}
             <br />
             <span className="text-5xl font-bold md:text-7xl">
