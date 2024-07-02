@@ -155,7 +155,7 @@ function ServiceItem({ service }) {
         <div className="relative h-[350px] shadow-xl transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] md:h-full">
           <div className="absolute inset-0">
             <div className="h-full rounded-md bg-background p-5 md:p-10">
-              <h3 className="pb-2 font-roboto text-xl font-semibold md:text-2xl">
+              <h3 className="pb-2 font-lora text-xl font-semibold md:text-2xl">
                 {service.header}
               </h3>
               <p className="pb-4 text-muted-foreground">{service.subheader}</p>

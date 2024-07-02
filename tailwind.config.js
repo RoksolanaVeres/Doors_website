@@ -21,7 +21,6 @@ module.exports = {
     fontFamily: {
       inter: ["Inter Variable", "sans-serif"],
       lora: ["Lora Variable", "serif"],
-      roboto: ["Roboto Slab Variable", "serif"],
     },
     extend: {
       padding: {
