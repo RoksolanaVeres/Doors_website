@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import "@fontsource-variable/inter";
-import "@fontsource-variable/roboto-slab";
+import "@fontsource-variable/lora";
 import { HelmetProvider } from "react-helmet-async";
 import MenuContextProvider from "./components/store/MenuContext.jsx";
 import LanguageContextProvider from "./components/store/LanguageContext.jsx";

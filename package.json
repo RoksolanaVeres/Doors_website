@@ -13,7 +13,6 @@
   "dependencies": {
     "@fontsource-variable/inter": "^5.0.18",
     "@fontsource-variable/lora": "^5.0.18",
-    "@fontsource-variable/roboto-slab": "^5.0.20",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.6",
