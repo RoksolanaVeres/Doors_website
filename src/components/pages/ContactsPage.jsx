@@ -35,7 +35,7 @@ export default function ContactsPage() {
         >
           <div
             id="email-container"
-            className="flex justify-center rounded-md bg-background_secondary p-10 shadow-lg"
+            className="bg-background-secondary flex justify-center rounded-md p-10 shadow-lg"
           >
             <div className="grid w-full content-start justify-center gap-2 text-center">
               <IoIosMail className="mx-auto text-2xl" />
@@ -44,16 +44,16 @@ export default function ContactsPage() {
               </h2>
               <a
                 href="mailto:taras-oksana@ukr.net"
-                className="flex items-center gap-2 text-secondary-foreground"
+                className="text-foreground-secondary flex items-center gap-2"
               >
                 taras-oksana@ukr.net
               </a>
               <div className="flex items-center gap-2">
-                <FaViber className="text-xl text-secondary-foreground" />
+                <FaViber className="text-foreground-secondary text-xl" />
                 <a href="tel:+380999568789">+380992236426</a>
               </div>
               <div className="flex items-center gap-2">
-                <FaTelegramPlane className="text-xl text-secondary-foreground" />
+                <FaTelegramPlane className="text-foreground-secondary text-xl" />
                 <a href="tel:+380999568789">+380992236426</a>
               </div>
             </div>
@@ -61,15 +61,15 @@ export default function ContactsPage() {
 
           <div
             id="phones-container"
-            className="flex justify-center rounded-md bg-background_secondary p-10 shadow-lg"
+            className="bg-background-secondary flex justify-center rounded-md p-10 shadow-lg"
           >
             <div className="grid w-full content-start justify-center gap-2 text-center">
-              <FaPhone className="mx-auto text-xl text-secondary-foreground" />
+              <FaPhone className="text-foreground-secondary mx-auto text-xl" />
               <h2 className="font-semibold uppercase tracking-wider">
                 {contactsText.phonesCard.header}
               </h2>
               <div id="doors-phones">
-                <h3 className="text-secondary-foreground">
+                <h3 className="text-foreground-secondary">
                   {contactsText.phonesCard.windowsDoorsPhones.header}
                 </h3>
                 <ul>
@@ -104,7 +104,7 @@ export default function ContactsPage() {
               </div>
 
               <div id="glass-phone">
-                <h3 className="text-secondary-foreground">
+                <h3 className="text-foreground-secondary">
                   {contactsText.phonesCard.glassCuttingPhones.header}
                 </h3>
                 <div className="flex justify-center gap-2 text-sm">
@@ -121,7 +121,7 @@ export default function ContactsPage() {
               </div>
 
               <div id="electronics-phone">
-                <h3 className="text-secondary-foreground">
+                <h3 className="text-foreground-secondary">
                   {contactsText.phonesCard.electronicsPhones.header}
                 </h3>
                 <div
@@ -144,14 +144,14 @@ export default function ContactsPage() {
 
           <div
             id="location-container"
-            className="flex justify-center rounded-md bg-background_secondary p-10 shadow-lg"
+            className="bg-background-secondary flex justify-center rounded-md p-10 shadow-lg"
           >
             <div className="grid w-full content-start justify-center gap-2 text-center">
-              <IoHome className="mx-auto text-2xl text-accent-foreground" />
+              <IoHome className="mx-auto text-2xl" />
               <h2 className="font-semibold uppercase tracking-wider">
                 {contactsText.addressCard.header}
               </h2>
-              <p className="text-secondary-foreground">
+              <p className="text-foreground-secondary">
                 {contactsText.addressCard.address}
               </p>
               <p className="text-sm">{contactsText.addressCard.landmark}</p>
@@ -160,19 +160,19 @@ export default function ContactsPage() {
 
           <div
             id="workingHours-container"
-            className="flex justify-center rounded-md bg-background_secondary p-10 shadow-lg"
+            className="bg-background-secondary flex justify-center rounded-md p-10 shadow-lg"
           >
             <div className="grid w-full content-start justify-center gap-2 text-center">
-              <GrSchedule className="mx-auto text-2xl text-secondary-foreground" />
+              <GrSchedule className="text-foreground-secondary mx-auto text-2xl" />
               <h2 className="font-semibold uppercase tracking-wider">
                 {contactsText.scheduleCard.header}
               </h2>
               <dl>
-                <dt className="mt-1 text-secondary-foreground">
+                <dt className="text-foreground-secondary mt-1">
                   {contactsText.scheduleCard.workDays}:
                 </dt>
                 <dd>9:00 - 17:00</dd>
-                <dt className="mt-1 text-secondary-foreground">
+                <dt className="text-foreground-secondary mt-1">
                   {" "}
                   {contactsText.scheduleCard.saturday}:
                 </dt>

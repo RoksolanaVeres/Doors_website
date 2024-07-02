@@ -77,7 +77,7 @@ export default function DoorsPage() {
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "all" }))
               }
-              className={`${filter === "all" && "bg-background_secondary"}`}
+              className={`${filter === "all" && "bg-background-secondary"}`}
             >
               {l10n[language].doorsPage.filterButtons.all}
             </Button>
@@ -87,7 +87,7 @@ export default function DoorsPage() {
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "interior" }))
               }
-              className={`${filter === "interior" && "bg-background_secondary"}`}
+              className={`${filter === "interior" && "bg-background-secondary"}`}
             >
               {l10n[language].doorsPage.filterButtons.interior}
             </Button>
@@ -97,7 +97,7 @@ export default function DoorsPage() {
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "exterior" }))
               }
-              className={`${filter === "exterior" && "bg-background_secondary"}`}
+              className={`${filter === "exterior" && "bg-background-secondary"}`}
             >
               {l10n[language].doorsPage.filterButtons.exterior}
             </Button>
@@ -140,7 +140,7 @@ function DoorsCatalogues() {
             alt="magda doors catalogue"
             className="rounded-md border"
           />
-          <h3 className="absolute bottom-0 left-0 right-0 bg-blur px-container-padding py-4 text-2xl font-semibold">
+          <h3 className="absolute bottom-0 left-0 right-0 bg-background-blur px-container-padding py-4 text-2xl font-semibold">
             {l10n[language].doorsPage.catalogues.magda}
           </h3>
         </a>
@@ -150,7 +150,7 @@ function DoorsCatalogues() {
             alt="termoplast doors catalogue"
             className="rounded-md border"
           />
-          <h3 className="absolute bottom-0 left-0 right-0 bg-blur px-container-padding py-4 text-2xl font-semibold">
+          <h3 className="absolute bottom-0 left-0 right-0 bg-background-blur px-container-padding py-4 text-2xl font-semibold">
             {l10n[language].doorsPage.catalogues.termoplast}
           </h3>
         </a>

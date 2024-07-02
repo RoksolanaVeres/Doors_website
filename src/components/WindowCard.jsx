@@ -19,7 +19,7 @@ export default function WindowCard({ window }) {
         <CardTitle>
           <p>{window.title}</p>
           {window.subtitle && (
-            <p className="text-base text-secondary-foreground">
+            <p className="text-foreground-secondary text-base">
               {window.subtitle}
             </p>
           )}
@@ -37,25 +37,25 @@ export default function WindowCard({ window }) {
         <ul>
           <li>
             {windowCardText.mountingDepth}{" "}
-            <span className="text-xl font-bold text-secondary-foreground">
+            <span className="text-foreground-secondary text-xl font-bold">
               {window.characteristics.mountingDepth}
             </span>
           </li>
           <li>
             {windowCardText.glazingUnit}{" "}
-            <span className="text-xl font-bold text-secondary-foreground">
+            <span className="text-foreground-secondary text-xl font-bold">
               {window.characteristics.glazingUnit}
             </span>
           </li>
           <li>
             {windowCardText.chambers}{" "}
-            <span className="text-xl font-bold text-secondary-foreground">
+            <span className="text-foreground-secondary text-xl font-bold">
               {window.characteristics.chambers}
             </span>
           </li>
           <li>
             {windowCardText.gasketContours}{" "}
-            <span className="text-xl font-bold text-secondary-foreground">
+            <span className="text-foreground-secondary text-xl font-bold">
               {window.characteristics.gasketContours}
             </span>
           </li>

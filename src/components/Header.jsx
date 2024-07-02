@@ -40,14 +40,14 @@ function DesktopHeader() {
       <div className="flex gap-2">
         <button
           onClick={setUkrainianLanguage}
-          className={`${language === "ua" && "underline underline-offset-8 border-accent-main"}`}
+          className={`${language === "ua" && "underline underline-offset-8"}`}
         >
           УКР
         </button>
         <div className="h-[22px] w-[1px] bg-border"></div>
         <button
           onClick={setEnglishLanguage}
-          className={`${language === "en" && "underline underline-offset-8 border-accent-main"}`}
+          className={`${language === "en" && "underline underline-offset-8"}`}
         >
           ENG
         </button>
@@ -112,7 +112,6 @@ function MobileHeader() {
                 size={32}
                 strokeWidth={1.5}
                 onClick={handleCloseMenuClick}
-                className="text-accent-main"
               />
             </button>
             <DropdownMenu />
@@ -124,14 +123,14 @@ function MobileHeader() {
         <div className="flex gap-2">
           <button
             onClick={setUkrainianLanguage}
-            className={`${language === "ua" && "border-b-2 border-accent-main"}`}
+            className={`${language === "ua" && "underline underline-offset-8"}`}
           >
             УКР
           </button>
           <div className="h-[22px] w-[1px] bg-border"></div>
           <button
             onClick={setEnglishLanguage}
-            className={`${language === "en" && "border-b-2 border-accent-main"}`}
+            className={`${language === "en" && "underline underline-offset-8"}`}
           >
             ENG
           </button>

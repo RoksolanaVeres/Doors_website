@@ -5,40 +5,27 @@
 @layer base {
   :root {
     --background: 42 100% 98.04%;
+    --background-secondary: 44, 59%, 91%;
+    --background-blur: 42, 100%, 98%, 0.729;
+
     --foreground: 11, 93%, 6%;
-    
-    --background_secondary: 44, 59%, 91%; 
+    --foreground-secondary: 27, 92%, 31%; /*contacts page highlights*/
+    --foreground-inverted: 42 100% 98.04%;
 
-    --card:40, 69%, 95%;
+    --primary: 4, 76%, 15%; /*brown brand color*/
+    --primary-foreground: 210 40% 98%; /*text color on advantages buttons*/
+
+    --card: 40, 69%, 95%;
     --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 27, 92%, 31%; /*contacts page highlights*/
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 12, 12%, 49%; /*inactive Navlink*/
 
-    --accent: 210 40% 96.1%; /*button background on hover*/
-    --accent-foreground: 222.2 47.4% 11.2%; /*button text on hover*/
-
-    --accent-main: 12, 96%, 10%; /*main heading, active Navlink*/
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: 12, 96%, 10%; /*main heading, active Navlink*/
 
     --border: 43.64 29.73% 85.49%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --blur: 42, 100%, 98%, 0.729;
-    --neutral: 0, 0%, 66%;
-    --brand-main: 4, 76%, 15%;
+    --neutralGray: 0, 0%, 66%;
+    --destructive: 0 84.2% 60.2%;
 
     --door-white: 45, 57%, 97%;
     --door-beige: 36, 28%, 77%;
@@ -47,7 +34,7 @@
     --door-gray: 0, 0%, 23%;
     --door-lightGray: 0, 0%, 47%;
     --door-lighterGray: 0, 1%, 35%;
-    --door-bileDerevo: 250, 10%, 89%; 
+    --door-bileDerevo: 250, 10%, 89%;
     --door-astanaMerle: 349, 13%, 47%;
     --door-astanaRozvud: 24, 19%, 69%;
     --door-bilyiMat: 150, 1%, 72%;

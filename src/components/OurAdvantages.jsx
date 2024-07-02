@@ -74,7 +74,7 @@ export default function OurAdvantages() {
       id="ourAdvantages-block"
       className="mx-auto flex flex-col items-center px-container-padding pt-10 md:pt-20 xl:w-2/3 xl:px-0"
     >
-      <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase text-brand-main md:pb-20 md:text-4xl">
+      <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase text-primary md:pb-20 md:text-4xl">
         {l10n[language].homePage.advantages.header[0]} <br />
         <span className="text-4xl md:text-6xl">
           {l10n[language].homePage.advantages.header[1]}
@@ -159,7 +159,7 @@ function AdvantageItem({ advantage }) {
               : "slideFromLeft"
         }
       >
-        <p id="advantage-number" className="pb-4 text-neutral">
+        <p id="advantage-number" className="text-neutralGray pb-4">
           <span className="tracking-widest">{advantageItemText.reason} # </span>
           <span className="text-3xl md:text-5xl">0{advantage.id}</span>
         </p>
@@ -175,7 +175,10 @@ function AdvantageItem({ advantage }) {
                 to={button.path}
                 className="pt-4 md:pt-8"
               >
-                <Button size="normal" variant="normal" className="bg-brand-main">
+                <Button
+                  size="normal"
+                  variant="normal"
+                >
                   {button.buttonCaption}
                 </Button>
               </Link>
@@ -185,7 +188,7 @@ function AdvantageItem({ advantage }) {
       </motion.div>
       <div
         id="advantages-image-container"
-        className="flex items-center justify-center rounded-md bg-background_secondary"
+        className="flex items-center justify-center rounded-md bg-background-secondary"
       >
         <motion.img
           ref={advantageImageRef}
