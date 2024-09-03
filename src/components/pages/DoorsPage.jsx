@@ -10,10 +10,11 @@ import { Helmet } from "react-helmet-async";
 import { useInView } from "react-intersection-observer";
 import { useSearchParams } from "react-router-dom";
 import DoorCard from "../DoorCard";
-import PricesCollapsible from "../PricesCollapsible";
+import PricesInfo from "../PricesInfo";
 import ScrollToTopButton from "../ScrollToTopButton";
 import { LanguageContext } from "../store/LanguageContext";
 import { Button } from "../ui/button";
+import { useAnimationOncePerSession } from "@/hooks/useAnimationOncePerSession";
 
 const PER_PAGE = 8;
 
@@ -23,6 +24,12 @@ export default function DoorsPage() {
   const filter = searchParams.get("type");
   const [page, setPage] = useState(1);
   const { ref, inView } = useInView(false);
+  const doorsAnimationHasPlayed = useAnimationOncePerSession("doorsAnimation");
+
+  const doorsVariants = {
+    initial: { scale: 0.5 },
+    animated: { scale: 1, transition: { duration: 0.2, ease: "easeOut" } },
+  };
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -62,35 +69,35 @@ export default function DoorsPage() {
       </Helmet>
       <div className="mx-auto w-full max-w-[1600px] px-container-padding py-24">
         <div className="relative flex justify-between gap-1 pb-10">
-          <PricesCollapsible />
+          <PricesInfo />
           <div className="flex justify-end gap-1">
             <Button
-              size="sm"
+              size="small"
               variant="outline"
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "all" }))
               }
-              className={`${filter === "all" && "bg-background_secondary"}`}
+              className={`${filter === "all" && "bg-background-secondary"}`}
             >
               {l10n[language].doorsPage.filterButtons.all}
             </Button>
             <Button
-              size="sm"
+              size="small"
               variant="outline"
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "interior" }))
               }
-              className={`${filter === "interior" && "bg-background_secondary"}`}
+              className={`${filter === "interior" && "bg-background-secondary"}`}
             >
               {l10n[language].doorsPage.filterButtons.interior}
             </Button>
             <Button
-              size="sm"
+              size="small"
               variant="outline"
               onClick={() =>
                 setSearchParams((params) => ({ ...params, type: "exterior" }))
               }
-              className={`${filter === "exterior" && "bg-background_secondary"}`}
+              className={`${filter === "exterior" && "bg-background-secondary"}`}
             >
               {l10n[language].doorsPage.filterButtons.exterior}
             </Button>
@@ -101,9 +108,9 @@ export default function DoorsPage() {
             return (
               <motion.div
                 key={door.id}
-                initial={{ scale: 0.5 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
+                variants={doorsVariants}
+                initial={!doorsAnimationHasPlayed ? "initial" : null}
+                animate={!doorsAnimationHasPlayed ? "animated" : null}
               >
                 <DoorCard door={door} />
               </motion.div>
@@ -111,7 +118,7 @@ export default function DoorsPage() {
           })}
         </div>
         <div className="h-1 w-full" ref={ref}>
-          <ScrollToTopButton />
+          {/* <ScrollToTopButton /> */}
         </div>
         {filter !== "interior" && <DoorsCatalogues />}
       </div>
@@ -133,7 +140,7 @@ function DoorsCatalogues() {
             alt="magda doors catalogue"
             className="rounded-md border"
           />
-          <h3 className="absolute bottom-0 left-0 right-0 bg-blur px-container-padding py-4 text-2xl font-semibold">
+          <h3 className="absolute bottom-0 left-0 right-0 bg-background-blur px-container-padding py-4 text-2xl font-semibold">
             {l10n[language].doorsPage.catalogues.magda}
           </h3>
         </a>
@@ -143,7 +150,7 @@ function DoorsCatalogues() {
             alt="termoplast doors catalogue"
             className="rounded-md border"
           />
-          <h3 className="absolute bottom-0 left-0 right-0 bg-blur px-container-padding py-4 text-2xl font-semibold">
+          <h3 className="absolute bottom-0 left-0 right-0 bg-background-blur px-container-padding py-4 text-2xl font-semibold">
             {l10n[language].doorsPage.catalogues.termoplast}
           </h3>
         </a>

@@ -99,7 +99,7 @@ export default function ServicesPage() {
         </title>
       </Helmet>
 
-      <div id="ourServices" className="bg-background_secondary md:py-20">
+      <div id="ourServices" className="bg-background-secondary md:py-20">
         <div
           id="services-content-container"
           className="mx-auto max-w-[1600px] px-container-padding py-20 "
@@ -155,20 +155,20 @@ function ServiceItem({ service }) {
         <div className="relative h-[350px] shadow-xl transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] md:h-full">
           <div className="absolute inset-0">
             <div className="h-full rounded-md bg-background p-5 md:p-10">
-              <h3 className="pb-2 font-roboto text-xl font-semibold md:text-2xl">
+              <h3 className="pb-2 font-lora text-xl font-semibold md:text-2xl">
                 {service.header}
               </h3>
               <p className="pb-4 text-muted-foreground">{service.subheader}</p>
               <p className="pb-6 text-sm sm:text-base">{service.details}</p>
               <div
                 id="service-arrow-container"
-                className="absolute bottom-5 right-5 flex size-[50px] items-center justify-center rounded-full bg-background_secondary"
+                className="absolute bottom-5 right-5 flex size-[50px] items-center justify-center rounded-full bg-background-secondary"
               >
                 <ArrowBigUp className="w-full rotate-90 scale-125 text-muted-foreground" />
               </div>
             </div>
           </div>
-          <div className="absolute inset-0 flex w-full items-center justify-center rounded-md bg-muted-foreground px-12 text-center text-accent [backface-visibility:hidden] [transform:rotateY(180deg)] md:h-full">
+          <div className="absolute inset-0 flex w-full items-center justify-center rounded-md bg-muted-foreground px-12 text-center text-foreground-inverted [backface-visibility:hidden] [transform:rotateY(180deg)] md:h-full">
             <div className="grid gap-2 p-5 md:p-10">
               <h3>{service.backCard.header}</h3>
               <div>

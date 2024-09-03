@@ -9,6 +9,10 @@ export default function MenuContextProvider({ children }) {
     setMenuIsOpen((isOpen) => !isOpen);
   }
 
+  function openMenu() {
+    setMenuIsOpen(true);
+  }
+
   function closeMenu() {
     setMenuIsOpen(false);
   }
@@ -24,6 +28,7 @@ export default function MenuContextProvider({ children }) {
     toggleMenuOpenState,
     closeMenu,
     closeMenuIfLinkClicked,
+    openMenu,
   };
   return <MenuContext.Provider value={value}>{children}</MenuContext.Provider>;
 }

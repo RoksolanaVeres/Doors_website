@@ -64,7 +64,7 @@ export default function OurAssortment() {
       id="assortment-block"
       className="flex flex-col items-center px-container-padding py-10 md:py-20"
     >
-      <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase text-brand-main md:pb-20 md:text-4xl">
+      <h2 className="pb-10 text-center font-lora text-2xl font-semibold uppercase text-primary md:pb-20 md:text-4xl">
         {l10n[language].homePage.assortment.header[0]} <br />
         <span className="text-4xl md:text-6xl">
           {l10n[language].homePage.assortment.header[1]}
@@ -101,7 +101,7 @@ function AssortmentItem({ assortmentItem, animationVariants }) {
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", duration: 0.5 }}
         >
-          <h3 className="bg-blur px-container-padding py-4 text-2xl font-semibold">
+          <h3 className="bg-background-blur px-container-padding py-4 text-2xl font-semibold">
             {assortmentItem.header}
           </h3>
         </motion.div>

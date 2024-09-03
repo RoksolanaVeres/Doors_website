@@ -1,31 +1,17 @@
-import { Separator } from "@/components/ui/separator";
 import { AnimatePresence, motion } from "framer-motion";
 import { useContext } from "react";
 import DropdownMenu from "./DropdownMenu";
 import NavigationLinkItems from "./NavigationLinkItems";
 import { MenuContext } from "./store/MenuContext";
 import { LanguageContext } from "./store/LanguageContext";
+import { useRef } from "react";
+import { XIcon, MenuIcon } from "lucide-react";
 
 export default function Header() {
   const { menuIsOpen, toggleMenuOpenState } = useContext(MenuContext);
 
   return (
     <>
-      <AnimatePresence>
-        {menuIsOpen && (
-          <>
-            <motion.div
-              id="overlay"
-              className="absolute bottom-0 top-0 z-10 w-full bg-black/70"
-              onClick={toggleMenuOpenState}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            ></motion.div>
-            <DropdownMenu />
-          </>
-        )}
-      </AnimatePresence>
       <div
         id="mobile-desktop-header__container"
         className="absolute left-0 right-0 top-0 z-10 flex"
@@ -54,14 +40,14 @@ function DesktopHeader() {
       <div className="flex gap-2">
         <button
           onClick={setUkrainianLanguage}
-          className={`${language === "ua" && "border-b-2 border-accent-main"}`}
+          className={`${language === "ua" && "underline underline-offset-8"}`}
         >
           УКР
         </button>
-        <Separator orientation="vertical" className="h-[20px]" />
+        <div className="h-[22px] w-[1px] bg-border"></div>
         <button
           onClick={setEnglishLanguage}
-          className={`${language === "en" && "border-b-2 border-accent-main"}`}
+          className={`${language === "en" && "underline underline-offset-8"}`}
         >
           ENG
         </button>
@@ -71,9 +57,41 @@ function DesktopHeader() {
 }
 
 function MobileHeader() {
-  const { toggleMenuOpenState, menuIsOpen } = useContext(MenuContext);
+  const { menuIsOpen, closeMenu, openMenu } = useContext(MenuContext);
   const { language, setUkrainianLanguage, setEnglishLanguage } =
     useContext(LanguageContext);
+
+  const dropdownMenu = useRef(null);
+
+  if (menuIsOpen) {
+    dropdownMenu.current.showModal();
+  }
+
+  if (!menuIsOpen && dropdownMenu.current) {
+    dropdownMenu.current.close();
+  }
+
+  function handleDialogClick(e) {
+    console.log(e.target.nodeName);
+    if (e.target.nodeName === "DIALOG") {
+      closeMenu();
+    }
+  }
+
+  function handleCloseMenuClick() {
+    closeMenu();
+  }
+
+  function handleOpenMenuClick() {
+    openMenu();
+  }
+
+  const dialogVariants = {
+    slideIn: {
+      x: ["-100%", 0],
+      transition: { ease: "easeOut", duration: 0.5 },
+    },
+  };
 
   return (
     <>
@@ -81,37 +99,38 @@ function MobileHeader() {
         id="mobileHeader"
         className="flex w-full justify-between gap-5 px-container-padding py-6 text-sm md:hidden"
       >
-        <button
-          onClick={toggleMenuOpenState}
-          className="grid h-[20px] w-[30px] grid-cols-1 gap-0.5"
+        <dialog
+          variants={dialogVariants}
+          animate="slideIn"
+          ref={dropdownMenu}
+          className="m-0 h-screen max-h-screen w-2/3 bg-background backdrop:bg-black/70 open:animate-slide-in"
+          onClick={handleDialogClick}
         >
-          <motion.div
-            animate={{ rotate: menuIsOpen ? -45 : 0, y: menuIsOpen ? 11 : 0 }}
-            transition={{ ease: "easeOut", duration: 0.2 }}
-            className="h-0.5 bg-black"
-          ></motion.div>
-          <motion.div
-            animate={{ display: menuIsOpen ? "none" : "block" }}
-            transition={{ ease: "easeOut", duration: 0.1 }}
-            className="h-0.5 bg-black"
-          ></motion.div>
-          <motion.div
-            animate={{ rotate: menuIsOpen ? 45 : 0 }}
-            transition={{ ease: "easeOut", duration: 0.2 }}
-            className={"h-0.5 bg-black"}
-          ></motion.div>
+          <div className="h-full px-container-padding py-6">
+            <button className="pb-10">
+              <XIcon
+                size={32}
+                strokeWidth={1.5}
+                onClick={handleCloseMenuClick}
+              />
+            </button>
+            <DropdownMenu />
+          </div>
+        </dialog>
+        <button onClick={handleOpenMenuClick}>
+          <MenuIcon size={32} strokeWidth={1.5} />
         </button>
         <div className="flex gap-2">
           <button
             onClick={setUkrainianLanguage}
-            className={`${language === "ua" && "border-b-2 border-accent-main"}`}
+            className={`${language === "ua" && "underline underline-offset-8"}`}
           >
             УКР
           </button>
-          <Separator orientation="vertical" />
+          <div className="h-[22px] w-[1px] bg-border"></div>
           <button
             onClick={setEnglishLanguage}
-            className={`${language === "en" && "border-b-2 border-accent-main"}`}
+            className={`${language === "en" && "underline underline-offset-8"}`}
           >
             ENG
           </button>

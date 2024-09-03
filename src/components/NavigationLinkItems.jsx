@@ -10,7 +10,7 @@ const linkVariants = {
 };
 
 export default function NavigationLinkItems() {
-  const {language} = useContext(LanguageContext)
+  const { language } = useContext(LanguageContext);
   const LINKS = [
     { page: l10n[language].navLinks.homePage, path: "/" },
     { page: l10n[language].navLinks.doors, path: "/doors?type=all" },
@@ -32,8 +32,8 @@ export default function NavigationLinkItems() {
               to={link.path}
               className={({ isActive }) =>
                 isActive
-                  ? "after:duration-400 font-semibold text-accent-main after:mt-0.5 after:block after:h-0.5 after:w-auto after:scale-100 after:bg-accent-main after:transition-transform after:ease-in-out after:content-['']"
-                  : "font-semibold text-muted-foreground after:scale-50 after:content-[''] hover:text-accent-main"
+                  ? "after:duration-400 font-semibold text-accent after:mt-0.5 after:block after:h-0.5 after:w-auto after:scale-100 after:bg-accent after:transition-transform after:ease-in-out after:content-['']"
+                  : "font-semibold text-muted-foreground after:scale-50 after:content-[''] hover:text-accent"
               }
             >
               {link.page}
