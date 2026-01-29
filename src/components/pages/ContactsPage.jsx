@@ -1,7 +1,7 @@
 import { l10n } from "@/textTranslation";
 import { Suspense, lazy, useContext, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { FaTelegramPlane, FaViber } from "react-icons/fa";
+import { FaTelegramPlane, FaViber, FaInstagram } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { GrSchedule } from "react-icons/gr";
 import { IoIosMail } from "react-icons/io";
@@ -55,6 +55,12 @@ export default function ContactsPage() {
               <div className="flex items-center gap-2">
                 <FaTelegramPlane className="text-xl text-foreground-secondary" />
                 <a href="tel:+380999568789">+380992236426</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaInstagram className="text-xl text-foreground-secondary" />
+                <a href="https://www.instagram.com/vikna_dveri.if/">
+                  vikna_dveri.if
+                </a>
               </div>
             </div>
           </div>
