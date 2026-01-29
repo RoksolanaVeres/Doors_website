@@ -1,7 +1,6 @@
 import counsultingImg from "@/assets/doors-img/unsplash-images/consulting.jpg";
 import deliveryImg from "@/assets/doors-img/unsplash-images/delivery.jpg";
 import doorInstallationImg from "@/assets/doors-img/unsplash-images/doors-installation.jpg";
-import electricalAppliancesImg from "@/assets/doors-img/unsplash-images/electrical-appliances.jpg";
 import glassCuttingImg from "@/assets/doors-img/unsplash-images/glass-cutting.jpg";
 import { useAnimationOncePerSession } from "@/hooks/useAnimationOncePerSession";
 import { l10n } from "@/textTranslation";
@@ -64,19 +63,6 @@ export default function ServicesPage() {
       backCard: {
         header: servicesText.glassCutting.backCard.header,
         phones: servicesText.glassCutting.backCard.phones,
-        visitUs: servicesText.visitUs.text,
-        address: servicesText.visitUs.address,
-      },
-    },
-    {
-      id: 5,
-      img: electricalAppliancesImg,
-      header: servicesText.repair.header,
-      subheader: servicesText.repair.subheader,
-      details: servicesText.repair.details,
-      backCard: {
-        header: servicesText.repair.backCard.header,
-        phones: servicesText.repair.backCard.phones,
         visitUs: servicesText.visitUs.text,
         address: servicesText.visitUs.address,
       },

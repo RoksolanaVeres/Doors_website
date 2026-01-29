@@ -141,17 +141,6 @@ export const l10n = {
           phones: ["(099) 956-87-89 - Bohdan"],
         },
       },
-      repair: {
-        header: "Repair of household appliances",
-        subheader: "and diagnostics of malfunctions",
-        details: `Surprise, surprise: our store has also an electronics repair shop where you can fix your appliances 
-        and find all the extras you need — like tuners, remote controls, antennas, power supplies, and more!`,
-        backCard: {
-          header:
-            "For questions about electronics repairs, feel free to reach out to us by phone:",
-          phones: ["(095) 924-62-08 - Mykola"],
-        },
-      },
     },
     doorsPage: {
       filterButtons: {
@@ -189,10 +178,6 @@ export const l10n = {
         glassCuttingPhones: {
           header: "Glass cutting:",
           phoneNames: ["Bohdan"],
-        },
-        electronicsPhones: {
-          header: "Electronics repair shop:",
-          phoneNames: ["Mykola"],
         },
       },
       addressCard: {
@@ -299,8 +284,6 @@ export const l10n = {
             details: `Ми розуміємо з якими труднощами Ви стикаєтесь, коли наважуєтесь розпочати ремонт в оселі, 
               особливо в цей нелегкий час, тому подбали про те, щоб попри все, наші ціни залишалися конкурентними, 
              а якість високою.`,
-            highlight:
-              'Для військових, які захищають наш спокій, пропонуємо приємні знижки - це наш спосіб сказати "Дякую!"',
             buttonCaptions: ["Наші контакти"],
           },
         },
@@ -361,16 +344,6 @@ export const l10n = {
           phones: ["(099) 956-87-89 - Богдан"],
         },
       },
-      repair: {
-        header: "Ремонт побутової техніки",
-        subheader: "та діагностика поломки",
-        details: `Неочікувано, але факт: в магазині працює телерадіомайстерня, де Ви можете зремонтувати техніку, 
-        яка вийшла з ладу, а також придбати супутні товари (тюнер, пульт, антену, блок живлення тощо).`,
-        backCard: {
-          header: "З питань ремонту техніки дзвоніть за телефоном:",
-          phones: ["(095) 924-62-08 - Микола"],
-        },
-      },
     },
     doorsPage: {
       filterButtons: {
@@ -408,10 +381,6 @@ export const l10n = {
         glassCuttingPhones: {
           header: "Порізка скла:",
           phoneNames: ["Богдан"],
-        },
-        electronicsPhones: {
-          header: "Телерадіомайстерня:",
-          phoneNames: ["Микола"],
         },
       },
       addressCard: {
