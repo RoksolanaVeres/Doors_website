@@ -3,8 +3,9 @@ import { useContext } from "react";
 import {
   FaEnvelope,
   FaLocationDot,
-  FaPhoneVolume,
+  FaPhone,
   FaViber,
+  FaInstagram,
 } from "react-icons/fa6";
 import { HiLockClosed } from "react-icons/hi2";
 import { LanguageContext } from "./store/LanguageContext";
@@ -44,8 +45,15 @@ export default function Footer() {
           </a>
 
           <a href="tel:+380682349404" className="flex items-center gap-2">
-            <FaPhoneVolume />
+            <FaPhone />
             +380682349404
+          </a>
+          <a
+            href="https://www.instagram.com/vikna_dveri.if/"
+            className="flex items-center gap-2"
+          >
+            <FaInstagram />
+            vikna_dveri.if
           </a>
           <a
             href="mailto:taras-oksana@ukr.net"
